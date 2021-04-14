@@ -1981,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: 80445782462319214, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 404994741374714928, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
@@ -2749,6 +2749,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
+        type: 3}
+      propertyPath: herbs
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4687050786715699882, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: m_Name
@@ -3113,7 +3118,7 @@ PrefabInstance:
     - target: {fileID: 6196830424710362332, guid: 4f3b6d528384b3044ad30e08a34a476f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6498510205726761997, guid: 4f3b6d528384b3044ad30e08a34a476f,
         type: 3}

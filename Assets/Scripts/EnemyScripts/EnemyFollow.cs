@@ -14,7 +14,7 @@ public class EnemyFollow : MonoBehaviour
     private Vector2 distancia;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rbEnemigo = GetComponent<Rigidbody2D>();
     }

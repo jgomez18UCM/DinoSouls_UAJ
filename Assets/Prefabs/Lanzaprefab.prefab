@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3087657838926789930}
   - component: {fileID: 2397185110608537414}
   - component: {fileID: 9026960740800961632}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Lanzaprefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
