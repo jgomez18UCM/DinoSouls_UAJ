@@ -5,14 +5,23 @@ using UnityEngine.UI;
 
 public class UImanager : MonoBehaviour
 {
+    //variables para la vida
     [SerializeField]
     private Image[] hearts;
 
     [SerializeField]
     private Sprite[] heartSprites;
 
+    //variables para la hierbas
     [SerializeField]
     private Text herbsText;
+
+    //variables para la parte de las almas
+    [SerializeField]
+    private Image[] souls;
+
+    [SerializeField]
+    private Sprite[] soulSprites;
 
     //da una referencia al gamemanager
     private void Start()
@@ -40,5 +49,26 @@ public class UImanager : MonoBehaviour
     public void UpdateHerbs(int herbs)
     {
         herbsText.text = "x" + herbs;
+    }
+
+    //se encarga de la parte de la interfaz de las almas
+    public void UpdateSouls(bool haveTrex, bool haveAnkylo, int activeAttack)
+    {
+        Sprite trex=soulSprites[1], ankylo=soulSprites[3];
+
+        if (haveTrex) trex = soulSprites[0];
+      
+        if (haveAnkylo) ankylo = soulSprites[2];
+
+        if (activeAttack == 0)
+        {
+            souls[0].sprite = trex;
+            souls[1].sprite = ankylo;
+        }
+        else if(activeAttack==1)
+        {
+            souls[0].sprite = ankylo;
+            souls[1].sprite = trex;
+        }
     }
 }
