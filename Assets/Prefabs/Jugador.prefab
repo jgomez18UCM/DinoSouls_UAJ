@@ -43,9 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5467668641c865d4caa6a93f044b55c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 0}
+  attackPrefab: {fileID: 1396453778356711167, guid: 042ad5b969a4671449fb711cd255f5eb,
+    type: 3}
   attackCastTime: 0
-  attackDuration: 0
+  attackDuration: 1
 --- !u!1 &3925003021163371156
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,8 +153,9 @@ MonoBehaviour:
   dashCooldown: 0
   tengolanza: 1
   attackRoot:
-  - {fileID: 0}
-  attackRootTriceratops: {fileID: 0}
+  - {fileID: 1159055322037544487}
+  - {fileID: 409135868655883689}
+  attackRootTriceratops: {fileID: 5459442837107072095}
 --- !u!50 &3925003021163371144
 Rigidbody2D:
   serializedVersion: 4
