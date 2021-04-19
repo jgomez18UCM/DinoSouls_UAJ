@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private int activeAttack = 0;
 
     [SerializeField]
-    private bool haveTrex = true, haveAnkylo = true;
+    private bool haveTrex = true, haveAnkylo = true, haveTrice=true;
 
     void Awake()
     {
@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void Heal()
     {
-        if (herbs > 0 && life <= maxLife - 1)
+        if (herbs > 0 && life <= maxLife/5*4)
         {
             herbs--;
 
@@ -121,13 +121,22 @@ public class GameManager : MonoBehaviour
 
         theUIManager.UpdateHerbs(herbs);
 
-        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack);
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
     }
 
-    public void changeAttack(int attack)
+    //cambia los ataques en la UI
+    public void ChangeAttackUI(int attack)
     {
         activeAttack = attack;
 
-        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack);
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
+    }
+
+    //cambia el estado del escudo en la UI
+    public void changeShieldStateUI()
+    {
+        haveTrice = !haveTrice;
+
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
     }
 }

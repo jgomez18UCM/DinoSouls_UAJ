@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
         else if (dir == 1 && activeAttack == attackRoot.Length - 1) activeAttack = 0;
         else activeAttack += dir;
 
-        gm.changeAttack(activeAttack);
+        gm.ChangeAttackUI(activeAttack);
     }
     public void ActivaStunt()//publico porque lo llama el pteranodon
     {

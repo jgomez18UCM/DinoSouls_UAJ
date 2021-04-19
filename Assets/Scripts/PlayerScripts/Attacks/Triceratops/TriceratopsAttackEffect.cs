@@ -7,7 +7,7 @@ public class TriceratopsAttackEffect : MonoBehaviour
     private void OnEnable()
     {
         //Al activarse o crearse activa la invencibilidad
-        GameManager.GetInstance().CancelDamage(-1);
+        GameManager.GetInstance().CancelDamage(1);
     }
 
     private void OnDestroy()

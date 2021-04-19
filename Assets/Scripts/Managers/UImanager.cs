@@ -52,7 +52,7 @@ public class UImanager : MonoBehaviour
     }
 
     //se encarga de la parte de la interfaz de las almas
-    public void UpdateSouls(bool haveTrex, bool haveAnkylo, int activeAttack)
+    public void UpdateSouls(bool haveTrex, bool haveAnkylo, int activeAttack, bool haveTrice)
     {
         Sprite trex=soulSprites[1], ankylo=soulSprites[3];
 
@@ -70,5 +70,11 @@ public class UImanager : MonoBehaviour
             souls[0].sprite = ankylo;
             souls[1].sprite = trex;
         }
+
+        if (haveTrice) souls[2].sprite = soulSprites[4];
+        
+        else souls[2].sprite = soulSprites[5];
+
+        
     }
 }

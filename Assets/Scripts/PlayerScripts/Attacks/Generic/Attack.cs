@@ -17,9 +17,15 @@ public class Attack : MonoBehaviour
 
     private float timer = 0;
 
+    private GameManager gm;
+
     //Bool que indica si se está atacando para no poder realizar ataques mientras
     private bool attacking = false;
 
+    private void Start()
+    {
+        gm = GameManager.GetInstance();
+    }
     private void Update()
     {
         if (timer > 0) timer -= Time.deltaTime;
@@ -39,6 +45,16 @@ public class Attack : MonoBehaviour
     private void CastAttack()
     {
         GameObject attackInstance = Instantiate(attackPrefab, transform);
+
+        //si se ha invocado el escudo
+        if (attackInstance.GetComponent<TriceratopsAttackEffect>() != null)
+        {
+            changeShielStateUI();
+
+            //cooldown + duracion del ataque porque en este punto va a iniciar el ataque
+            Invoke(nameof(changeShielStateUI), cooldown + attackDuration);
+        }
+
         //Lo destruye una vez acabada la duración
         Destroy(attackInstance, attackDuration);
 
@@ -49,5 +65,11 @@ public class Attack : MonoBehaviour
     private void CancelAttacking() 
     {
         attacking = false;
+    }
+
+    //invoca al gm para cambiar el estado de la ui sobre el escudo
+    private void changeShielStateUI()
+    {
+        gm.changeShieldStateUI();
     }
 }
