@@ -11,17 +11,28 @@ public class Attack : MonoBehaviour
     [SerializeField]
     [Tooltip("Duración del ataque")]
     private float attackDuration = 0;
+    [SerializeField]
+    [Tooltip("Cooldown del ataque")]
+    private float cooldown = 0;
+
+    private float timer = 0;
 
     //Bool que indica si se está atacando para no poder realizar ataques mientras
     private bool attacking = false;
 
+    private void Update()
+    {
+        if (timer > 0) timer -= Time.deltaTime;
+    }
+
     public void DoAttack()
     {
-        if (!attacking)
+        if (!attacking && timer <= 0)
         {
             //Realiza el ataque tras el tiempo de casteo
             Invoke(nameof(CastAttack), attackCastTime);
             attacking = true;
+            timer = cooldown;
         }
     }
 
