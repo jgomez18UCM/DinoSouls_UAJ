@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
 
     private UImanager theUIManager;
 
+    //variables que contienen el ataque actual, y cuales ha conseguido el jugador
+    private int activeAttack = 0;
+
+    [SerializeField]
+    private bool haveTrex = true, haveAnkylo = true;
+
     void Awake()
     {
         if (instance == null)
@@ -112,5 +118,16 @@ public class GameManager : MonoBehaviour
         theUIManager = uim;
 
         theUIManager.UpdateHearts(life);
+
+        theUIManager.UpdateHerbs(herbs);
+
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack);
+    }
+
+    public void changeAttack(int attack)
+    {
+        activeAttack = attack;
+
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack);
     }
 }

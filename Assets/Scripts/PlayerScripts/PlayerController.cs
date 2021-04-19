@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     //Índice del ataque seleccionado anteriormente
     private int prevAttack;
 
+    private GameManager gm;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -40,6 +42,8 @@ public class PlayerController : MonoBehaviour
         rotate = this.transform;
 
         dashScript = GetComponent<Dash>();
+
+        gm = GameManager.GetInstance();
     }
 
 
@@ -133,6 +137,8 @@ public class PlayerController : MonoBehaviour
         if (dir == -1 && activeAttack == 0) activeAttack = attackRoot.Length - 1;
         else if (dir == 1 && activeAttack == attackRoot.Length - 1) activeAttack = 0;
         else activeAttack += dir;
+
+        gm.changeAttack(activeAttack);
     }
     public void ActivaStunt()//publico porque lo llama el pteranodon
     {
