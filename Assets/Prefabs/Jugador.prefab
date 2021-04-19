@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5724606746175380233}
-  - component: {fileID: 4721957859554458967}
+  - component: {fileID: 5459442837107072095}
   m_Layer: 8
   m_Name: TriceratopsAttackRoot
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 3925003021163371159}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4721957859554458967
+--- !u!114 &5459442837107072095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,11 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3499899822100866180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b09ef104404c58c4d9c16ad5b75cc73d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5467668641c865d4caa6a93f044b55c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 1396453778356711167, guid: 042ad5b969a4671449fb711cd255f5eb,
-    type: 3}
+  attackPrefab: {fileID: 0}
+  attackCastTime: 0
+  attackDuration: 0
 --- !u!1 &3925003021163371156
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,12 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  shieldedSpeed: 0
   lanza: {fileID: 2396323201313141910, guid: aa08e5ed41e084a43bef98306f1e0641, type: 3}
   dashCooldown: 0
   tengolanza: 1
   attackRoot:
   - {fileID: 0}
+  attackRootTriceratops: {fileID: 0}
 --- !u!50 &3925003021163371144
 Rigidbody2D:
   serializedVersion: 4

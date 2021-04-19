@@ -8,10 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float speed = 1f;
 
-    [SerializeField]
-    [Tooltip("Velocidad mientras se utiliza el escudo del triceratops")]
-    private float shieldedSpeed;
-
     private Rigidbody2D rb;
     private Vector2 movement;
     private Transform rotate;
@@ -24,12 +20,12 @@ public class PlayerController : MonoBehaviour
     [Tooltip("AttackRoot, hijos del jugador, a meter")]
     private MonoBehaviour[] attackRoot;
 
+    [SerializeField]
+    [Tooltip("AttackRoot del triceratops, hijo del jugador, a meter")]
+    private MonoBehaviour attackRootTriceratops;
+
 
     private Dash dashScript;
-
-    private float iniSpeed;
-    //Bool que indica si estamos usando el escudo, para desactivar el dash
-    private bool shielded = false;
 
     //Índice del ataque seleccionado
     private int activeAttack;
@@ -44,9 +40,6 @@ public class PlayerController : MonoBehaviour
         rotate = this.transform;
 
         dashScript = GetComponent<Dash>();
-
-        //Guardamos la velocidad inicial para poder restaurarla más tarde
-        iniSpeed = speed;
     }
 
 
@@ -77,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dash
-        else if (Input.GetButtonDown("Jump") && dashCooldown <= 0 && !shielded)
+        else if (Input.GetButtonDown("Jump") && dashCooldown <= 0)
         {
             dashScript.ExecuteDash(ref dashCooldown);
         }
@@ -89,39 +82,22 @@ public class PlayerController : MonoBehaviour
         bool triceratops = attackRoot[activeAttack] is AttackTriceratops;
 
 
-        if (Input.GetButtonDown("Fire1") && !triceratops)
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack attack = (Attack) attackRoot[activeAttack];
 
             attack.DoAttack();
         }
 
-        else if (Input.GetButtonDown("Fire1") && triceratops) 
+        else if (Input.GetButtonDown("EscudoTriceratops")) 
         {
-            AttackTriceratops attackTriceratops = (AttackTriceratops) attackRoot[activeAttack];
+            Attack attackTriceratops = (Attack) attackRootTriceratops;
 
             attackTriceratops.DoAttack();
-
-            //Cambiamos la velocidad de movimiento
-            speed = shieldedSpeed;
-
-            shielded = true;
         }
 
-        if (Input.GetButtonUp("Fire1") && triceratops) 
-        {
-            AttackTriceratops attackTriceratops = (AttackTriceratops) attackRoot[activeAttack];
-
-            attackTriceratops.CancelAttack();
-
-            //Restauramos la velocidad de movimiento
-            speed = iniSpeed;
-
-            shielded = false;
-        }
-
-        if (Input.GetButtonDown("ChangeAttackF") && !shielded) ChangeAttack(1);
-        else if (Input.GetButtonDown("ChangeAttackB") && !shielded) ChangeAttack(-1);
+        if (Input.GetButtonDown("ChangeAttackF")) ChangeAttack(1);
+        else if (Input.GetButtonDown("ChangeAttackB")) ChangeAttack(-1);
 
     }
     void FixedUpdate()
