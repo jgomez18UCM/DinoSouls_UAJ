@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private int prevAttack;
 
     private GameManager gm;
+    private Stunt stun;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
         dashScript = GetComponent<Dash>();
 
         gm = GameManager.GetInstance();
+        stun = GetComponent<Stunt>();
     }
 
 
@@ -146,7 +148,7 @@ public class PlayerController : MonoBehaviour
     }
     public void ActivaStunt()//publico porque lo llama el pteranodon
     {
-        GetComponent<Stunt>().enabled = true;
+        stun.enabled=true;
     }
 
     public void ActivateFallingAnimation() 

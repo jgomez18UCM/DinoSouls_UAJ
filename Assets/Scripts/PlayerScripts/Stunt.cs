@@ -13,6 +13,7 @@ public class Stunt : MonoBehaviour
         playercont.enabled =false;
         rg.velocity = new Vector2(0,0);
         print("desactiuve el player ocntroller");
+        Invoke("Desactivar", 3);
        
 
 

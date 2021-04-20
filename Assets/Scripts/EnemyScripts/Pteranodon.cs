@@ -15,7 +15,7 @@ public class Pteranodon : MonoBehaviour
    float mod;
     Rigidbody2D rg;
     Transform posjug;
-    bool atacando=false;
+    
     void Start()
     {
         percepcion = GetComponent<Perception>();
@@ -31,22 +31,29 @@ public class Pteranodon : MonoBehaviour
         
         if (percepcion.GetSee())//cuando lo vea lo seguira hasta la distancia de  ataque
         {
-            mov = transform.position - posjug.transform.position;
+            mov = posjug.transform.position - transform.position;
             //no encontre niguna instruccion para calcular modulkos pero si alguien la conoce nos ahorramos esto XD
             mod = Mathf.Sqrt(mov.x * mov.x + mov.y * mov.y);
             mov.Normalize();
 
-            if (mod <= attackDistance)
+            if (mod < attackDistance)
             {
-                atacando = true;
-
                 Invoke("Attack", 0);
+                mov = -mov;
+
+                
                
                //si está muy cerca que salga en direccion contraria y ataca
                
 
             }
-            else if (mod > attackDistance+1)//si esta en un rango de distancia con respecto del jugador ,ataca
+  else if (mod==attackDistance)
+            {
+                Invoke("Attack", 0);
+                mov = mov * 0;
+
+            }
+            else if (mod > attackDistance)//si esta en un rango de distancia con respecto del jugador ,ataca
             {
 
                 mov = mov;
@@ -72,7 +79,7 @@ public class Pteranodon : MonoBehaviour
         //estunea al jugador activando el componente stunt que el jugador tiene 
         playercont.ActivaStunt();
         print("active el stunt");
-        mov = -mov;
+        
     }
 
 }

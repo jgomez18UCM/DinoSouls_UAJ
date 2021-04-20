@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1124633161}
-  attackDistance: 1
+  attackDistance: 3
   pteranodonSpeed: 2
 --- !u!114 &315559615
 MonoBehaviour:
@@ -2614,7 +2614,7 @@ Transform:
   m_GameObject: {fileID: 1384444634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02, y: 0.012, z: -0.20841789}
-  m_LocalScale: {x: 11.692296, y: 11.692296, z: 11.692296}
+  m_LocalScale: {x: 19.928349, y: 19.928349, z: 19.928349}
   m_Children: []
   m_Father: {fileID: 315559617}
   m_RootOrder: 0
