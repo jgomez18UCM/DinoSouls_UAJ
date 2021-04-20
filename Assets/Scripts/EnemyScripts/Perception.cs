@@ -3,7 +3,7 @@
 public class Perception : MonoBehaviour
 {
     [SerializeField]
-    private GameObject father;
+    private GameObject father = null;
 
     private bool seeing = false;
 

@@ -7,18 +7,18 @@ public class SpinoEnemy : MonoBehaviour
     Vector2 mov = new Vector2(0, 0);
     Vector2 dir = new Vector2(0, 0);
     Rigidbody2D rg;
-    float tim = 0f;
-    bool detectado =true;//se implementara bien cuando tengamos la percepcion lista
-    bool stunt = false;
+    bool detectado = false;
+    bool stun = false;
+    bool attacking = false;
       
     [SerializeField]
     Transform jugador = null;
     [SerializeField]
-    int tiempoplacaje = 1;
+    float tiempoPlacaje = 1;
     [SerializeField]
-    int tiempostunt = 1;
+    float tiempoStun = 1;
     [SerializeField]
-   float velocidadplacaje=0f;
+    float velocidadPlacaje = 0;
 
 
     Perception per;
@@ -30,7 +30,6 @@ public class SpinoEnemy : MonoBehaviour
     void Start()
     {
         rg= GetComponent<Rigidbody2D>();
-        Placaje();
         per = GetComponentInChildren<Perception>();
         p = GetComponent<Patrol>();
         e = GetComponent<EnemyFollow>();
@@ -40,77 +39,66 @@ public class SpinoEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        detectado = per.GetSee();
-
-        if (detectado && !stunt)
+        if (!stun)
         {
-
-            if (Time.time - tim > tiempoplacaje)
+            if (per) detectado = per.GetSee();
+            if(detectado && !attacking)
             {
-                
-                dir= dir*0;
-
-                detectado = false;
-                
-                stunt = true;
-
-                tim = Time.time;
+                Placaje();
             }
-
-
-        }
-        else if (Time.time - tim > tiempostunt)
-        {
-            stunt = false;
-            if (perCol) perCol.enabled = true;
-            if (p) p.enabled = true;
         }
     }
     void Placaje()
     {
-        if (detectado)
+        attacking = true;
+        dir = jugador.position - transform.position;
+        dir.Normalize();
+        transform.up = dir;
+
+        if (p)
         {
-            dir = jugador.position - transform.position;
-            dir.Normalize();
-            transform.up = dir;
-            tim = Time.time;
+            p.enabled = false;
+            p.CancelInvoke();
         }
+        if (e)
+        {
+            e.enabled = false;
+            e.CancelInvoke();
+        }
+        if (perCol) perCol.enabled = false;
+        if (p)
+        {
+            p.enabled = false;
+            p.CancelInvoke();
+        }
+
+        mov = dir * velocidadPlacaje;
+        rg.AddForce(mov, ForceMode2D.Impulse);
+        Debug.Log("vector de mov (spino): " + mov);
+        Invoke(nameof(GetStunned),tiempoPlacaje);
 
     }
-    
-    void FixedUpdate()
-    { 
-        if (detectado)
-        {
-            if (p)
-            {
-                p.enabled = false;
-                p.CancelInvoke();
-            }
-            if (e)
-            {
-                e.enabled = false;
-                e.CancelInvoke();
-            }
-            if (perCol) perCol.enabled = false;
-            if (p)
-            {
-                p.enabled = false;
-                p.CancelInvoke();
-            }
-            rg.velocity = Vector2.zero;
-            mov = dir * velocidadplacaje;
-            rg.AddForce(mov);
-            //rg.velocity = mov ;
-        }
-        else if (stunt)
-        {
-            //rg.AddForce(-mov);
-            rg.velocity = Vector2.zero;
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (attacking && collision.gameObject.layer == jugador.gameObject.layer)
+        {
+            CancelInvoke();
+            GetStunned();
         }
-    
-    
+    }
+
+    private void GetStunned()
+    { 
+        attacking = false;
+        stun = true; 
+        rg.velocity = Vector2.zero;
+        Invoke(nameof(QuitaStun), tiempoStun);
+    }
+
+    private void QuitaStun()
+    {
+        stun = false;
     }
 
 }
