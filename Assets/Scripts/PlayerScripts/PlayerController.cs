@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("AttackRoot del triceratops, hijo del jugador, a meter")]
     private MonoBehaviour attackRootTriceratops;
 
+    [SerializeField]
+    [Tooltip("GameObject animación de caída")]
+    private GameObject fallingPlayer;
+
 
     private Dash dashScript;
 
@@ -142,9 +146,11 @@ public class PlayerController : MonoBehaviour
     }
     public void ActivaStunt()//publico porque lo llama el pteranodon
     {
-        GetComponent<Stunt>().enabled=true;
+        GetComponent<Stunt>().enabled = true;
+    }
 
-    
-    
+    public void ActivateFallingAnimation() 
+    {
+        Instantiate(fallingPlayer, transform.position, transform.rotation);
     }
 }

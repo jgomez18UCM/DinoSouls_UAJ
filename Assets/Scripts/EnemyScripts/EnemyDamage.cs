@@ -10,6 +10,9 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private int enemyLives;
 
+    [SerializeField]
+    private GameObject fallingEnemy;
+
     private void OnCollisionEnter2D(Collision2D attack)
     {
         //Si lo que colisiona es el jugador llama al método Respawn
@@ -28,6 +31,13 @@ public class EnemyDamage : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void CliffFall() 
+    {
+        Instantiate(fallingEnemy, transform.position, transform.rotation);
+
+        Destroy(this.gameObject);
     }
 }
 

@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int life = 20;
 
+    [SerializeField]
+    [Tooltip("Daño al caer por un precipicio")]
+    int fallDamage = 4;
+
     //Bool que hace que el jugador no reciba daño cuando está en true
     private bool invencible = false;
 
@@ -138,5 +142,14 @@ public class GameManager : MonoBehaviour
         haveTrice = !haveTrice;
 
         theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
+    }
+
+    //Hace daño al jugador cuando se cae por un precipicio (activa animación en el futuro
+    public void CliffFall()
+    {
+        if (!invencible) 
+        {
+            TakeDamage(fallDamage);
+        }
     }
 }
