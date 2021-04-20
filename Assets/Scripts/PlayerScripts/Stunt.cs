@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Stunt : MonoBehaviour
 {
-    [SerializeField] GameObject jugador;
-    PlayerController playercont;   
-    void Start()
+   
+    PlayerController playercont;
+    Rigidbody2D rg;
+    void OnEnable()
     {
-        playercont = jugador.GetComponent<PlayerController>();
+        playercont =GetComponent<PlayerController>();
         playercont.enabled =false;
+        rg.velocity = new Vector2(0,0);
+        print("desactiuve el player ocntroller");
+       
+
 
     }
 

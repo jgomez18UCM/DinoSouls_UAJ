@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d9eeb2f59c5fd4b8397798af2bf2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  father: {fileID: 1384444634}
+  father: {fileID: 315559613}
 --- !u!212 &315559616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315559613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3122904, y: -0.04, z: -2.9100237}
+  m_LocalPosition: {x: 1.3122904, y: -0.2, z: -2.9100237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1384444636}
@@ -1101,7 +1101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.01, z: -10}
+  m_LocalPosition: {x: 0.3, y: 3.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1987,7 +1987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fe197aa27ff7247a4564a039b5b00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 1124633161}
 --- !u!114 &1124633166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
@@ -2237,7 +2236,7 @@ PrefabInstance:
     - target: {fileID: 5140677700851771437, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
@@ -2370,7 +2369,7 @@ PrefabInstance:
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.93
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -2615,7 +2614,7 @@ Transform:
   m_GameObject: {fileID: 1384444634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02, y: 0.012, z: -0.20841789}
-  m_LocalScale: {x: 6.795476, y: 6.795476, z: 6.795476}
+  m_LocalScale: {x: 11.692296, y: 11.692296, z: 11.692296}
   m_Children: []
   m_Father: {fileID: 315559617}
   m_RootOrder: 0
@@ -2821,6 +2820,8 @@ MonoBehaviour:
   - {fileID: 6833591187675591237, guid: 306e02bc46047c540b3267abffe3cfc8, type: 3}
   - {fileID: -2115737015225485785, guid: 306e02bc46047c540b3267abffe3cfc8, type: 3}
   herbsText: {fileID: 1172505592}
+  souls: []
+  soulSprites: []
 --- !u!1001 &1466075668
 PrefabInstance:
   m_ObjectHideFlags: 0
