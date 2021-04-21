@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 472468902621568428}
   - component: {fileID: 472468902621568429}
   - component: {fileID: -4857692532318336797}
+  - component: {fileID: 5256855281466047545}
   m_Layer: 0
   m_Name: EnemySpino
   m_TagString: Untagged
@@ -148,6 +149,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5256855281466047545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472468902621568432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  enemyLives: 2
+  fallingEnemy: {fileID: 1619345333758996521, guid: b6fa751718677714b9f18aa8694c2721,
+    type: 3}
 --- !u!1 &3356166617580097129
 GameObject:
   m_ObjectHideFlags: 0
