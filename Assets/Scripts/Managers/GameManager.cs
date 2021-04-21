@@ -66,10 +66,8 @@ public class GameManager : MonoBehaviour
         theUIManager.UpdateHerbs(herbs);
     }
 
-    public bool TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        //Bool para respawnear
-        bool respawn = false;
 
         if (!invencible)
         {
@@ -80,12 +78,9 @@ public class GameManager : MonoBehaviour
         {
             life = maxLife;
 
-            respawn = true;
+            player.transform.position = respawn.position;
         }
-
         theUIManager.UpdateHearts(life);
-
-        return respawn;
     }
 
     //Método que hace invencible al jugador un tiempo determinado
@@ -157,14 +152,6 @@ public class GameManager : MonoBehaviour
         if (!invencible) 
         {
             TakeDamage(fallDamage);
-        }
-    }
-
-    public void Respawn(int damage)
-    {
-        if (TakeDamage(damage))
-        {
-           player.transform.position = respawn.position;
         }
     }
 }
