@@ -7,11 +7,18 @@ public class EnemyAttackDMG : MonoBehaviour
     [SerializeField]
     private int damage;
 
+    private GameManager gm;
+
+    private void Start()
+    {
+        gm = GameManager.GetInstance();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer==LayerMask.NameToLayer("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().Respawn(damage);
+            gm.Respawn(damage);
         }
     }
 }

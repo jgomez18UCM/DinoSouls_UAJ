@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 3925003021163371144}
   - component: {fileID: 2269679639178914346}
   - component: {fileID: 4560644827131077968}
-  - component: {fileID: 6828485488825656181}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Untagged
@@ -157,6 +156,7 @@ MonoBehaviour:
   - {fileID: 1159055322037544487}
   - {fileID: 409135868655883689}
   attackRootTriceratops: {fileID: 5459442837107072095}
+  fallingPlayer: {fileID: 0}
 --- !u!50 &3925003021163371144
 Rigidbody2D:
   serializedVersion: 4
@@ -221,19 +221,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6828485488825656181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3925003021163371156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f70f25590dd104da0db4c21dcb1c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!1 &4761548467595893170
 GameObject:
   m_ObjectHideFlags: 0
