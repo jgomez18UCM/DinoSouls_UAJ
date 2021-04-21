@@ -36,7 +36,7 @@ public class Pteranodon : MonoBehaviour
             mod = Mathf.Sqrt(mov.x * mov.x + mov.y * mov.y);
             mov.Normalize();
 
-            if (mod < attackDistance)
+            if (mod < attackDistance-2)
             {
                 Invoke("Attack", 0);
                 mov = -mov;
@@ -47,25 +47,27 @@ public class Pteranodon : MonoBehaviour
                
 
             }
-  else if (mod==attackDistance)
+            else if ((mod>attackDistance-2)&&mod>(attackDistance+2))
             {
                 Invoke("Attack", 0);
                 mov = mov * 0;
 
             }
-            else if (mod > attackDistance)//si esta en un rango de distancia con respecto del jugador ,ataca
+            else if (mod > attackDistance+2)//si esta en un rango de distancia con respecto del jugador ,ataca
             {
 
                 mov = mov;
 
             }
-             
+
+            transform.up = mov;
         }
         else if (!percepcion.GetSee())
         {
             CancelInvoke();
             mov = mov * 0;
         }
+      
     }
     void FixedUpdate()
     {
