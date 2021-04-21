@@ -43,6 +43,12 @@ public class UImanager : MonoBehaviour
         {
             hearts[numHeart].sprite = heartSprites[amountHeart];
         }
+
+        //esto arregla el problema al recibir daño de distintas fuentes en un periodo te tiempo corto
+        for(int j = numHeart + 1; j < hearts.Length; j++)
+        {
+            hearts[j].sprite = heartSprites[0];
+        }
     }
 
     //hace update del numero en pantalla que muestra las hierbas restantes
