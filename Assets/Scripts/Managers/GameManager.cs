@@ -78,7 +78,8 @@ public class GameManager : MonoBehaviour
         {
             life = maxLife;
 
-            player.transform.position = respawn.position;
+            //Respawnea al jugador
+            Respawn(respawn.position);
         }
         theUIManager.UpdateHearts(life);
     }
@@ -146,12 +147,21 @@ public class GameManager : MonoBehaviour
         theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
     }
 
-    //Hace daño al jugador cuando se cae por un precipicio (activa animación en el futuro
-    public void CliffFall()
+    //Hace daño al jugador cuando se cae por un precipicio (activa animación en el futuro)
+    public void CliffFall(Vector2 respawnPoint)
     {
         if (!invencible) 
         {
             TakeDamage(fallDamage);
+
+            //Si no muere respawnea al lado
+            if (life < maxLife) Respawn(respawnPoint);
         }
+    }
+
+    //Método que respawnea al jugador en el punto dado por el vector
+    void Respawn(Vector2 respawnPoint) 
+    {
+        player.transform.position = respawnPoint;
     }
 }
