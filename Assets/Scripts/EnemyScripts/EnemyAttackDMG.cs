@@ -18,7 +18,7 @@ public class EnemyAttackDMG : MonoBehaviour
     {
         if (collision.gameObject.layer==LayerMask.NameToLayer("Player"))
         {
-            gm.Respawn(damage);
+            gm.TakeDamage(damage);
         }
     }
 }
