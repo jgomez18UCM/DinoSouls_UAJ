@@ -13,12 +13,18 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private GameObject fallingEnemy;
 
+    private GameManager gm;
+
+    private void Start()
+    {
+        gm = GameManager.GetInstance();
+    }
     private void OnCollisionEnter2D(Collision2D attack)
     {
         //Si lo que colisiona es el jugador llama al método Respawn
         if (attack.gameObject.GetComponent<PlayerController>() != null)
         {
-            attack.gameObject.GetComponent<PlayerHealth>().Respawn(damage);
+            gm.Respawn(damage);
         }
 
     }

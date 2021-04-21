@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool haveTrex = true, haveAnkylo = true, haveTrice=true;
 
+    //punto de respawn del jugador
+    [SerializeField]
+    private Transform respawn;
+
+    [SerializeField]
+    private GameObject player;
+
     void Awake()
     {
         if (instance == null)
@@ -150,6 +157,14 @@ public class GameManager : MonoBehaviour
         if (!invencible) 
         {
             TakeDamage(fallDamage);
+        }
+    }
+
+    public void Respawn(int damage)
+    {
+        if (TakeDamage(damage))
+        {
+           player.transform.position = respawn.position;
         }
     }
 }
