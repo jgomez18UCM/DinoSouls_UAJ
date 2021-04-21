@@ -22,6 +22,7 @@ public class Pteranodon : MonoBehaviour
         posjug = jugador.GetComponent<Transform>();
         playercont = jugador.GetComponent<PlayerController>();
         rg = GetComponent<Rigidbody2D>();
+        
 
     }
 
@@ -65,13 +66,18 @@ public class Pteranodon : MonoBehaviour
         else if (!percepcion.GetSee())
         {
             CancelInvoke();
+
             mov = mov * 0;
         }
       
     }
     void FixedUpdate()
     {
+        if (!percepcion.GetSee())
+            rg.velocity = mov * 0;
+        else
         rg.velocity = mov * pteranodonSpeed;
+       
     
     
     }
