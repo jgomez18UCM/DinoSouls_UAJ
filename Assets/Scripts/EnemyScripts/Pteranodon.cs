@@ -8,6 +8,7 @@ public class Pteranodon : MonoBehaviour
     [SerializeField] GameObject jugador;
     [SerializeField] int attackDistance;
     [SerializeField] int pteranodonSpeed;
+    int speedAuxiliar;
     Perception percepcion;
     Vector2 mov = new Vector2(0, 0);
     PlayerController playercont;
@@ -22,6 +23,7 @@ public class Pteranodon : MonoBehaviour
         posjug = jugador.GetComponent<Transform>();
         playercont = jugador.GetComponent<PlayerController>();
         rg = GetComponent<Rigidbody2D>();
+        speedAuxiliar = pteranodonSpeed;
         
 
     }
@@ -37,37 +39,41 @@ public class Pteranodon : MonoBehaviour
             mod = Mathf.Sqrt(mov.x * mov.x + mov.y * mov.y);
             mov.Normalize();
 
-            if (mod < attackDistance-2)
+            if (mod < attackDistance - 2)
             {
                 Invoke("Attack", 0);
                 mov = -mov;
+                pteranodonSpeed = speedAuxiliar;
 
-                
-               
-               //si está muy cerca que salga en direccion contraria y ataca
-               
+
+                //si está muy cerca que salga en direccion contraria y ataca
+
 
             }
-            else if ((mod>attackDistance-2)&&mod>(attackDistance+2))
+            else if ((mod<attackDistance)&&mod>= attackDistance - 2)
             {
-                Invoke("Attack", 0);
-                mov = mov * 0;
+                mov = mov;
+                pteranodonSpeed = 0;
+                //mov = mov * 0; mov me cambia la direccion tbm solo tengo que tocar la velocidad
 
             }
-            else if (mod > attackDistance+2)//si esta en un rango de distancia con respecto del jugador ,ataca
+            else if (mod > attackDistance + 2)//si esta en un rango de distancia con respecto del jugador ,ataca
             {
 
                 mov = mov;
+                pteranodonSpeed = speedAuxiliar;
 
             }
+           
 
             transform.up = mov;
         }
         else if (!percepcion.GetSee())
         {
             CancelInvoke();
+            pteranodonSpeed = 0;
 
-            mov = mov * 0;
+            //mov = mov * 0;
         }
       
     }
@@ -78,6 +84,15 @@ public class Pteranodon : MonoBehaviour
         else
         rg.velocity = mov * pteranodonSpeed;
        
+    
+    
+    }
+    void OnTriggerEntered2D(Collider2D other)
+    {
+        if (other.GetComponent<PlayerController>() != null)
+        {
+            Invoke("Attack", 0);
+        }
     
     
     }

@@ -499,6 +499,8 @@ GameObject:
   - component: {fileID: 315559615}
   - component: {fileID: 315559614}
   - component: {fileID: 315559618}
+  - component: {fileID: 315559620}
+  - component: {fileID: 315559619}
   m_Layer: 9
   m_Name: Pteranodon
   m_TagString: Untagged
@@ -593,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 315559613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3122904, y: -3.71, z: -2.9100237}
-  m_LocalScale: {x: 0.51871, y: 0.51871, z: 0.51871}
+  m_LocalScale: {x: 0.80929136, y: 0.80929136, z: 0.80929136}
   m_Children:
   - {fileID: 1384444636}
   m_Father: {fileID: 0}
@@ -620,6 +622,62 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &315559619
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315559613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.07321854, y: 2.2694275}
+      - {x: -1.6136878, y: 2.2929392}
+      - {x: -0.46534225, y: 0.6090523}
+      - {x: 0.48267096, y: 0.5830593}
+      - {x: 1.753966, y: 2.0956926}
+--- !u!61 &315559620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315559613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &323365789
 PrefabInstance:
   m_ObjectHideFlags: 0
