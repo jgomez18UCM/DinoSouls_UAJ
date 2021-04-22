@@ -647,11 +647,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.07321854, y: 2.2694275}
-      - {x: -1.6136878, y: 2.2929392}
+    - - {x: 0.1431418, y: 3.5047557}
+      - {x: -2.6392422, y: 3.4816508}
       - {x: -0.46534225, y: 0.6090523}
       - {x: 0.48267096, y: 0.5830593}
-      - {x: 1.753966, y: 2.0956926}
+      - {x: 2.872754, y: 3.517485}
 --- !u!61 &315559620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124633161}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51fe197aa27ff7247a4564a039b5b00b, type: 3}
   m_Name: 
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1260411343}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124633161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb1e13a6988f47d4e8e7836075548474, type: 3}
   m_Name: 
@@ -2396,6 +2396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
       propertyPath: attackRoot.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2427,7 +2432,7 @@ PrefabInstance:
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
