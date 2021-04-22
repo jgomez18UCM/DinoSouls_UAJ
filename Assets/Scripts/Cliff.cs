@@ -17,7 +17,7 @@ public class Cliff : MonoBehaviour
         }
 
         //Si se cae un enemigo hace una pequeña animación y lo destruye
-        else  
+        else
         {
             enemyDamage = collision.GetComponent<EnemyDamage>();
 

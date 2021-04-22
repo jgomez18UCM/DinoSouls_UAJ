@@ -21,19 +21,20 @@ public class SpinoEnemy : MonoBehaviour
     float velocidadPlacaje = 0;
 
 
-    Perception per;
-    Patrol p;
-    EnemyFollow e;
-    Collider2D perCol;
+    Perception perceptionComponent;
+    Patrol patrol;
+    EnemyFollow enemyFollow;
+    [SerializeField]
+    Collider2D perceptionCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         rg= GetComponent<Rigidbody2D>();
-        per = GetComponentInChildren<Perception>();
-        p = GetComponent<Patrol>();
-        e = GetComponent<EnemyFollow>();
-        perCol = GetComponentInChildren<Collider2D>();
+        perceptionComponent = GetComponentInChildren<Perception>();
+        patrol = GetComponent<Patrol>();
+        enemyFollow = GetComponent<EnemyFollow>();
+        
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class SpinoEnemy : MonoBehaviour
     {
         if (!stun)
         {
-            if (per) detectado = per.GetSee();
+            if (perceptionComponent) detectado = perceptionComponent.GetSee();
             if(detectado && !attacking)
             {
                 Placaje();
@@ -55,26 +56,26 @@ public class SpinoEnemy : MonoBehaviour
         dir.Normalize();
         transform.up = dir;
 
-        if (p)
+        if (patrol)
         {
-            p.enabled = false;
-            p.CancelInvoke();
+            patrol.enabled = false;
+            patrol.CancelInvoke();
         }
-        if (e)
+        if (enemyFollow)
         {
-            e.enabled = false;
-            e.CancelInvoke();
+            enemyFollow.enabled = false;
+            enemyFollow.CancelInvoke();
         }
-        if (perCol) perCol.enabled = false;
-        if (p)
+        if (perceptionCollider) perceptionCollider.enabled = false;
+        if (patrol)
         {
-            p.enabled = false;
-            p.CancelInvoke();
+            patrol.enabled = false;
+            patrol.CancelInvoke();
         }
 
         mov = dir * velocidadPlacaje;
         rg.AddForce(mov, ForceMode2D.Impulse);
-        Debug.Log("vector de mov (spino): " + mov);
+        //Debug.Log("vector de mov (spino): " + mov);
         Invoke(nameof(GetStunned),tiempoPlacaje);
 
     }
@@ -99,6 +100,12 @@ public class SpinoEnemy : MonoBehaviour
     private void QuitaStun()
     {
         stun = false;
+        if (perceptionCollider) perceptionCollider.enabled = true;
+        if (patrol)
+        {
+            patrol.enabled = true;
+            patrol.CancelInvoke();
+        }
     }
 
 }
