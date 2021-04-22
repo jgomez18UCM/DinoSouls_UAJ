@@ -7,9 +7,9 @@ public class PoisonAttack : MonoBehaviour
     [SerializeField]
     private int damage;
     [SerializeField]
-    public float poisonSpeed = 2f;
+    public float speed = 2f;
     [SerializeField]
-    public float poisonDistance = 6f;
+    public float distance = 6f;
     [SerializeField]
     public GameObject drop;
     float tiempolanzado;
@@ -20,7 +20,7 @@ public class PoisonAttack : MonoBehaviour
     {
         rg = this.GetComponent<Rigidbody2D>();
         tiempolanzado = Time.time;
-        tiempotop = poisonDistance / poisonSpeed;//siguiendo la formula v=d/t        
+        tiempotop = distance / speed;//siguiendo la formula v=d/t        
     }
 
     // Update is called once per frame
@@ -28,25 +28,21 @@ public class PoisonAttack : MonoBehaviour
     {
         if (Time.time - tiempolanzado < tiempotop)
         {
-            if (Time.time - tiempolanzado < poisonDistance / 2)
-                rg.velocity = (transform.up * poisonSpeed);
+            if (Time.time - tiempolanzado < distance / 2)
+                rg.velocity = (transform.up * speed);
             else
-                rg.AddForce(-transform.up * poisonSpeed / 4);
-
+                rg.AddForce(-transform.up * speed / 4);
 
         }
         else
         {
             Destroy(this.gameObject);
-
-
         }
 
     }
     void OnDestroy()
     {
         Instantiate(drop, this.transform.position, this.transform.rotation);
-
     }
     
 }

@@ -7,12 +7,11 @@ public class DilophoMove : MonoBehaviour
     [SerializeField]
     GameObject jugador = null;
     [SerializeField]
-    private float velocity;
+    private float velocity, velocAux;
     [SerializeField]
     private float standByTime;
     Rigidbody2D rbEnemigo;
     private Vector2 distancia;
-    bool dentroRango = false;
     [SerializeField]
     public GameObject drop;
     Perception perception;
@@ -23,33 +22,32 @@ public class DilophoMove : MonoBehaviour
         rbEnemigo = GetComponent<Rigidbody2D>();
         Instantiate(drop, this.transform.position, this.transform.rotation);
         perception = GetComponentInChildren<Perception>();
+        velocity = velocAux;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         
-        if (transform.position != jugador.transform.position && !perception.GetSee())
+        if (transform.position != jugador.transform.position)
         {
             distancia = jugador.transform.position - transform.position;
            
-        }
-        else if (transform.position != jugador.transform.position && perception.GetSee())
-        {
-            distancia = jugador.transform.position + transform.position;
         }
         Invoke(nameof(Mueve), standByTime);
     }
 
     private void Mueve()
     {
-        rbEnemigo.velocity = distancia.normalized * (velocity);
         transform.up = distancia.normalized;
+        if (!perception.GetSee())
+        {
+            rbEnemigo.velocity = distancia.normalized * (velocity);            
+        }
+        else
+        {
+            rbEnemigo.velocity = distancia.normalized * (-velocity);
+        }
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        dentroRango = true;
-    }
-
 }
 
