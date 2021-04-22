@@ -9,8 +9,10 @@ public class Stunt : MonoBehaviour
     Rigidbody2D rg;
     void OnEnable()
     {
-        playercont =GetComponent<PlayerController>();
-        playercont.enabled =false;
+        //playercont =GetComponent<PlayerController>();
+        //playercont.enabled =false;
+        GetComponent<PlayerController>().enabled = false;
+        rg = GetComponent<Rigidbody2D>();
         rg.velocity = new Vector2(0,0);
         print("desactiuve el player ocntroller");
         Invoke("Desactivar", 3);

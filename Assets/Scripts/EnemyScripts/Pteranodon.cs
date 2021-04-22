@@ -12,7 +12,7 @@ public class Pteranodon : MonoBehaviour
     Perception percepcion;
     Vector2 mov = new Vector2(0, 0);
     PlayerController playercont;
-
+    Stunt stun;
    float mod;
     Rigidbody2D rg;
     Transform posjug;
@@ -21,7 +21,9 @@ public class Pteranodon : MonoBehaviour
     {
         percepcion = GetComponent<Perception>();
         posjug = jugador.GetComponent<Transform>();
-        playercont = jugador.GetComponent<PlayerController>();
+        //playercont = jugador.GetComponent<PlayerController>();
+        stun = jugador.GetComponent<Stunt>();
+        stun.enabled = false;
         rg = GetComponent<Rigidbody2D>();
         speedAuxiliar = pteranodonSpeed;
         
@@ -41,7 +43,7 @@ public class Pteranodon : MonoBehaviour
 
             if (mod < attackDistance - 2)
             {
-                Invoke("Attack", 0);
+                //Invoke("Attack", 0);
                 mov = -mov;
                 pteranodonSpeed = speedAuxiliar;
 
@@ -89,20 +91,23 @@ public class Pteranodon : MonoBehaviour
     }
     void OnTriggerEntered2D(Collider2D other)
     {
+        print("el trigger va");
         if (other.GetComponent<PlayerController>() != null)
         {
-            Invoke("Attack", 0);
+            //Invoke("Attack", 0);
+            //other.GetComponent<Stunt>().enabled = true;
+            stun.enabled = true;
         }
     
     
     }
-    void Attack()
+    /*void Attack()
     {
 
         //estunea al jugador activando el componente stunt que el jugador tiene 
         playercont.ActivaStunt();
         print("active el stunt");
         
-    }
+    }*/
 
 }
