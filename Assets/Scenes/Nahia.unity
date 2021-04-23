@@ -680,8 +680,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 1124633161}
   velocity: 2
+  velocAux: 0
   standByTime: 1
   drop: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080, type: 3}
+  distanciaMod: 0
 --- !u!1 &376916778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5932100420765696497, guid: 05b8f179e7a9aab46913b715f69e41b2,
@@ -944,7 +946,7 @@ GameObject:
   - component: {fileID: 560105881}
   - component: {fileID: 560105882}
   - component: {fileID: 560105883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
