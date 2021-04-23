@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stunt : MonoBehaviour
+public class Stun : MonoBehaviour
 {
    
     PlayerController playercont;
     Rigidbody2D rg;
     void OnEnable()
     {
-        //playercont =GetComponent<PlayerController>();
+        playercont =GetComponent<PlayerController>();
         //playercont.enabled =false;
-        GetComponent<PlayerController>().enabled = false;
+        playercont.enabled = false;
         rg = GetComponent<Rigidbody2D>();
         rg.velocity = new Vector2(0,0);
         print("desactiuve el player ocntroller");
@@ -21,14 +21,15 @@ public class Stunt : MonoBehaviour
 
     }
 
-    void OnDisable()
+    /*void OnDisable()
     {
         playercont.enabled = true;
 
     
-    }
+    }*/
     void Desactivar()
     {
+        playercont.enabled = true;
         this.enabled = false;
     
     

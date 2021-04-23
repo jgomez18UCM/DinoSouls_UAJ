@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private int prevAttack;
 
     private GameManager gm;
-    private Stunt stun;
+    private Stun stun;
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         dashScript = GetComponent<Dash>();
 
         gm = GameManager.GetInstance();
-        stun = GetComponent<Stunt>();
+        stun = GetComponent<Stun>();
     }
 
 
