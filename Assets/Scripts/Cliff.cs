@@ -9,11 +9,14 @@ public class Cliff : MonoBehaviour
     [SerializeField]
     Transform cliffRespawnPoint;
 
+    [SerializeField]
+    private float cliffRespawnTime = 3;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerController>() != null)
         {
-            GameManager.GetInstance().CliffFall(cliffRespawnPoint.position);
+            GameManager.GetInstance().CliffFall(cliffRespawnPoint.position, cliffRespawnTime);
         }
 
         //Si se cae un enemigo hace una pequeña animación y lo destruye

@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    Vector2 respawnPointTemp;
+
     void Awake()
     {
         if (instance == null)
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
             life = maxLife;
 
             //Respawnea al jugador
-            Respawn(respawn.position);
+            Respawn(respawn.position, 0);
         }
         theUIManager.UpdateHearts(life);
     }
@@ -148,20 +150,29 @@ public class GameManager : MonoBehaviour
     }
 
     //Hace daño al jugador cuando se cae por un precipicio (activa animación en el futuro)
-    public void CliffFall(Vector2 respawnPoint)
+    public void CliffFall(Vector2 respawnPoint, float respawnTime)
     {
         if (!invencible) 
         {
             TakeDamage(fallDamage);
+            player.gameObject.SetActive(false);
 
             //Si no muere respawnea al lado
-            if (life < maxLife) Respawn(respawnPoint);
+            if (life < maxLife) Respawn(respawnPoint, respawnTime);
         }
     }
 
     //Método que respawnea al jugador en el punto dado por el vector
-    void Respawn(Vector2 respawnPoint) 
+    void Respawn(Vector2 respawnPoint, float respawnTime) 
     {
-        player.transform.position = respawnPoint;
+        respawnPointTemp = respawnPoint;
+        Invoke("RespawnPlayer", respawnTime);
+    }
+
+    void RespawnPlayer() 
+    {
+        player.transform.position = respawnPointTemp;
+
+        if (!player.gameObject.activeSelf) player.gameObject.SetActive(true);
     }
 }
