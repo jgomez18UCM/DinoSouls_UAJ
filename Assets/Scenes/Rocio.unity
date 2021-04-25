@@ -2045,6 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341407f26d6c1f84b90fb7f64f388ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempostunt: 3
 --- !u!114 &1124633166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
@@ -2392,7 +2393,7 @@ PrefabInstance:
     - target: {fileID: 2269679639178914346, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371156, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -2401,13 +2402,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
-      propertyPath: attackRoot.Array.size
-      value: 3
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: attackRoot.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
