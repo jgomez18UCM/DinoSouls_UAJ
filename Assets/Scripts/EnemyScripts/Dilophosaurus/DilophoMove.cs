@@ -7,7 +7,8 @@ public class DilophoMove : MonoBehaviour
     [SerializeField]
     GameObject jugador = null;
     [SerializeField]
-    private float velocity, velocAux;
+    private float velocity;
+    float velocAux;
     [SerializeField]
     private float standByTime;
     Rigidbody2D rbEnemigo;
@@ -17,6 +18,8 @@ public class DilophoMove : MonoBehaviour
     [SerializeField]  
     float distanciaMod;
     Perception perception;
+    [SerializeField]
+    BoxCollider2D rangoAcercar, percepcion;
 
 
 
@@ -26,32 +29,56 @@ public class DilophoMove : MonoBehaviour
         rbEnemigo = GetComponent<Rigidbody2D>();
         Instantiate(drop, this.transform.position, this.transform.rotation);
         perception = GetComponentInChildren<Perception>();
-
+        velocAux = velocity;
+    }
+    void FixedUpdate()
+    {
+        rbEnemigo.velocity = vEnemigo;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
+    {
+        distancia = jugador.transform.position - transform.position;
+        Invoke(nameof(Movimiento), standByTime);
+    }
+   
+    private void Movimiento()
     {
        
-        distancia = jugador.transform.position - transform.position;
-        Invoke(nameof(Mueve), standByTime);
-    }
-
-    private void Mueve()
-    {
-        transform.up = distancia.normalized;
-        
-        if (!perception.GetSee())
+        if (!perception.GetSee() && !percepcion)
         {
-            rbEnemigo.velocity = distancia.normalized * (velocity);
+            velocAux = 0;
+        }
+        else
+        {
+           transform.up = distancia.normalized;
+        }
+        /*if (!perception.GetSee())
+        {
+            vEnemigo = distancia.normalized * (velocity);
             
         }
         else
         {
-            rbEnemigo.velocity = distancia.normalized * (-velocity);
+            vEnemigo = distancia.normalized * (-velocity);
           
+        }*/
+
+    }
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+       
+        if (perception.GetSee())
+        {
+            vEnemigo = distancia.normalized * (-velocAux);
+        }
+        else if (rangoAcercar)
+        {
+            vEnemigo = distancia.normalized * (velocAux);
         }
         
+
     }
 }
 
