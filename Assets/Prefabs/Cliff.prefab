@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cliffRespawnPoint: {fileID: 2328732207208917562}
+  cliffRespawnTime: 2
 --- !u!1 &5783662243620784567
 GameObject:
   m_ObjectHideFlags: 0

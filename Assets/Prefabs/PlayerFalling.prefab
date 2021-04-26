@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5115942847500863811}
-  - component: {fileID: 5115942847500863810}
   - component: {fileID: 4719879243262408992}
   m_Layer: 0
   m_Name: PlayerFalling
@@ -33,21 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5115942847500863810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115942847500863808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a78bea9b05f734baf43344b35fccdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 270
-  sizeReduceSpeed: 1
-  fallTime: 1
 --- !u!95 &4719879243262408992
 Animator:
   serializedVersion: 3
@@ -58,7 +42,7 @@ Animator:
   m_GameObject: {fileID: 5115942847500863808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a15a494dc6f2e3246a24a4100bb7fa31, type: 2}
+  m_Controller: {fileID: 9100000, guid: ee08989bfad80264897b0701567bb5d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

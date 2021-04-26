@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   enemyLives: 1
-  fallingEnemy: {fileID: 1619345333758996521, guid: b6fa751718677714b9f18aa8694c2721,
+  fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
 --- !u!1 &7607735152305098460
 GameObject:

@@ -10,7 +10,7 @@ public class Cliff : MonoBehaviour
     Transform cliffRespawnPoint;
 
     [SerializeField]
-    private float cliffRespawnTime = 3;
+    private float cliffRespawnTime = 2;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

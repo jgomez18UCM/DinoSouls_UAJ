@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    [SerializeField]
+    private float respawnTime = 2;
+
+    [SerializeField]
+    private GameObject playerFallingPrefab;
+
     Vector2 respawnPointTemp;
 
     void Awake()
@@ -81,7 +87,7 @@ public class GameManager : MonoBehaviour
             life = maxLife;
 
             //Respawnea al jugador
-            Respawn(respawn.position, 0);
+            Respawn(respawn.position, respawnTime);
         }
         theUIManager.UpdateHearts(life);
     }
@@ -157,8 +163,15 @@ public class GameManager : MonoBehaviour
             TakeDamage(fallDamage);
             player.gameObject.SetActive(false);
 
+            GameObject instance = Instantiate(playerFallingPrefab, player.transform.position, player.transform.rotation);
+
+            Destroy(instance, respawnTime);
+
             //Si no muere respawnea al lado
-            if (life < maxLife) Respawn(respawnPoint, respawnTime);
+            if (life < maxLife)
+            {
+                Respawn(respawnPoint, respawnTime);
+            }
         }
     }
 

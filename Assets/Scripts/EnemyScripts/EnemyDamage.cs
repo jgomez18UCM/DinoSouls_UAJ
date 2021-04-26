@@ -41,9 +41,11 @@ public class EnemyDamage : MonoBehaviour
 
     public void CliffFall() 
     {
-        Instantiate(fallingEnemy, transform.position, transform.rotation);
+        GameObject instance = Instantiate(fallingEnemy, transform.position, transform.rotation);
 
         Destroy(this.gameObject);
+
+        Destroy(instance, 2);
     }
 }
 
