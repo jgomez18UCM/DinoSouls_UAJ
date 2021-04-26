@@ -16,8 +16,6 @@ public class DilophoMove : MonoBehaviour
     private Vector2 distancia, vEnemigo;
     [SerializeField]
     public GameObject drop;
-    [SerializeField]  
-    float distanciaMod;
     [SerializeField]
     Perception perception;
     [SerializeField]
@@ -86,20 +84,17 @@ public class DilophoMove : MonoBehaviour
         velocAux = velocity;*/
 
     }
-    /*private void OnTriggerStay2D(Collider2D collider)
+    private void OnTriggerStay2D(Collider2D collider)
     {
         transform.up = distancia.normalized;
-        if (perception.GetSee())
+        /*if (rangoAcercar)
         {
             vEnemigo = distancia.normalized * (-velocAux);
-        }
-        else if (rangoAcercar)
-        {
-            vEnemigo = distancia.normalized * (velocAux);
-        }
+        }*/
+        
        
 
-    }*/
+    }
 }
 
 
