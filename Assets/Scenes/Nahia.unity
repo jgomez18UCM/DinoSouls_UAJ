@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 1124633161}
   velocity: 2
-  standByTime: 1
+  standByTime: 5
   drop: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080, type: 3}
   distanciaMod: 0
   rangoAcercar: {fileID: 778162359}

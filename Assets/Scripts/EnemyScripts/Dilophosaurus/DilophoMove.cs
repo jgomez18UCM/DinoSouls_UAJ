@@ -19,7 +19,7 @@ public class DilophoMove : MonoBehaviour
     float distanciaMod;
     Perception perception;
     [SerializeField]
-    BoxCollider2D rangoAcercar, percepcion;
+    BoxCollider2D rangoAcercar, percepCol;
 
 
 
@@ -40,20 +40,11 @@ public class DilophoMove : MonoBehaviour
     private void Update()
     {
         distancia = jugador.transform.position - transform.position;
-        Invoke(nameof(Movimiento), standByTime);
+        //Invoke(nameof(Movimiento), standByTime);
     }
    
     private void Movimiento()
     {
-       
-        if (!perception.GetSee() && !percepcion)
-        {
-            velocAux = 0;
-        }
-        else
-        {
-           transform.up = distancia.normalized;
-        }
         /*if (!perception.GetSee())
         {
             vEnemigo = distancia.normalized * (velocity);
@@ -66,9 +57,19 @@ public class DilophoMove : MonoBehaviour
         }*/
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        percepCol.enabled = false;
+        if (perception.GetSee())
+        {
+            velocAux = 0;
+        }
+        velocAux = velocity;
+
+    }
     private void OnTriggerStay2D(Collider2D collider)
     {
-       
+        transform.up = distancia.normalized;
         if (perception.GetSee())
         {
             vEnemigo = distancia.normalized * (-velocAux);
@@ -77,7 +78,7 @@ public class DilophoMove : MonoBehaviour
         {
             vEnemigo = distancia.normalized * (velocAux);
         }
-        
+       
 
     }
 }
