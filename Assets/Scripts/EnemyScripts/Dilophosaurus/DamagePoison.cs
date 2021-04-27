@@ -12,31 +12,17 @@ public class DamagePoison : MonoBehaviour
     float distance = 6f;
     [SerializeField]
     GameObject drop;
-    float tiempolanzado, tiempotop, venenoIni = 0, cooldownIni = 0;
+    float tiempolanzado, tiempotop;
     Rigidbody2D rg;
-    // Start is called before the first frame update
+
+    
     void Start()
     {
         rg = this.GetComponent<Rigidbody2D>();
         tiempolanzado = Time.time;
         tiempotop = distance / speed;//siguiendo la formula v=d/t        
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-      
-        /*if (Time.time - venenoIni < tiempoEnvenenado)
-        {
-            Debug.Log("Envenenado");
-            cooldownIni = Time.time;
-            if (Time.time - cooldownIni < cooldown)
-            {
-                GameManager.GetInstance().TakeDamage(damage);
-
-            }
-        }*/
-    }
+   
     void FixedUpdate()
     {
         if (Time.time - tiempolanzado < tiempotop)
@@ -54,16 +40,10 @@ public class DamagePoison : MonoBehaviour
         }
 
     }
-   /* void OnDestroy()
-    {
-        Instantiate(drop, this.transform.position, this.transform.rotation);
-    }*/
-    
+   
     //Si detecta al jugador hace daño con TakeDamage y destruye el veneno
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //venenoIni = Time.time;
-
+    {       
         GameManager.GetInstance().PoisonDamage();
         Destroy(this.gameObject);
     }

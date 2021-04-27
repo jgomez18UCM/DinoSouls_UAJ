@@ -49,7 +49,7 @@ public class DilophoMove : MonoBehaviour
         
         distancia = jugador.transform.position - transform.position;
         rbEnemigo.velocity = distancia.normalized *velocity;
-        //Debug.Log(rbEnemigo.velocity);
+        Debug.Log(rbEnemigo.velocity);
 
         if (percepCol) percepCol.enabled = false;
         if (perception) perception.enabled = false;
@@ -68,10 +68,11 @@ public class DilophoMove : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
+        
         transform.up = distancia.normalized;
         if (rangoAcercar)
         {
-            vEnemigo = distancia.normalized * (-velocAux);
+            rbEnemigo.velocity = distancia.normalized * -velocity;
         }
         
     }

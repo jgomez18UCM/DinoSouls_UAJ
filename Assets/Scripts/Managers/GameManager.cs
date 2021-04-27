@@ -197,7 +197,7 @@ public class GameManager : MonoBehaviour
     {
         if (poisonTick < contpoisonMax)
         {
-            Debug.Log("DAño");
+            //Debug.Log("DAño");
             TakeDamage(poisonDamage);
             Invoke(nameof(PoisonDamage), 1);
             poisonTick++;

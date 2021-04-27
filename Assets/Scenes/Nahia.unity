@@ -2193,7 +2193,12 @@ PrefabInstance:
     - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: poisonDamage
-      value: 10
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
+        type: 3}
+      propertyPath: contpoisonMax
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4687050786715699882, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
