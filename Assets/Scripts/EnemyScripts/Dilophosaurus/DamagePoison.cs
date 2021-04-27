@@ -5,9 +5,9 @@ using UnityEngine;
 public class DamagePoison : MonoBehaviour
 {
     [SerializeField]
-    private int damage, tiempoEnvenenado, cooldown;
+    private int damage;
     [SerializeField]
-    float speed = 2f;
+    float speed = 2f, tiempoEnvenenado, cooldown;
     [SerializeField]
     float distance = 6f;
     [SerializeField]
@@ -23,6 +23,20 @@ public class DamagePoison : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+      
+        /*if (Time.time - venenoIni < tiempoEnvenenado)
+        {
+            Debug.Log("Envenenado");
+            cooldownIni = Time.time;
+            if (Time.time - cooldownIni < cooldown)
+            {
+                GameManager.GetInstance().TakeDamage(damage);
+
+            }
+        }*/
+    }
     void FixedUpdate()
     {
         if (Time.time - tiempolanzado < tiempotop)
@@ -48,16 +62,10 @@ public class DamagePoison : MonoBehaviour
     //Si detecta al jugador hace daño con TakeDamage y destruye el veneno
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        venenoIni = Time.time;
-       /* if (tiempoEnvenenado)
-        {
-            if ()
-            {
+        //venenoIni = Time.time;
 
-            }
-        }*/
-        GameManager.GetInstance().TakeDamage(damage);
+        GameManager.GetInstance().PoisonDamage();
         Destroy(this.gameObject);
-        
     }
+   
 }

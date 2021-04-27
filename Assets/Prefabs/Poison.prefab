@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   speed: 2
+  tiempoEnvenenado: 2
+  cooldown: 1
   distance: 6
   drop: {fileID: 3393968286270886297, guid: e2a9164d14e9c694d90da8db98067ce6, type: 3}
 --- !u!50 &1301339478873195640
