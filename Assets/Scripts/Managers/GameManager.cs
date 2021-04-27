@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private int life = 20;
-
+    [SerializeField]
+    int contpoisonMax = 4;
+    [SerializeField]
+    int poisonDamage= 1;
+    int poisonTick = 0;
     [SerializeField]
     [Tooltip("Daño al caer por un precipicio")]
     int fallDamage = 4;
@@ -178,6 +182,7 @@ public class GameManager : MonoBehaviour
     //Método que respawnea al jugador en el punto dado por el vector
     void Respawn(Vector2 respawnPoint, float respawnTime) 
     {
+        CancelInvoke();
         respawnPointTemp = respawnPoint;
         Invoke("RespawnPlayer", respawnTime);
     }
@@ -187,5 +192,19 @@ public class GameManager : MonoBehaviour
         player.transform.position = respawnPointTemp;
 
         if (!player.gameObject.activeSelf) player.gameObject.SetActive(true);
+    }
+    public void PoisonDamage()
+    {
+        if (poisonTick < contpoisonMax)
+        {
+            Debug.Log("DAño");
+            TakeDamage(poisonDamage);
+            Invoke(nameof(PoisonDamage), 1);
+            poisonTick++;
+        }
+        else
+        {
+            poisonTick = 0;
+        }
     }
 }
