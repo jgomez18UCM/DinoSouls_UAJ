@@ -1705,6 +1705,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7523791590216944125, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523791590216944125, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3333334
+      objectReference: {fileID: 0}
     - target: {fileID: 7607735152305098460, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
@@ -1775,9 +1785,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
-      propertyPath: attackRoot.Array.data[2]
+      propertyPath: direction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1394226234}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_RootOrder
@@ -1786,12 +1796,12 @@ PrefabInstance:
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.02
+      value: -3.52
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22186548
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -1836,12 +1846,12 @@ PrefabInstance:
     - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 6828485488825656181, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -1852,6 +1862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606772320658485771, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: m_Name
+      value: Direction
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8100351e5d5a6654d829a98491f14374, type: 3}
@@ -1999,6 +2014,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05b8f179e7a9aab46913b715f69e41b2, type: 3}
+--- !u!1 &1394226234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7606772320658485771, guid: 8100351e5d5a6654d829a98491f14374,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260411343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1466075668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2154,12 +2175,6 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 1668025949}
-    - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
-        type: 3}
-      propertyPath: playerFallingPrefab
-      value: 
-      objectReference: {fileID: 5115942847500863808, guid: 9e952aebbb26e024eb8c98eabd225c8c,
-        type: 3}
     - target: {fileID: 4687050786715699882, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: m_Name

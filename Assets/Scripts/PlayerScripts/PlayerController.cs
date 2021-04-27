@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     [Tooltip("GO cuyo transform.up es usado por el dash para calcular la dirección")]
-    private GameObject dashDirection;
+    private GameObject direction;
 
 
     private Dash dashScript;
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             tengolanza = false;
 
-            Instantiate(lanza, this.transform.position, transform.rotation);
+            Instantiate(lanza, direction.transform.position, direction.transform.rotation);
 
         }
         else if (Input.GetButtonDown("Fire3"))
@@ -96,9 +96,6 @@ public class PlayerController : MonoBehaviour
         if (dashCooldown > 0) dashCooldown -= Time.deltaTime;
 
         //Ataque
-
-        bool triceratops = attackRoot[activeAttack] is AttackTriceratops;
-
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -124,7 +121,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerLateralLeftWalking");
 
-            dashDirection.transform.up = Vector2.left;
+            direction.transform.up = Vector2.left;
         }
 
         //abajo
@@ -132,7 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerFrontWalking");
 
-            dashDirection.transform.up = Vector2.down;
+            direction.transform.up = Vector2.down;
         }
 
         //arriba
@@ -140,7 +137,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerBackWalking");
 
-            dashDirection.transform.up = Vector2.up;
+            direction.transform.up = Vector2.up;
         }
 
         //derecha
@@ -148,7 +145,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerLateralRightWalking");
 
-            dashDirection.transform.up = Vector2.right;
+            direction.transform.up = Vector2.right;
         }
 
         //diagonal abajo izquierda
@@ -156,7 +153,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerDiagonalLeftWalking");
 
-            dashDirection.transform.up = Vector2.down + Vector2.left;
+            direction.transform.up = Vector2.down + Vector2.left;
         }
 
         //diagonal arriba izquierda
@@ -164,7 +161,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerDiagonalBackLeftWalking");
 
-            dashDirection.transform.up = Vector2.up + Vector2.left;
+            direction.transform.up = Vector2.up + Vector2.left;
         }
 
         //diagonal abajo derecha
@@ -172,7 +169,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerDiagonalRightWalking");
 
-            dashDirection.transform.up = Vector2.down + Vector2.right;
+            direction.transform.up = Vector2.down + Vector2.right;
         }
 
         //diagonal arriba derecha
@@ -180,7 +177,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerDiagonalBackRightWalking");
 
-            dashDirection.transform.up = Vector2.up + Vector2.right;
+            direction.transform.up = Vector2.up + Vector2.right;
         }
 
         //parado
@@ -188,7 +185,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerStopped");
 
-            dashDirection.transform.up = Vector2.down;
+            direction.transform.up = Vector2.down;
         }
     }
     void FixedUpdate()
