@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3393968286270886295}
   - component: {fileID: 3393968286270886296}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PoisonCharco
   m_TagString: Untagged
   m_Icon: {fileID: 0}

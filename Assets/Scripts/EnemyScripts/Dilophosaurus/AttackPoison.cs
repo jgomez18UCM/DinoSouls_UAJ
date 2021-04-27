@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoisonDamage : MonoBehaviour
+public class AttackPoison : MonoBehaviour
 {
     [SerializeField]
     GameObject drop;

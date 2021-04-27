@@ -22,7 +22,7 @@ public class Perception : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        Debug.Log("Te vi");
+        //Debug.Log("Te vi");
         seeing = true;
         See();
    
@@ -48,7 +48,7 @@ public class Perception : MonoBehaviour
         {
             if (p) p.enabled = false;
             if (s) s.enabled = true;
-            Debug.Log("Seguimiento activado");
+            //Debug.Log("Seguimiento activado");
         }
         else
         {
