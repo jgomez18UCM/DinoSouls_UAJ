@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 3925003021163371144}
   - component: {fileID: 2269679639178914346}
   - component: {fileID: 4560644827131077968}
+  - component: {fileID: 3146997570167325586}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Untagged
@@ -125,7 +126,8 @@ SpriteRenderer:
   m_SortingLayerID: -1779921819
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 609ea2fb42343b14898d7a503446ddc9, type: 3}
+  m_Sprite: {fileID: -4833438273499498420, guid: 782d1abd6da72d9448f5a94dbaaa25d8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +158,9 @@ MonoBehaviour:
   - {fileID: 1159055322037544487}
   - {fileID: 409135868655883689}
   attackRootTriceratops: {fileID: 5459442837107072095}
-  fallingPlayer: {fileID: 0}
+  fallingPlayer: {fileID: 5115942847500863808, guid: 9e952aebbb26e024eb8c98eabd225c8c,
+    type: 3}
+  playerAnimator: {fileID: 3146997570167325586}
 --- !u!50 &3925003021163371144
 Rigidbody2D:
   serializedVersion: 4
@@ -212,7 +216,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -221,6 +225,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3146997570167325586
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925003021163371156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a15a494dc6f2e3246a24a4100bb7fa31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4761548467595893170
 GameObject:
   m_ObjectHideFlags: 0
