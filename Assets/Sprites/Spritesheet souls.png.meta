@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 1305971fbebb63d40a8e5c1c9d678c0d
+guid: 9f216a764db9d094491990f8f4214949
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2443959837120834350
-    second: AlmasTemp_0
+      213: 2958471331662356614
+    second: Spritesheet souls_0
   - first:
-      213: -7667095581478151534
-    second: AlmasTemp_1
+      213: -2339528014046343162
+    second: Spritesheet souls_1
   - first:
-      213: -2166509485344027344
-    second: AlmasTemp_2
+      213: 254536260773182664
+    second: Spritesheet souls_2
   - first:
-      213: 4595456509276991470
-    second: AlmasTemp_3
+      213: -6458917223772453566
+    second: Spritesheet souls_3
   - first:
-      213: -8678270508465821025
-    second: AlmasTemp_4
+      213: -5886488776149985069
+    second: Spritesheet souls_4
   - first:
-      213: 3722791561935693516
-    second: AlmasTemp_5
+      213: -8787194260416739358
+    second: Spritesheet souls_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AlmasTemp_0
+      name: Spritesheet souls_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ba8e0f580bae120800000000000000
-      internalID: 2443959837120834350
+      spriteID: 68069e1600a9e0920800000000000000
+      internalID: 2958471331662356614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlmasTemp_1
+      name: Spritesheet souls_1
       rect:
         serializedVersion: 2
         x: 32
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29a170fc031099590800000000000000
-      internalID: -7667095581478151534
+      spriteID: 60051b4aaa3588fd0800000000000000
+      internalID: -2339528014046343162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlmasTemp_2
+      name: Spritesheet souls_2
       rect:
         serializedVersion: 2
         x: 0
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03d0e8b0a130fe1e0800000000000000
-      internalID: -2166509485344027344
+      spriteID: 8cc77dd616b488300800000000000000
+      internalID: 254536260773182664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlmasTemp_3
+      name: Spritesheet souls_3
       rect:
         serializedVersion: 2
         x: 32
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef2630f85756cf30800000000000000
-      internalID: 4595456509276991470
+      spriteID: 245046b71015d56a0800000000000000
+      internalID: -6458917223772453566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlmasTemp_4
+      name: Spritesheet souls_4
       rect:
         serializedVersion: 2
         x: 0
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9a6526b3f6909780800000000000000
-      internalID: -8678270508465821025
+      spriteID: 3d8914365adfe4ea0800000000000000
+      internalID: -5886488776149985069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlmasTemp_5
+      name: Spritesheet souls_5
       rect:
         serializedVersion: 2
         x: 32
@@ -248,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc6affd83330aa330800000000000000
-      internalID: 3722791561935693516
+      spriteID: 2e7428f606d9d0680800000000000000
+      internalID: -8787194260416739358
       vertices: []
       indices: 
       edges: []
