@@ -1521,25 +1521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1e13a6988f47d4e8e7836075548474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1124633167
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124633161}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a15a494dc6f2e3246a24a4100bb7fa31, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1156047173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5932100420765696497, guid: 05b8f179e7a9aab46913b715f69e41b2,
@@ -1794,26 +1775,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
-      propertyPath: fallingPlayer
-      value: 
-      objectReference: {fileID: 5115942847500863808, guid: 9e952aebbb26e024eb8c98eabd225c8c,
-        type: 3}
-    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 1124633167}
-    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
       propertyPath: attackRoot.Array.data[2]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3925003021163371158, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -4833438273499498420, guid: 782d1abd6da72d9448f5a94dbaaa25d8,
-        type: 3}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_RootOrder
@@ -1868,6 +1832,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6828485488825656181, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}

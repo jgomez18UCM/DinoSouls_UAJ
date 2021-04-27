@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    //Variables públicas
-    public float dashSpeed;
-    public float dashDistance;
-    public float uptime;
+    [SerializeField]
+    private float dashSpeed;
+
+    [SerializeField]
+    private float dashDistance;
+
+    [SerializeField]
+    private float uptime;
 
     //SFX del dash
-    public AudioSource dashSound;
+    [SerializeField]
+    private AudioSource dashSound;
+
+    [SerializeField]
+    [Tooltip("GO hijo del player que indica la dirección del dash")]
+    private GameObject dashDirection;
 
     //Script del movimiento de la cámara
     private CameraShake cameraShake;
@@ -64,7 +73,7 @@ public class Dash : MonoBehaviour
     {
         playerController.enabled = false;
 
-        direction = transform.up;
+        direction = dashDirection.transform.up;
 
         rb.velocity = direction * dashSpeed;
 

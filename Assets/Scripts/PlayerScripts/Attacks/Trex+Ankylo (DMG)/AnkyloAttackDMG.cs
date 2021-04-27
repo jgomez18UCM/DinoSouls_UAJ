@@ -14,8 +14,12 @@ public class AnkyloAttackDMG : MonoBehaviour
     [Tooltip("Ángulo del área de ataque")]
     private float attackAngle = 90;
 
+    private EnemyDamage enemyDamage;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        enemyDamage = collision.GetComponent<EnemyDamage>();
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             //Vector de la dirección hacia el enemigo
@@ -26,9 +30,9 @@ public class AnkyloAttackDMG : MonoBehaviour
             if (rb != null) rb.AddForce(dir.normalized * knockBackForce, ForceMode2D.Impulse);
 
             //Si el ángulo está dentro del área del ataque hace daño
-            if (Vector2.Angle(transform.up, dir) <= attackAngle/2) 
+            if (Vector2.Angle(transform.up, dir) <= attackAngle/2 && enemyDamage != null) 
             {
-                collision.gameObject.GetComponent<EnemyDamage>().TakeDamage(damage);
+                enemyDamage.TakeDamage(damage);
             }
         }
     }

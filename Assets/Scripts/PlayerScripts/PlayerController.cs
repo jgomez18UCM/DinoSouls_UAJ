@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator playerAnimator;
 
+    [SerializeField]
+    [Tooltip("GO cuyo transform.up es usado por el dash para calcular la dirección")]
+    private GameObject dashDirection;
+
 
     private Dash dashScript;
 
@@ -116,31 +120,76 @@ public class PlayerController : MonoBehaviour
         //MOVIMIENTO
 
         //izquierda
-        if (movement.x < 0 && movement.y == 0) playerAnimator.Play("PlayerDiagonalLeftWalking");
+        if (movement.x < 0 && movement.y == 0)
+        {
+            playerAnimator.Play("PlayerLateralLeftWalking");
+
+            dashDirection.transform.up = Vector2.left;
+        }
 
         //abajo
-        else if (movement.x == 0 && movement.y < 0) playerAnimator.Play("PlayerFrontWalking");
+        else if (movement.x == 0 && movement.y < 0)
+        {
+            playerAnimator.Play("PlayerFrontWalking");
+
+            dashDirection.transform.up = Vector2.down;
+        }
 
         //arriba
-        else if (movement.x == 0 && movement.y > 0) playerAnimator.Play("PlayerFrontWalking");
+        else if (movement.x == 0 && movement.y > 0)
+        {
+            playerAnimator.Play("PlayerBackWalking");
+
+            dashDirection.transform.up = Vector2.up;
+        }
 
         //derecha
-        else if (movement.x > 0 && movement.y == 0) playerAnimator.Play("PlayerDiagonalRightWalking");
+        else if (movement.x > 0 && movement.y == 0)
+        {
+            playerAnimator.Play("PlayerLateralRightWalking");
+
+            dashDirection.transform.up = Vector2.right;
+        }
 
         //diagonal abajo izquierda
-        else if (movement.x < 0 && movement.y < 0) playerAnimator.Play("PlayerDiagonalLeftWalking");
+        else if (movement.x < 0 && movement.y < 0)
+        {
+            playerAnimator.Play("PlayerDiagonalLeftWalking");
+
+            dashDirection.transform.up = Vector2.down + Vector2.left;
+        }
 
         //diagonal arriba izquierda
-        else if (movement.x < 0 && movement.y > 0) ;
+        else if (movement.x < 0 && movement.y > 0)
+        {
+            playerAnimator.Play("PlayerDiagonalBackLeftWalking");
+
+            dashDirection.transform.up = Vector2.up + Vector2.left;
+        }
 
         //diagonal abajo derecha
-        else if (movement.x > 0 && movement.y < 0) playerAnimator.Play("PlayerDiagonalRightWalking");
+        else if (movement.x > 0 && movement.y < 0)
+        {
+            playerAnimator.Play("PlayerDiagonalRightWalking");
+
+            dashDirection.transform.up = Vector2.down + Vector2.right;
+        }
 
         //diagonal arriba derecha
-        else if (movement.x > 0 && movement.y > 0) ;
+        else if (movement.x > 0 && movement.y > 0)
+        {
+            playerAnimator.Play("PlayerDiagonalBackRightWalking");
+
+            dashDirection.transform.up = Vector2.up + Vector2.right;
+        }
 
         //parado
-        else if (movement.x == 0 && movement.y == 0) playerAnimator.Play("PlayerStopped"); 
+        else if (movement.x == 0 && movement.y == 0)
+        {
+            playerAnimator.Play("PlayerStopped");
+
+            dashDirection.transform.up = Vector2.down;
+        }
     }
     void FixedUpdate()
     {

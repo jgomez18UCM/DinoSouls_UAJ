@@ -84,6 +84,7 @@ Transform:
   - {fileID: 2474148440509883681}
   - {fileID: 5839156970728219078}
   - {fileID: 5724606746175380233}
+  - {fileID: 6170018897678672272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,6 +162,7 @@ MonoBehaviour:
   fallingPlayer: {fileID: 5115942847500863808, guid: 9e952aebbb26e024eb8c98eabd225c8c,
     type: 3}
   playerAnimator: {fileID: 3146997570167325586}
+  dashDirection: {fileID: 7606772320658485771}
 --- !u!50 &3925003021163371144
 Rigidbody2D:
   serializedVersion: 4
@@ -199,6 +201,7 @@ MonoBehaviour:
   uptime: 0.75
   dashSound: {fileID: 2258792942272096821, guid: b7cbbfe52c0a1ae458854355f8d126fd,
     type: 3}
+  dashDirection: {fileID: 7606772320658485771}
 --- !u!61 &4560644827131077968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -340,3 +343,33 @@ MonoBehaviour:
   attackCastTime: 0.3
   attackDuration: 1
   cooldown: 0
+--- !u!1 &7606772320658485771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6170018897678672272}
+  m_Layer: 8
+  m_Name: DashDirection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6170018897678672272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606772320658485771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3925003021163371159}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
