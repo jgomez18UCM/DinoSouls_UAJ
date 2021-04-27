@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
-  knockBackForce: 3
+  knockBackForce: 5
   attackAngle: 90
 --- !u!212 &8160883183601813954
 SpriteRenderer:

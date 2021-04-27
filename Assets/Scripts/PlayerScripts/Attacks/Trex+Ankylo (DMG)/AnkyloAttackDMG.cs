@@ -23,7 +23,7 @@ public class AnkyloAttackDMG : MonoBehaviour
 
             Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
 
-            if (rb != null) rb.AddForce(dir * knockBackForce, ForceMode2D.Impulse);
+            if (rb != null) rb.AddForce(dir.normalized * knockBackForce, ForceMode2D.Impulse);
 
             //Si el ángulo está dentro del área del ataque hace daño
             if (Vector2.Angle(transform.up, dir) <= attackAngle/2) 

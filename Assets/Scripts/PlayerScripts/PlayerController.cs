@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("GameObject animación de caída")]
     private GameObject fallingPlayer;
 
+    [SerializeField]
+    private Animator playerAnimator;
+
 
     private Dash dashScript;
 
@@ -110,26 +113,38 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("ChangeAttackF")) ChangeAttack(1);
         else if (Input.GetButtonDown("ChangeAttackB")) ChangeAttack(-1);
 
+        //MOVIMIENTO
+
+        //izquierda
+        if (movement.x < 0 && movement.y == 0) playerAnimator.Play("PlayerDiagonalLeftWalking");
+
+        //abajo
+        else if (movement.x == 0 && movement.y < 0) playerAnimator.Play("PlayerFrontWalking");
+
+        //arriba
+        else if (movement.x == 0 && movement.y > 0) playerAnimator.Play("PlayerFrontWalking");
+
+        //derecha
+        else if (movement.x > 0 && movement.y == 0) playerAnimator.Play("PlayerDiagonalRightWalking");
+
+        //diagonal abajo izquierda
+        else if (movement.x < 0 && movement.y < 0) playerAnimator.Play("PlayerDiagonalLeftWalking");
+
+        //diagonal arriba izquierda
+        else if (movement.x < 0 && movement.y > 0) ;
+
+        //diagonal abajo derecha
+        else if (movement.x > 0 && movement.y < 0) playerAnimator.Play("PlayerDiagonalRightWalking");
+
+        //diagonal arriba derecha
+        else if (movement.x > 0 && movement.y > 0) ;
+
+        //parado
+        else if (movement.x == 0 && movement.y == 0) playerAnimator.Play("PlayerStopped"); 
     }
     void FixedUpdate()
     {
         rb.velocity = movement * speed;
-
-        if (movement.x < 0 && movement.y == 0)  transform.up = Vector2.left;
-        
-        else if (movement.x == 0 && movement.y < 0)  transform.up = Vector2.down;
-        
-        else if (movement.x == 0 && movement.y > 0)  transform.up = Vector2.up;
-        
-        else if (movement.x > 0 && movement.y == 0) transform.up = Vector2.right;
-        
-        else if (movement.x < 0 && movement.y < 0)  transform.up = Vector2.left + Vector2.down;
-        
-        else if (movement.x < 0 && movement.y > 0)  transform.up = Vector2.left + Vector2.up;
-        
-        else if (movement.x > 0 && movement.y < 0)  transform.up = Vector2.right + Vector2.down;
-        
-        else if (movement.x > 0 && movement.y > 0)  transform.up = Vector2.right + Vector2.up;
     }
 
     public void DarLanza()
