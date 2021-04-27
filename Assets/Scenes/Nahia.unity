@@ -3362,6 +3362,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4431609365623471890, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: velocity
@@ -3372,6 +3377,11 @@ PrefabInstance:
       propertyPath: perception
       value: 
       objectReference: {fileID: 560105882}
+    - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: pteranodonSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4431609365707138621, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_Radius
@@ -3380,7 +3390,7 @@ PrefabInstance:
     - target: {fileID: 4431609365707138623, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4431609366368579824, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}

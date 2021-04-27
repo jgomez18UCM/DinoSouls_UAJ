@@ -68,14 +68,19 @@ public class DilophoMove : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
+        Invoke("MovimientoRetraso", 3);
         
+        
+    }
+    void MovimientoRetraso()
+    {
         transform.up = distancia.normalized;
         if (rangoAcercar)
         {
             rbEnemigo.velocity = distancia.normalized * -velocity;
         }
-        
     }
 }
+
 
 
