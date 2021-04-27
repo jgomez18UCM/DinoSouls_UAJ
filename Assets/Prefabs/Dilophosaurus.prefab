@@ -110,7 +110,6 @@ MonoBehaviour:
   standByTime: 0
   rbEnemigo: {fileID: 4431609366368579824}
   drop: {fileID: 3393968286270886297, guid: e2a9164d14e9c694d90da8db98067ce6, type: 3}
-  distanciaMod: 0
   perception: {fileID: 4431609365623471888}
   rangoAcercar: {fileID: 4431609365707138621}
   percepCol: {fileID: 4431609365623471889}
@@ -143,6 +142,7 @@ GameObject:
   - component: {fileID: 4431609366368579825}
   - component: {fileID: 4431609366368579824}
   - component: {fileID: 4431609366368579830}
+  - component: {fileID: 6087790643149640414}
   m_Layer: 0
   m_Name: Dilophosaurus
   m_TagString: Untagged
@@ -279,3 +279,16 @@ MonoBehaviour:
   velocity: 3
   standByTime: 1
   perception: {fileID: 4431609365623471888}
+--- !u!114 &6087790643149640414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431609366368579837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d406fc9abb204547ac7db48be08f35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080, type: 3}

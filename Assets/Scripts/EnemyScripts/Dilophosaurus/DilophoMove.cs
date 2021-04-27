@@ -28,7 +28,7 @@ public class DilophoMove : MonoBehaviour
     void Start()
     {
        // rbEnemigo = GetComponent<Rigidbody2D>();
-        Instantiate(drop, this.transform.position, this.transform.rotation);
+       
         //perception = GetComponentInChildren<Perception>();
         velocAux = velocity;
     }
@@ -53,47 +53,27 @@ public class DilophoMove : MonoBehaviour
 
         if (percepCol) percepCol.enabled = false;
         if (perception) perception.enabled = false;
-        /*if (!perception.GetSee())
-        {
-            vEnemigo = distancia.normalized * (velocity);
-            
-        }
-        else
-        {
-            vEnemigo = distancia.normalized * (-velocity);
-          
-        }*/
-
+    
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (percepCol) percepCol.enabled = true;
         if (perception) perception.enabled = true;
         
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Movimiento();
         
-        /* percepCol.enabled = false;
-        if (perception.GetSee())
-        {
-            velocAux = 0;
-        }
-        velocAux = velocity;*/
-
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
         transform.up = distancia.normalized;
-        /*if (rangoAcercar)
+        if (rangoAcercar)
         {
             vEnemigo = distancia.normalized * (-velocAux);
-        }*/
+        }
         
-       
-
     }
 }
 

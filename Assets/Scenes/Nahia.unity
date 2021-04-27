@@ -3429,8 +3429,13 @@ PrefabInstance:
       objectReference: {fileID: 1124633161}
     - target: {fileID: 4431609366368579830, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
+      propertyPath: velocity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431609366368579830, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
       propertyPath: standByTime
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
