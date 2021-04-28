@@ -1783,11 +1783,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jugador
       objectReference: {fileID: 0}
-    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: direction
-      value: 
-      objectReference: {fileID: 1394226234}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_RootOrder
@@ -2014,12 +2009,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05b8f179e7a9aab46913b715f69e41b2, type: 3}
---- !u!1 &1394226234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7606772320658485771, guid: 8100351e5d5a6654d829a98491f14374,
-    type: 3}
-  m_PrefabInstance: {fileID: 1260411343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1466075668
 PrefabInstance:
   m_ObjectHideFlags: 0
