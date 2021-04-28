@@ -46,39 +46,42 @@ public class DilophoMove : MonoBehaviour
    
     private void Movimiento()
     {
-        
+        if (percepCol) percepCol.enabled = false;
+        if (perception) perception.enabled = false;
+
         distancia = jugador.transform.position - transform.position;
         rbEnemigo.velocity = distancia.normalized *velocity;
         Debug.Log(rbEnemigo.velocity);
 
-        if (percepCol) percepCol.enabled = false;
-        if (perception) perception.enabled = false;
+        
     
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (percepCol) percepCol.enabled = true;
-        if (perception) perception.enabled = true;
-        
+        Invoke("ActivatePerception", 1);
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         Movimiento();
         
     }
-    private void OnTriggerStay2D(Collider2D collider)
+    /* private void OnTriggerStay2D(Collider2D collider)
+     {
+         transform.up = distancia.normalized;
+         if (rangoAcercar)
+         {
+             rbEnemigo.velocity = distancia.normalized * -velocity;
+         }
+
+     }*/
+    private void ActivatePerception()
     {
-        Invoke("MovimientoRetraso", 3);
-        
-        
-    }
-    void MovimientoRetraso()
-    {
-        transform.up = distancia.normalized;
-        if (rangoAcercar)
-        {
-            rbEnemigo.velocity = distancia.normalized * -velocity;
-        }
+
+        if (percepCol) percepCol.enabled = true;
+        if (perception) perception.enabled = true;
     }
 }
 

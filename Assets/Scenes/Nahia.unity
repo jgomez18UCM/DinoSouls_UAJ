@@ -2198,7 +2198,7 @@ PrefabInstance:
     - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: contpoisonMax
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4687050786715699882, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
@@ -3357,6 +3357,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4431609365623471889, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: m_Radius
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4431609365623471890, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_Layer
