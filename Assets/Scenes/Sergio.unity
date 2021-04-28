@@ -1291,6 +1291,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7cbbfe52c0a1ae458854355f8d126fd, type: 3}
+--- !u!1 &939893854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7606772320658485771, guid: 8100351e5d5a6654d829a98491f14374,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260411343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1015335687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1736,6 +1742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jugador
       objectReference: {fileID: 0}
+    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: direction
+      value: 
+      objectReference: {fileID: 939893854}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: attackRoot.Array.size

@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
-    [SerializeField]
-    private int life = 20;
+    
+    const int MAXLIFE = 20;
+
     [SerializeField]
     int contpoisonMax = 4;
     [SerializeField]
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int herbs = 0;
 
-    private int maxLife;
+    private int life;
 
     private UImanager theUIManager;
 
@@ -59,11 +60,7 @@ public class GameManager : MonoBehaviour
 
         else Destroy(this.gameObject);
 
-    }
-
-    private void Start()
-    {
-        maxLife = life;
+        life = MAXLIFE;
     }
 
     public static GameManager GetInstance()
@@ -88,7 +85,7 @@ public class GameManager : MonoBehaviour
 
         if (life <= 0 && !invencible)
         {
-            life = maxLife;
+            life = MAXLIFE;
 
             //Respawnea al jugador
             Respawn(respawn.position, respawnTime);
@@ -118,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public void Heal()
     {
-        if (herbs > 0 && life <= maxLife/5*4)
+        if (herbs > 0 && life <= MAXLIFE/5*4)
         {
             herbs--;
 
@@ -172,7 +169,7 @@ public class GameManager : MonoBehaviour
             Destroy(instance, respawnTime);
 
             //Si no muere respawnea al lado
-            if (life < maxLife)
+            if (life < MAXLIFE)
             {
                 Respawn(respawnPoint, respawnTime);
             }
