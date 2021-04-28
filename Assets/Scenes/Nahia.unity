@@ -1832,7 +1832,7 @@ PrefabInstance:
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371159, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -3372,6 +3372,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 1124633161}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: velocity

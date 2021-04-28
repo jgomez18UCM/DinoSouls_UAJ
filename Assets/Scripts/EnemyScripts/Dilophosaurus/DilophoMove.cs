@@ -20,14 +20,16 @@ public class DilophoMove : MonoBehaviour
     Perception perception;
     [SerializeField]
     CircleCollider2D rangoAcercar, percepCol;
-    
-
+    bool visto;
+    float timerVisto;
 
 
     // Start is called before the first frame update
     void Start()
     {
-       // rbEnemigo = GetComponent<Rigidbody2D>();
+        timerVisto = 0;
+        
+        // rbEnemigo = GetComponent<Rigidbody2D>();
        
         //perception = GetComponentInChildren<Perception>();
         velocAux = velocity;
@@ -40,8 +42,12 @@ public class DilophoMove : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //distancia = jugador.transform.position - transform.position;
-        //Invoke(nameof(Movimiento), standByTime);
+        timerVisto += Time.deltaTime;
+        if(timerVisto >= 1)
+        {
+            visto = true;
+        }
+     
     }
    
     private void Movimiento()
@@ -49,7 +55,8 @@ public class DilophoMove : MonoBehaviour
         if (percepCol) percepCol.enabled = false;
         if (perception) perception.enabled = false;
 
-        distancia = jugador.transform.position - transform.position;
+        distancia = transform.position - jugador.transform.position;
+        Debug.DrawRay(jugador.transform.position, distancia);
         rbEnemigo.velocity = distancia.normalized *velocity;
         Debug.Log(rbEnemigo.velocity);
 
@@ -64,19 +71,21 @@ public class DilophoMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        visto = true;
+        CancelInvoke();
         Movimiento();
-        
+      
     }
-    /* private void OnTriggerStay2D(Collider2D collider)
+     private void OnTriggerStay2D(Collider2D collider)
      {
-         transform.up = distancia.normalized;
-         if (rangoAcercar)
-         {
-             rbEnemigo.velocity = distancia.normalized * -velocity;
-         }
+        if (visto)
+        {
+            visto = false;
+            Movimiento();
+            timerVisto = 0;
+        }
 
-     }*/
+     }
     private void ActivatePerception()
     {
 

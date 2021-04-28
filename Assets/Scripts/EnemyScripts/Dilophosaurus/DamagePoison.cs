@@ -41,7 +41,7 @@ public class DamagePoison : MonoBehaviour
 
     }
    
-    //Si detecta al jugador hace daño con TakeDamage y destruye el veneno
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {       
         GameManager.GetInstance().PoisonDamage();
