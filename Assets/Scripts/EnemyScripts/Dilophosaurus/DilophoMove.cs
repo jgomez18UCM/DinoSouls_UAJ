@@ -7,42 +7,30 @@ public class DilophoMove : MonoBehaviour
     [SerializeField]
     GameObject jugador = null;
     [SerializeField]
-    private float velocity;
-    float velocAux;
-    [SerializeField]
-    private float standByTime;
-    [SerializeField]
-    Rigidbody2D rbEnemigo;
-    private Vector2 distancia, vEnemigo;
-    [SerializeField]
-    GameObject drop;
-    [SerializeField]
     GameObject poison;
     [SerializeField]
-    Perception perception;
+    GameObject direction;
+
     [SerializeField]
-    CircleCollider2D rangoAcercar, percepCol;
+    private float velocity;
+
+    [SerializeField]
+    Rigidbody2D rbEnemigo;
+    
+    [SerializeField]
+    Perception perception;
+
+    [SerializeField]
+    CircleCollider2D percepCol;
+
+    private Vector2 distancia;
     bool visto;
     float timerVisto;
-    [SerializeField]
-    GameObject dilophosaurio;
-    [SerializeField]
-    GameObject direction;
 
     // Start is called before the first frame update
     void Start()
     {
-        timerVisto = 0;
-        
-        // rbEnemigo = GetComponent<Rigidbody2D>();
-       
-        //perception = GetComponentInChildren<Perception>();
-        velocAux = velocity;
-        
-    }
-    void FixedUpdate()
-    {
-       // rbEnemigo.velocity = vEnemigo;
+        timerVisto = 0;              
     }
 
     // Update is called once per frame
@@ -52,8 +40,7 @@ public class DilophoMove : MonoBehaviour
         if(timerVisto >= 1)
         {
             visto = true;
-        }
-     
+        }     
     }
    
     private void Movimiento()
