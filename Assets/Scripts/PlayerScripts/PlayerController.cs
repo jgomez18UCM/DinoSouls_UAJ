@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
         {
             tengolanza = false;
 
+            gm.changeSpearStateUI();
+
             Instantiate(lanza, direction.transform.position, direction.transform.rotation);
 
         }
@@ -196,6 +198,7 @@ public class PlayerController : MonoBehaviour
     public void DarLanza()
     {
         tengolanza = true;
+        gm.changeSpearStateUI();
     }
 
     private void ChangeAttack(int dir)

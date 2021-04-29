@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: fdb2cff69c9010144923c3f54f8c9b88
+guid: 06944b333d178ea40ba818611f5fb09a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6721881696953920639
-    second: Spritesheet hierba_0
+      213: 1443705559732973524
+    second: Spritesheet lanza_0
   - first:
-      213: -8541200266705826857
-    second: Spritesheet hierba_1
+      213: -7984578779037241709
+    second: Spritesheet lanza_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet hierba_0
+      name: Spritesheet lanza_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1839cdee53417b2a0800000000000000
-      internalID: -6721881696953920639
+      spriteID: 4dfe328be82190410800000000000000
+      internalID: 1443705559732973524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet hierba_1
+      name: Spritesheet lanza_1
       rect:
         serializedVersion: 2
         x: 0
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db07835c9f877980800000000000000
-      internalID: -8541200266705826857
+      spriteID: 39eec5297e3113190800000000000000
+      internalID: -7984578779037241709
       vertices: []
       indices: 
       edges: []

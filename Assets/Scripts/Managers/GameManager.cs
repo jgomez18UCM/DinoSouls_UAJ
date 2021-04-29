@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
 
     Vector2 respawnPointTemp;
 
+    private bool haveLanza = true;
+
     void Awake()
     {
         if (instance == null)
@@ -203,5 +205,12 @@ public class GameManager : MonoBehaviour
         {
             poisonTick = 0;
         }
+    }
+    //cambia el estado de la lanza en la interfaz
+    public void changeSpearStateUI() 
+    {
+        haveLanza = !haveLanza;
+
+        theUIManager.UpdateSpear(haveLanza);
     }
 }

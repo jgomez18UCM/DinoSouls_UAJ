@@ -23,6 +23,13 @@ public class UImanager : MonoBehaviour
     [SerializeField]
     private Sprite[] soulSprites;
 
+    //variables para la lanza
+    [SerializeField]
+    private Sprite[] spearSprites;
+
+    [SerializeField]
+    private Image spear;
+
     //da una referencia al gamemanager
     private void Start()
     {
@@ -81,6 +88,17 @@ public class UImanager : MonoBehaviour
         
         else souls[2].sprite = soulSprites[5];
 
-        
+    }
+
+    public void UpdateSpear(bool haveLanza)
+    {
+        if (haveLanza)
+        {
+            spear.sprite = spearSprites[1];
+        }
+        else
+        {
+            spear.sprite = spearSprites[0];
+        }
     }
 }
