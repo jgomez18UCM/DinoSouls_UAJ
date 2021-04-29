@@ -24,7 +24,10 @@ public class DilophoMove : MonoBehaviour
     CircleCollider2D rangoAcercar, percepCol;
     bool visto;
     float timerVisto;
-
+    [SerializeField]
+    GameObject dilophosaurio;
+    [SerializeField]
+    GameObject direction;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +38,7 @@ public class DilophoMove : MonoBehaviour
        
         //perception = GetComponentInChildren<Perception>();
         velocAux = velocity;
-        Instantiate(poison, this.transform.position, this.transform.rotation);
+        
     }
     void FixedUpdate()
     {
@@ -55,22 +58,22 @@ public class DilophoMove : MonoBehaviour
    
     private void Movimiento()
     {
+        // Desactiva percepción (Trigger y Script)
         if (percepCol) percepCol.enabled = false;
         if (perception) perception.enabled = false;
 
+        // Calcula la distancia y lo mueve
         distancia = transform.position - jugador.transform.position;
-        Debug.DrawRay(jugador.transform.position, distancia);
-        rbEnemigo.velocity = distancia.normalized *velocity;
-        Debug.Log(rbEnemigo.velocity);
-
-        
-    
+        distancia.Normalize();
+        direction.transform.up = -distancia;        
+        rbEnemigo.velocity = distancia *velocity;
+            
     }
+
+    //Activa la percepcíon con 1 seg de retraso al salir de rangoAlejar
     private void OnTriggerExit2D(Collider2D collision)
     {
         Invoke("ActivatePerception", 1);
-
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -91,10 +94,16 @@ public class DilophoMove : MonoBehaviour
      }
     private void ActivatePerception()
     {
-
         if (percepCol) percepCol.enabled = true;
         if (perception) perception.enabled = true;
+        PoisonInstance();
     }
+    
+    void PoisonInstance()
+    {
+        Instantiate(poison, this.transform.position, direction.transform.rotation);
+    }
+    
 }
 
 

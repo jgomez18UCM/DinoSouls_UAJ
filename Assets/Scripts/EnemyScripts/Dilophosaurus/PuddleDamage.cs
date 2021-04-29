@@ -5,9 +5,13 @@ using UnityEngine;
 public class PuddleDamage : MonoBehaviour
 {
     //Llama a PoisonDamage del GM
+    private void Start()
+    {
+        Destroy(this.gameObject, 5);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.GetInstance().PoisonDamage();
+        GameManager.GetInstance().ActivatePoison();
         Destroy(this.gameObject);
     }
 }

@@ -101,7 +101,11 @@ MonoBehaviour:
   tiempoEnvenenado: 2
   cooldown: 1
   distance: 6
-  drop: {fileID: 3393968286270886297, guid: e2a9164d14e9c694d90da8db98067ce6, type: 3}
+  poisonCharco: {fileID: 3393968286270886297, guid: e2a9164d14e9c694d90da8db98067ce6,
+    type: 3}
+  poison: {fileID: 7594521510964842823}
+  dilophosaurio: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
+    type: 3}
 --- !u!50 &1301339478873195640
 Rigidbody2D:
   serializedVersion: 4

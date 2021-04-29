@@ -11,21 +11,42 @@ public class DamagePoison : MonoBehaviour
     [SerializeField]
     float distance = 6f;
     [SerializeField]
-    GameObject drop;
+    GameObject poisonCharco;
+
+    [SerializeField]
+    GameObject poison;
     float tiempolanzado, tiempotop;
     Rigidbody2D rg;
+    float timerVeneno, timeMax;
+
+
 
     
     void Start()
     {
         rg = this.GetComponent<Rigidbody2D>();
         tiempolanzado = Time.time;
-        tiempotop = distance / speed;//siguiendo la formula v=d/t        
+        timeMax = distance / speed;//siguiendo la formula v=d/t 
+        timerVeneno = 0;
     }
-   
+    private void Update()
+    {
+        timerVeneno += Time.deltaTime;
+        if(timerVeneno < timeMax)
+        {
+            rg.velocity = (transform.up * speed);
+           
+        }
+        else
+        {
+            timerVeneno = 0;
+            Instantiate(poisonCharco, this.transform.position, this.transform.rotation);
+            Destroy(this.gameObject);
+        }
+    }
     void FixedUpdate()
     {
-        if (Time.time - tiempolanzado < tiempotop)
+        /*if (Time.time - tiempolanzado < tiempotop)
         {
             if (Time.time - tiempolanzado < distance / 2)
                 rg.velocity = (transform.up * speed);
@@ -35,16 +56,16 @@ public class DamagePoison : MonoBehaviour
         }
         else
         {
-            Instantiate(drop, this.transform.position, this.transform.rotation);
+            Instantiate(poisonCharco, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
-        }
+        }*/
 
     }
    
     
     private void OnCollisionEnter2D(Collision2D collision)
     {       
-        GameManager.GetInstance().PoisonDamage();
+        GameManager.GetInstance().ActivatePoison();
         Destroy(this.gameObject);
     }
    
