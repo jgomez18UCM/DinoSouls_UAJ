@@ -3,48 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DamagePoison : MonoBehaviour
-{
+{  
     [SerializeField]
-    private int damage;
-    [SerializeField]
-    float speed = 2f, tiempoEnvenenado, cooldown;
+    float speed = 2f;
     [SerializeField]
     float distance = 6f;
     [SerializeField]
-    GameObject drop;
-    float tiempolanzado, tiempotop;
-    Rigidbody2D rg;
+    float tiempoEnvenenado;
+    [SerializeField]
+    float cooldown;
 
+    [SerializeField]
+    GameObject poisonCharco;
+    [SerializeField]
+    GameObject poison;
     
+    Rigidbody2D rb;
+    float timerVeneno, timeMax;
+
     void Start()
     {
-        rg = this.GetComponent<Rigidbody2D>();
-        tiempolanzado = Time.time;
-        tiempotop = distance / speed;//siguiendo la formula v=d/t        
+        rb = this.GetComponent<Rigidbody2D>();      
+        timeMax = distance / speed;
+        timerVeneno = 0;
     }
-   
-    void FixedUpdate()
+    private void Update()
     {
-        if (Time.time - tiempolanzado < tiempotop)
+        timerVeneno += Time.deltaTime;
+        if(timerVeneno < timeMax)
         {
-            if (Time.time - tiempolanzado < distance / 2)
-                rg.velocity = (transform.up * speed);
-            else
-                rg.AddForce(-transform.up * speed / 4);
-
+            rb.velocity = (transform.up * speed);           
         }
         else
         {
-            Instantiate(drop, this.transform.position, this.transform.rotation);
+            timerVeneno = 0;
+            Instantiate(poisonCharco, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
         }
-
     }
-   
     
+    // Llava a ActivatePoison del GM y destruye el veneno
     private void OnCollisionEnter2D(Collision2D collision)
     {       
-        GameManager.GetInstance().PoisonDamage();
+        GameManager.GetInstance().ActivatePoison();
         Destroy(this.gameObject);
     }
    

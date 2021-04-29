@@ -785,18 +785,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1015335687}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &560105882 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4431609365623471888, guid: fc5f0f01e22220849bd870ea66638346,
-    type: 3}
-  m_PrefabInstance: {fileID: 4431609366141302410}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d9eeb2f59c5fd4b8397798af2bf2d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &566031015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8699244166007326680, guid: 934f14adef772634a9c720afc70120db,
@@ -2198,7 +2186,7 @@ PrefabInstance:
     - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: contpoisonMax
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4687050786715699882, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
@@ -3374,12 +3362,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
-      propertyPath: poison
-      value: 
-      objectReference: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080,
-        type: 3}
-    - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
@@ -3388,11 +3370,6 @@ PrefabInstance:
       propertyPath: velocity
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
-      propertyPath: perception
-      value: 
-      objectReference: {fileID: 560105882}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: pteranodonSpeed
@@ -3503,5 +3480,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6087790643149640414, guid: fc5f0f01e22220849bd870ea66638346, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fc5f0f01e22220849bd870ea66638346, type: 3}

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int poisonDamage= 1;
     int poisonTick = 0;
+    bool poisoned = false;
     [SerializeField]
     [Tooltip("Daño al caer por un precipicio")]
     int fallDamage = 4;
@@ -192,11 +193,10 @@ public class GameManager : MonoBehaviour
 
         if (!player.gameObject.activeSelf) player.gameObject.SetActive(true);
     }
-    public void PoisonDamage()
+    void PoisonDamage()
     {
         if (poisonTick < contpoisonMax)
-        {
-            //Debug.Log("DAño");
+        {           
             TakeDamage(poisonDamage);
             Invoke(nameof(PoisonDamage), 1);
             poisonTick++;
@@ -204,6 +204,16 @@ public class GameManager : MonoBehaviour
         else
         {
             poisonTick = 0;
+            poisoned = false;
+        }
+    }
+     
+    public void ActivatePoison()
+    {
+        if (!poisoned)
+        {
+            PoisonDamage();
+            poisoned = true;
         }
     }
     //cambia el estado de la lanza en la interfaz
