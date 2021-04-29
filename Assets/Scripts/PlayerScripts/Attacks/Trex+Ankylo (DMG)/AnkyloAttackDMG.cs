@@ -8,6 +8,9 @@ public class AnkyloAttackDMG : MonoBehaviour
     private int damage;
 
     [SerializeField]
+    private Collider2D colliderAnk;
+
+    [SerializeField]
     private float knockBackForce;
 
     [SerializeField]
@@ -35,5 +38,10 @@ public class AnkyloAttackDMG : MonoBehaviour
                 enemyDamage.TakeDamage(damage);
             }
         }
+    }
+
+    public void ActivateAttack() 
+    {
+        colliderAnk.enabled = true;
     }
 }

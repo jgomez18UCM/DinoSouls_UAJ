@@ -43,7 +43,7 @@ public class EnemyFollow : MonoBehaviour
     private void Mueve()
     {
         rbEnemigo.velocity = distancia.normalized * (velocity);
-        transform.up = distancia;
-        transform.up.Normalize();
+        //transform.up = distancia;
+        //transform.up.Normalize();
     }
 }

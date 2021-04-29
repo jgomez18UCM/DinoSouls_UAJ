@@ -1768,6 +1768,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 409135868655883689, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: attackCastTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2269679639178914346, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: dashSound

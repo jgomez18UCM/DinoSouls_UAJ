@@ -64,11 +64,9 @@ public class Patrol : MonoBehaviour
         if (speed != 0 && timer <= 0)
         {
             //el enemigo patrulla hacia el siguiente punto
-            transform.up = nextPosition - new Vector2(transform.position.x, transform.position.y);
+            Vector2 dir = nextPosition - new Vector2(transform.position.x, transform.position.y);
 
-            transform.up.Normalize();
-
-            rb.velocity = speed * transform.up;
+            rb.velocity = speed * dir;
         }
     }
 
