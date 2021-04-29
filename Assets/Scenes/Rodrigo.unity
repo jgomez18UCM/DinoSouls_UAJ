@@ -1562,21 +1562,6 @@ PrefabInstance:
       propertyPath: enemyLives
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: animations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: animations.Array.data[0]
-      value: EnemyRight
-      objectReference: {fileID: 0}
-    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: animations.Array.data[1]
-      value: EnemyLeft
-      objectReference: {fileID: 0}
     - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
       propertyPath: jugador
       value: 
@@ -1649,12 +1634,12 @@ PrefabInstance:
     - target: {fileID: 5140677700851771427, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.66
+      value: -6.59
       objectReference: {fileID: 0}
     - target: {fileID: 5140677700851771427, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.12
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 5140677700851771427, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
