@@ -53,8 +53,7 @@ public class DilophoMove : MonoBehaviour
         distancia = transform.position - jugador.transform.position;
         distancia.Normalize();
         direction.transform.up = -distancia;        
-        rbEnemigo.velocity = distancia *velocity;
-            
+        rbEnemigo.velocity = distancia *velocity;            
     }
 
     //Activa la percepcíon con 1 seg de retraso al salir de rangoAlejar
@@ -62,13 +61,14 @@ public class DilophoMove : MonoBehaviour
     {
         Invoke("ActivatePerception", 1);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         visto = true;
         CancelInvoke();
-        Movimiento();
-      
+        Movimiento();      
     }
+
      private void OnTriggerStay2D(Collider2D collider)
      {
         if (visto)
@@ -77,8 +77,8 @@ public class DilophoMove : MonoBehaviour
             Movimiento();
             timerVisto = 0;
         }
-
      }
+
     private void ActivatePerception()
     {
         if (percepCol) percepCol.enabled = true;
@@ -89,8 +89,7 @@ public class DilophoMove : MonoBehaviour
     void PoisonInstance()
     {
         Instantiate(poison, this.transform.position, direction.transform.rotation);
-    }
-    
+    }    
 }
 
 
