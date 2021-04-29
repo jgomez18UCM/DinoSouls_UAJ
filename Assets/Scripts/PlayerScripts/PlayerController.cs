@@ -111,8 +111,8 @@ public class PlayerController : MonoBehaviour
             attackTriceratops.DoAttack();
         }
 
-        if (Input.GetButtonDown("ChangeAttackF")) ChangeAttack(1);
-        else if (Input.GetButtonDown("ChangeAttackB")) ChangeAttack(-1);
+        if (Input.GetButtonDown("ChangeAttackF") || Input.GetAxis("ChangeAttackF") > 0.1) ChangeAttack(1);
+        else if (Input.GetButtonDown("ChangeAttackB") || Input.GetAxis("ChangeAttackB") > 0) ChangeAttack(-1);
 
         //MOVIMIENTO
 

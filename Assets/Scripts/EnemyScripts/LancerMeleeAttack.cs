@@ -66,7 +66,7 @@ public class LancerMeleeAttack : MonoBehaviour
         if (attack)
         {
             if (per) per.enabled = false;
-            perColl.enabled = false;         
+            if (perColl) perColl.enabled = false;         
             if (p) p.enabled = false;
             if (f)
             {
