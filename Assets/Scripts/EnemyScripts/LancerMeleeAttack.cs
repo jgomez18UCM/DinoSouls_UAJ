@@ -17,6 +17,9 @@ public class LancerMeleeAttack : MonoBehaviour
     [SerializeField]
     private float attackDuration = 1f;
 
+    [SerializeField]
+    private GameObject directionGO;
+
     private bool attack;
     private float distance;
     private LayerMask mask;
@@ -48,17 +51,17 @@ public class LancerMeleeAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector2 dir = -transform.position + player.transform.position;
-        if (Vector2.Angle(transform.up, dir) <= 45)
+        if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        Debug.Log("ángulo: " + Vector2.Angle(transform.up, dir));
+        Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         Vector2 dir = -transform.position + player.transform.position;
-        if (Vector2.Angle(transform.up, dir) <= 45)
+        if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        Debug.Log("ángulo: " + Vector2.Angle(transform.up, dir));
+        Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     public void DoAttack()

@@ -1562,6 +1562,21 @@ PrefabInstance:
       propertyPath: enemyLives
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: animations.Array.data[0]
+      value: EnemyRight
+      objectReference: {fileID: 0}
+    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: animations.Array.data[1]
+      value: EnemyLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
       propertyPath: jugador
       value: 
@@ -1603,6 +1618,27 @@ PrefabInstance:
     - target: {fileID: 2500153058889024864, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140677700851771426, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140677700851771426, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140677700851771426, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3002912886800237489, guid: 6cb69fdbebd2e584e83a11f37a73bd54,
+        type: 3}
+    - target: {fileID: 5140677700851771426, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140677700851771427, guid: 934f14adef772634a9c720afc70120db,
@@ -1670,6 +1706,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5719549753700200030, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: speed
@@ -1704,6 +1745,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523791590216944125, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523791590216944125, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 7523791590216944125, guid: 934f14adef772634a9c720afc70120db,
         type: 3}

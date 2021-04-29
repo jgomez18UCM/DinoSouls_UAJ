@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5140677700851771427}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &3459193664840984930
 CircleCollider2D:
@@ -66,6 +66,7 @@ MonoBehaviour:
   attackRoot: {fileID: 6365371258975920758}
   attackCooldown: 2
   attackDuration: 1
+  directionGO: {fileID: 1582852997847853723}
   father: {fileID: 5140677700851771437}
   per: {fileID: 8699244166007326680}
   perColl: {fileID: 7352244099731642941}
@@ -92,12 +93,43 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003415794982502098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5140677700851771427}
+  m_Father: {fileID: 5719549753700200030}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1582852997847853723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5719549753700200030}
+  m_Layer: 9
+  m_Name: Direction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5719549753700200030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582852997847853723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6365371258975920758}
+  m_Father: {fileID: 5140677700851771427}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5140677700851771437
 GameObject:
@@ -133,9 +165,9 @@ Transform:
   m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6365371258975920758}
   - {fileID: 8704653384013297316}
   - {fileID: 6586538630649102114}
+  - {fileID: 5719549753700200030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -187,7 +219,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7332870999039681298
@@ -206,6 +238,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  direction: {fileID: 1582852997847853723}
   randomNext: 1
   standBy: 0.5
   speed: 3
@@ -272,6 +305,7 @@ MonoBehaviour:
   velocity: 3
   standByTime: 0
   perception: {fileID: 0}
+  direction: {fileID: 1582852997847853723}
 --- !u!114 &-836077665587962538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +319,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  direction: {fileID: 1582852997847853723}
+  animations:
+  - EnemyRight
+  - EnemyLeft
+  animator: {fileID: 2339199544690802366}
   enemyLives: 1
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
@@ -337,7 +376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5140677700851771427}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &7352244099731642941
 CircleCollider2D:

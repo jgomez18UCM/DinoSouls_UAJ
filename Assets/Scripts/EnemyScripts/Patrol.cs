@@ -9,6 +9,9 @@ public class Patrol : MonoBehaviour
     Transform [] patrolPositions;
 
     [SerializeField]
+    private GameObject direction;
+
+    [SerializeField]
     //el siguiente punto de patrulla del array es aleatoria si la variable es true
     bool randomNext = false;
 
@@ -56,7 +59,6 @@ public class Patrol : MonoBehaviour
 
             timer -= Time.deltaTime;
         }
-
     }
 
     private void FixedUpdate()
@@ -65,6 +67,8 @@ public class Patrol : MonoBehaviour
         {
             //el enemigo patrulla hacia el siguiente punto
             Vector2 dir = nextPosition - new Vector2(transform.position.x, transform.position.y);
+            dir.Normalize();
+            direction.transform.up = dir;
 
             rb.velocity = speed * dir;
         }

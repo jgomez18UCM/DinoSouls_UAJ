@@ -8,6 +8,15 @@ public class EnemyDamage : MonoBehaviour
     private int damage;
 
     [SerializeField]
+    private GameObject direction;
+
+    [SerializeField]
+    private string[] animations;
+
+    [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
     private int enemyLives;
 
     [SerializeField]
@@ -27,6 +36,14 @@ public class EnemyDamage : MonoBehaviour
             gm.TakeDamage(damage);
         }
 
+    }
+
+    private void Update()
+    {
+        float angle = Vector2.SignedAngle(direction.transform.up, Vector2.up);
+
+        if (angle > 0) animator.Play(animations[0]);
+        else if (angle < 0) animator.Play(animations[1]);
     }
 
     public void TakeDamage(int damage)

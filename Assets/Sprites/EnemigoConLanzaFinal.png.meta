@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 6fdd34ff2a856c643a8f8fd7b6113544
+guid: 6cb69fdbebd2e584e83a11f37a73bd54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4128447568258443176
-    second: EnemigoConLanza_0
+      213: -3002912886800237489
+    second: EnemigoConLanzaFinal_0
   - first:
-      213: -152367318693889764
-    second: EnemigoConLanza_1
+      213: 1556307295322832037
+    second: EnemigoConLanzaFinal_1
   - first:
-      213: -8208550121020076023
-    second: EnemigoConLanza_2
+      213: -7526632758767787812
+    second: EnemigoConLanzaFinal_2
   - first:
-      213: -3746312522882528353
-    second: EnemigoConLanza_3
+      213: 1153229092037936079
+    second: EnemigoConLanzaFinal_3
+  - first:
+      213: -296772893610246311
+    second: EnemigoConLanzaFinal_4
+  - first:
+      213: 4360469352565080755
+    second: EnemigoConLanzaFinal_5
+  - first:
+      213: 1239958072153463233
+    second: EnemigoConLanzaFinal_6
+  - first:
+      213: -5041665436867028496
+    second: EnemigoConLanzaFinal_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,7 +111,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemigoConLanza_0
+      name: EnemigoConLanzaFinal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c34dab3a28356d0800000000000000
+      internalID: -3002912886800237489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoConLanzaFinal_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acf01b4d3d199510800000000000000
+      internalID: 1556307295322832037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoConLanzaFinal_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0e3da32670c8790800000000000000
+      internalID: -7526632758767787812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoConLanzaFinal_3
       rect:
         serializedVersion: 2
         x: 0
@@ -113,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85851246fcec4b6c0800000000000000
-      internalID: -4128447568258443176
+      spriteID: fc34197cfb7110010800000000000000
+      internalID: 1153229092037936079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemigoConLanza_1
+      name: EnemigoConLanzaFinal_4
       rect:
         serializedVersion: 2
         x: 32
@@ -134,14 +209,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c193fdd1bbea2edf0800000000000000
-      internalID: -152367318693889764
+      spriteID: 95f756920a6a1ebf0800000000000000
+      internalID: -296772893610246311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemigoConLanza_2
+      name: EnemigoConLanzaFinal_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b28e9df5cf738c30800000000000000
+      internalID: 4360469352565080755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoConLanzaFinal_6
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 900db9bd72f551e80800000000000000
-      internalID: -8208550121020076023
+      spriteID: 1c9d51b0c47353110800000000000000
+      internalID: 1239958072153463233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemigoConLanza_3
+      name: EnemigoConLanzaFinal_7
       rect:
         serializedVersion: 2
         x: 32
@@ -176,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9b4df7fb9c620cc0800000000000000
-      internalID: -3746312522882528353
+      spriteID: 0f91d2f3ff7680ab0800000000000000
+      internalID: -5041665436867028496
       vertices: []
       indices: 
       edges: []

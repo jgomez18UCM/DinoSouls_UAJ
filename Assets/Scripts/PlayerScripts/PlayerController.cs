@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.Play("PlayerStopped");
 
-            direction.transform.up = Vector2.down;
+            //direction.transform.up = Vector2.down;
         }
     }
     void FixedUpdate()

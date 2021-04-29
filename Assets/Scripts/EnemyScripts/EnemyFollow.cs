@@ -10,6 +10,10 @@ public class EnemyFollow : MonoBehaviour
     private float standByTime;
     [SerializeField]
     private Perception perception;
+
+    [SerializeField]
+    private GameObject direction;
+
     Rigidbody2D rbEnemigo;
     private Vector2 distancia;
 
@@ -27,8 +31,8 @@ public class EnemyFollow : MonoBehaviour
         }
         Mueve();
     }
-    // Update is called once per frame
-    void FixedUpdate()
+
+    void Update()
     {
         if (perception.GetSee())
         {
@@ -43,7 +47,7 @@ public class EnemyFollow : MonoBehaviour
     private void Mueve()
     {
         rbEnemigo.velocity = distancia.normalized * (velocity);
-        //transform.up = distancia;
-        //transform.up.Normalize();
+        direction.transform.up = distancia;
+        direction.transform.up.Normalize();
     }
 }
