@@ -15,7 +15,9 @@ public class DilophoMove : MonoBehaviour
     Rigidbody2D rbEnemigo;
     private Vector2 distancia, vEnemigo;
     [SerializeField]
-    public GameObject drop;
+    GameObject drop;
+    [SerializeField]
+    GameObject poison;
     [SerializeField]
     Perception perception;
     [SerializeField]
@@ -33,6 +35,7 @@ public class DilophoMove : MonoBehaviour
        
         //perception = GetComponentInChildren<Perception>();
         velocAux = velocity;
+        Instantiate(poison, this.transform.position, this.transform.rotation);
     }
     void FixedUpdate()
     {

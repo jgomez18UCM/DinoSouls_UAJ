@@ -3374,6 +3374,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
+      propertyPath: poison
+      value: 
+      objectReference: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080,
+        type: 3}
+    - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
@@ -3491,6 +3497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087790643149640414, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5f0f01e22220849bd870ea66638346, type: 3}
