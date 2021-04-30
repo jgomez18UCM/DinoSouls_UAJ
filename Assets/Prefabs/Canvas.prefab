@@ -230,7 +230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: K / LT
+  m_Text: K / LB
 --- !u!1 &5405134635491538274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: P / Y
+  m_Text: P / B
 --- !u!1 &9099936271337564187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,4 +1666,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Q / E / LB
+  m_Text: ' E / RT'
