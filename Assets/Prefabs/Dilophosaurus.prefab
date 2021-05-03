@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8665705105912062118}
   - component: {fileID: 1835549460064250849}
   - component: {fileID: 1628087943738985600}
+  - component: {fileID: 119644151955095833}
   m_Layer: 0
   m_Name: AnimationDir
   m_TagString: Untagged
@@ -71,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -4383642534979317261, guid: 366ed7b11365a494098f87d47c558c2a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1628087943738985600
@@ -92,7 +94,7 @@ Animator:
   m_GameObject: {fileID: 3919964209631516180}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5184491381a863f4395b959dc24b68de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -101,6 +103,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &119644151955095833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919964209631516180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d9044d431254449becb5fc1f2ef6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dilophoMove: {fileID: 4431609365707138610}
 --- !u!1 &4431609365623471890
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,10 +224,11 @@ MonoBehaviour:
   jugador: {fileID: 3925003021163371156, guid: 8100351e5d5a6654d829a98491f14374, type: 3}
   poison: {fileID: 7594521510964842823, guid: 0c53d6d750854e4498c29453a88fd080, type: 3}
   direction: {fileID: 7824026981062780916}
-  velocity: 0
+  velocity: 2
   rbEnemigo: {fileID: 4431609366368579824}
   perception: {fileID: 4431609365623471888}
   percepCol: {fileID: 4431609365623471889}
+  animator: {fileID: 1628087943738985600}
 --- !u!58 &4431609365707138621
 CircleCollider2D:
   m_ObjectHideFlags: 0

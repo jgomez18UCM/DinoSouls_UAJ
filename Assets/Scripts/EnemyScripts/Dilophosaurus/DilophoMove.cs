@@ -23,6 +23,9 @@ public class DilophoMove : MonoBehaviour
     [SerializeField]
     CircleCollider2D percepCol;
 
+    [SerializeField]
+    private Animator animator;
+
     private Vector2 distancia;
     bool visto;
     float timerVisto;
@@ -83,13 +86,23 @@ public class DilophoMove : MonoBehaviour
     {
         if (percepCol) percepCol.enabled = true;
         if (perception) perception.enabled = true;
-        PoisonInstance();
+        Attack();
     }
-    
-    void PoisonInstance()
+
+    void Attack() 
+    {
+        animator.Play("DilophoAttack");
+    }
+
+    public void PoisonInstance()
     {
         Instantiate(poison, this.transform.position, direction.transform.rotation);
-    }    
+    }
+
+    public void PlayWalkingAnim() 
+    {
+        animator.Play("DilophoWalkingLeft");
+    }
 }
 
 
