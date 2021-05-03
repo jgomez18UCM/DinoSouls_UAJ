@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("GO cuyo transform.up es usado por el dash para calcular la dirección")]
     private GameObject direction;
 
+    [SerializeField]
+    private float cooldownCambioAlma;
 
     private Dash dashScript;
 
@@ -47,6 +49,9 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gm;
     private Stun stun;
+
+    private bool canChange = true;
+    private float changeTimer = 0;
 
     void Start()
     {
@@ -113,9 +118,8 @@ public class PlayerController : MonoBehaviour
             attackTriceratops.DoAttack();
         }
 
-        if (Input.GetButtonDown("ChangeAttackF") || Input.GetAxis("ChangeAttackF") > 0.1) ChangeAttack(1);
-        else if (Input.GetButtonDown("ChangeAttackB") || Input.GetAxis("ChangeAttackB") > 0) ChangeAttack(-1);
-
+        if (canChange &&  Input.GetAxis("ChangeAttackF") > 0.1) ChangeAttack(1);
+        else if (!canChange && Input.GetAxis("ChangeAttackF") < 0.1) canChange = true;
         //MOVIMIENTO
 
         //izquierda
@@ -205,6 +209,7 @@ public class PlayerController : MonoBehaviour
     {
         prevAttack = activeAttack;
         attackRoot[prevAttack].enabled = false;
+        canChange = false;
         if (dir == -1 && activeAttack == 0) activeAttack = attackRoot.Length - 1;
         else if (dir == 1 && activeAttack == attackRoot.Length - 1) activeAttack = 0;
         else activeAttack += dir;
