@@ -10,6 +10,8 @@ public class DilophoMove : MonoBehaviour
     GameObject poison;
     [SerializeField]
     GameObject direction;
+    [SerializeField]
+    GameObject animationDir;
 
     [SerializeField]
     private float velocity;
@@ -43,7 +45,14 @@ public class DilophoMove : MonoBehaviour
         if(timerVisto >= 1)
         {
             visto = true;
-        }     
+        }
+
+        float angle = Vector2.SignedAngle(direction.transform.up, Vector2.up);
+
+        //Derecha
+        if (angle > 0) animationDir.transform.rotation = Quaternion.Euler(0, 180, 0);
+        //Izquierda
+        else if (angle < 0) animationDir.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
    
     private void Movimiento()

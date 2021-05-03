@@ -12,25 +12,28 @@ public class Pteranodon : MonoBehaviour
     Perception percepcion;
     Vector2 mov = new Vector2(0, 0);
     PlayerController playercont;
-    Stun stun;
-   float mod;
+    float mod;
     Rigidbody2D rg;
     Transform posjug;
+
+    [SerializeField]
+    private GameObject direction;
+    [SerializeField]
+    private GameObject attackPrefab;
+    [SerializeField]
+    private GameObject animationDir;
     
     void Start()
     {
         percepcion = GetComponent<Perception>();
         posjug = jugador.GetComponent<Transform>();
         //playercont = jugador.GetComponent<PlayerController>();
-        stun = jugador.GetComponent<Stun>();
-        stun.enabled = false;
         rg = GetComponent<Rigidbody2D>();
         speedAuxiliar = pteranodonSpeed;
         
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -66,9 +69,17 @@ public class Pteranodon : MonoBehaviour
                 pteranodonSpeed = speedAuxiliar;
 
             }
-           
 
-            transform.up = mov;
+            direction.transform.up = mov;
+
+            //Dirección de la animación
+            float angle = Vector2.SignedAngle(direction.transform.up, Vector2.up);
+
+            //Derecha
+            if (angle > 0) animationDir.transform.rotation = Quaternion.Euler(0, 180, 0);
+            //Izquierda
+            else if (angle < 0) animationDir.transform.rotation = Quaternion.Euler(0, 0, 0);
+
         }
         else if (!percepcion.GetSee())
         {
@@ -79,35 +90,21 @@ public class Pteranodon : MonoBehaviour
         }
       
     }
+
+    public void Attack(float attackTime) 
+    {
+        GameObject instance = Instantiate(attackPrefab, direction.transform);
+
+        Destroy(instance, attackTime);
+    }
+
     void FixedUpdate()
     {
         if (!percepcion.GetSee())
             rg.velocity = mov * 0;
         else
         rg.velocity = mov * pteranodonSpeed;
-       
-    
-    
     }
-   void OnTriggerEnter2D(Collider2D other)
-   {
-        print("el trigger va");
-        if (other.GetComponent<PlayerController>() != null)
-        {
-            //Invoke("Attack", 0);
-            //other.GetComponent<Stunt>().enabled = true;
-            stun.enabled = true;
-        }
-    
-    
-    }
-    /*void Attack()
-    {
 
-        //estunea al jugador activando el componente stunt que el jugador tiene 
-        playercont.ActivaStunt();
-        print("active el stunt");
-        
-    }*/
-
+    
 }
