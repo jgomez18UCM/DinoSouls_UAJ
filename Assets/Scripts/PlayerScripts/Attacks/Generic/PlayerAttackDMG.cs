@@ -14,5 +14,7 @@ public class PlayerAttackDMG : MonoBehaviour
             collision.gameObject.GetComponent<EnemyDamage>().TakeDamage(damage);
                 
         }
+
+        Debug.Log("hola buenas tardes");
     }
 }

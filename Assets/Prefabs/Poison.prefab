@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1103470331
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2687fcb720b340c4d8e58df2eae338eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,16 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8e3b4d8b9b044bb1982d063892654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
   speed: 2
+  distance: 6
   tiempoEnvenenado: 2
   cooldown: 1
-  distance: 6
   poisonCharco: {fileID: 3393968286270886297, guid: e2a9164d14e9c694d90da8db98067ce6,
     type: 3}
   poison: {fileID: 7594521510964842823}
-  dilophosaurio: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
-    type: 3}
 --- !u!50 &1301339478873195640
 Rigidbody2D:
   serializedVersion: 4

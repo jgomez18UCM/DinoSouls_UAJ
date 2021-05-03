@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5837088463598710283}
   - component: {fileID: 7536839902131395981}
   m_Layer: 10
-  m_Name: lanzadrop
+  m_Name: LanzaDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1103470331
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.990566, g: 0.6496838, b: 0.3083838, a: 1}

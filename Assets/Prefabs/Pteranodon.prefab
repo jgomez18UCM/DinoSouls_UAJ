@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 5154095139341103847}
   - component: {fileID: 5154095139341103771}
   - component: {fileID: 5154095139341103773}
+  - component: {fileID: 8288092532840874592}
   m_Layer: 9
   m_Name: Pteranodon
   m_TagString: Untagged
@@ -249,6 +250,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8288092532840874592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5154095139341103844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  direction: {fileID: 4075049537275472803}
+  animationDir: {fileID: 490067082009222774}
+  enemyLives: 20
+  fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
+    type: 3}
 --- !u!1 &5154095140410068611
 GameObject:
   m_ObjectHideFlags: 0
