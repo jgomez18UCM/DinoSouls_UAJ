@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
     [Tooltip("GO cuyo transform.up es usado por el dash para calcular la dirección")]
     private GameObject direction;
 
-    [SerializeField]
-    private float cooldownCambioAlma;
-
     private Dash dashScript;
 
     //Índice del ataque seleccionado
@@ -51,7 +48,6 @@ public class PlayerController : MonoBehaviour
     private Stun stun;
 
     private bool canChange = true;
-    private float changeTimer = 0;
 
     void Start()
     {
