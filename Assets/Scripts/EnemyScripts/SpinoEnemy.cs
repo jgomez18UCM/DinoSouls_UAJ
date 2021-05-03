@@ -20,6 +20,12 @@ public class SpinoEnemy : MonoBehaviour
     [SerializeField]
     float velocidadPlacaje = 0;
 
+    [SerializeField]
+    [Tooltip("GO hijo del enemigo que indica la dirección de los ataques")]
+    private GameObject direction;
+    [SerializeField]
+    private Animator animator;
+
 
     Perception perceptionComponent;
     Patrol patrol;
@@ -51,10 +57,11 @@ public class SpinoEnemy : MonoBehaviour
     }
     void Placaje()
     {
+        animator.Play("SpinoPrepareRoll");
         attacking = true;
         dir = jugador.position - transform.position;
         dir.Normalize();
-        transform.up = dir;
+        direction.transform.up = dir;
 
         if (patrol)
         {
@@ -94,6 +101,7 @@ public class SpinoEnemy : MonoBehaviour
         attacking = false;
         stun = true; 
         rg.velocity = Vector2.zero;
+        animator.Play("SpinoStopped");
         Invoke(nameof(QuitaStun), tiempoStun);
     }
 
@@ -106,6 +114,11 @@ public class SpinoEnemy : MonoBehaviour
             patrol.enabled = true;
             patrol.CancelInvoke();
         }
+    }
+
+    public void PlayRollingAnimation() 
+    {
+        animator.Play("SpinoRoll");
     }
 
 }

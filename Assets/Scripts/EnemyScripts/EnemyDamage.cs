@@ -11,10 +11,7 @@ public class EnemyDamage : MonoBehaviour
     private GameObject direction;
 
     [SerializeField]
-    private string[] animations;
-
-    [SerializeField]
-    private Animator animator;
+    private GameObject animationDir;
 
     [SerializeField]
     private int enemyLives;
@@ -42,8 +39,10 @@ public class EnemyDamage : MonoBehaviour
     {
         float angle = Vector2.SignedAngle(direction.transform.up, Vector2.up);
 
-        if (angle > 0) animator.Play(animations[0]);
-        else if (angle < 0) animator.Play(animations[1]);
+        //Derecha
+        if (angle > 0) animationDir.transform.rotation = Quaternion.Euler(0, 180, 0);
+        //Izquierda
+        else if (angle < 0) animationDir.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     public void TakeDamage(int damage)
