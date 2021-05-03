@@ -1045,7 +1045,7 @@ PrefabInstance:
     - target: {fileID: 472468902621568432, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 472468902621568435, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
@@ -1101,6 +1101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229685157470772966, guid: 18fea75875f52694cbce41d7d332b988,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5256855281466047545, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
@@ -1491,6 +1496,11 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
+    - target: {fileID: 5177913416192926817, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5154095139341103770, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
@@ -1668,18 +1678,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1260411343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1124633165 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2269679639178914346, guid: 8100351e5d5a6654d829a98491f14374,
-    type: 3}
-  m_PrefabInstance: {fileID: 1260411343}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124633161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57aa79c72c53f749ba7677db9caff7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1124633166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
@@ -1772,6 +1770,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4731074138373289370, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5140677700851771427, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_RootOrder
@@ -1835,7 +1838,7 @@ PrefabInstance:
     - target: {fileID: 5140677700851771437, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5719549753700200030, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
@@ -2050,21 +2053,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Direction
       objectReference: {fileID: 0}
-    - target: {fileID: 8983370860372881553, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: dash
-      value: 
-      objectReference: {fileID: 1124633165}
-    - target: {fileID: 8983370860372881553, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: playercont
-      value: 
-      objectReference: {fileID: 1124633166}
-    - target: {fileID: 8983370860372881553, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: tiempoStun
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8100351e5d5a6654d829a98491f14374, type: 3}
 --- !u!4 &1260411344 stripped
@@ -2080,6 +2068,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1835549460064250849, guid: fc5f0f01e22220849bd870ea66638346,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4431609365707138610, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: jugador
@@ -2153,7 +2146,7 @@ PrefabInstance:
     - target: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5f0f01e22220849bd870ea66638346, type: 3}
