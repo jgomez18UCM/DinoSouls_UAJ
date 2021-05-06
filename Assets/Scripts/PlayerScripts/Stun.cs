@@ -11,6 +11,8 @@ public class Stun : MonoBehaviour
     Rigidbody2D rg;
     [SerializeField]
     int tiempoStun = 1;
+    [SerializeField]
+    private GameObject stunAnimation;
     void OnEnable()
     {
         rg = GetComponent<Rigidbody2D>();
@@ -19,6 +21,7 @@ public class Stun : MonoBehaviour
         playercont.enabled = false;
         
         rg.velocity = new Vector2(0,0);
+        stunAnimation.SetActive(true);
         print("desactiuve el player ocntroller");
         Invoke("Desactivar", tiempoStun);
     }
@@ -26,6 +29,7 @@ public class Stun : MonoBehaviour
     {
         dash.enabled = true;
         playercont.enabled = true;
+        stunAnimation.SetActive(false);
         this.enabled = false;
     }
 }

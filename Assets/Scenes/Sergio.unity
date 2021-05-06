@@ -634,7 +634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7397cc3726012c048ae81fcf57820e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -847,6 +846,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2294133801131668229, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294133801131668229, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294133801131668229, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294133801131668229, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294133801131668229, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5948865786667754284, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
         type: 3}
       propertyPath: m_AnchorMax.y
