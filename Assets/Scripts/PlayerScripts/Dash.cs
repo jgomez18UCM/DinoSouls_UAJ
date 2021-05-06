@@ -85,7 +85,7 @@ public class Dash : MonoBehaviour
         gameManager.CancelDamage(dashTime);
 
         //Movimiento de cámara
-        cameraShake.Shake(direction);
+        cameraShake.Shake(-direction, 0.1f, 0.1f);
 
         //Reproducción del sfx
         dashSound.Play();

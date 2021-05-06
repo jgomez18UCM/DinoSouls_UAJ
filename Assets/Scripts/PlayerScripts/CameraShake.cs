@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public float shakeDuration;
-
-    private float shakeCooldown;
-    private Vector3 iniPos;
+    FollowingCamera followingCamera;
 
     void Start()
     {
-        iniPos = transform.position;
+        followingCamera = GetComponent<FollowingCamera>();
     }
 
-    void Update()
+    //Ejecuta un camera shake en la dirección y distancia dados por un tiempo
+    public void Shake(Vector3 dir, float distance, float time) 
     {
-        if (shakeCooldown <= 0) transform.position = iniPos;
+        dir.Normalize();
+        dir *= distance;
 
-        else shakeCooldown -= Time.deltaTime;
-    }
-
-    public void Shake(Vector3 dir) 
-    {
-        transform.position -= 0.1f * dir;
-
-        shakeCooldown = shakeDuration;
+        //Si hay extiende la distancia lo indicado
+        if (followingCamera != null) followingCamera.ExtendDistance(dir, time);
     }
 }

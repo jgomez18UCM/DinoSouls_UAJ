@@ -4,7 +4,12 @@ public class FollowingCamera : MonoBehaviour
 {
     [SerializeField]
     private Transform tJug;
+    
     Vector3 distance;
+
+    Vector3 iniDistance;
+
+    bool active = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +22,38 @@ public class FollowingCamera : MonoBehaviour
     void LateUpdate()
     {
         // Cambia la posición de la cámara a la posición del jugador más la distancia
-        transform.position = tJug.position + distance;
+        if (active) transform.position = tJug.position + distance;
     }
+
+    //Aumenta la distancia entre la cámara y el jugador un tiempo
+    public void ExtendDistance(Vector3 addDistance, float time) 
+    {
+        iniDistance = distance;
+
+        distance += addDistance;
+
+        Invoke("RestoreDistance", time);
+    }
+
+    private void RestoreDistance() 
+    {
+        distance = iniDistance;
+        CancelInvoke();
+    }
+
+    /* METODO TEMPORAL PARA DESACTIVAR EL MOV DE LA CAMARA
+    //Desactiva el movimiento de la cámara un tiempo dado
+    public void DeactivateMovement(float activationTime) 
+    {
+        active = false;
+
+        Invoke("ActivateMovement", activationTime);
+    }
+
+    private void ActivateMovement() 
+    {
+        active = true;
+        CancelInvoke();
+    }
+    */
 }
