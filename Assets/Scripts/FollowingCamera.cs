@@ -41,7 +41,6 @@ public class FollowingCamera : MonoBehaviour
         CancelInvoke();
     }
 
-    /* METODO TEMPORAL PARA DESACTIVAR EL MOV DE LA CAMARA
     //Desactiva el movimiento de la cámara un tiempo dado
     public void DeactivateMovement(float activationTime) 
     {
@@ -55,5 +54,4 @@ public class FollowingCamera : MonoBehaviour
         active = true;
         CancelInvoke();
     }
-    */
 }

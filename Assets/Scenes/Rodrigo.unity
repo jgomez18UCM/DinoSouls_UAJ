@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -678,8 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7397cc3726012c048ae81fcf57820e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.1
-  shakeDistance: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -750,6 +749,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tJug: {fileID: 1260411344}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea7eaceb69fdcb40946ffafd0aadb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTime: 1
+  minDist: 0.1
+  maxDist: 0.1
 --- !u!1 &535544151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5932100420765696497, guid: 05b8f179e7a9aab46913b715f69e41b2,
@@ -1492,6 +1506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pteranodon
       objectReference: {fileID: 0}
+    - target: {fileID: 5154095139341103844, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5154095139341103847, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: jugador
@@ -1839,7 +1858,7 @@ PrefabInstance:
     - target: {fileID: 5140677700851771437, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5719549753700200030, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
@@ -2147,7 +2166,7 @@ PrefabInstance:
     - target: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5f0f01e22220849bd870ea66638346, type: 3}
