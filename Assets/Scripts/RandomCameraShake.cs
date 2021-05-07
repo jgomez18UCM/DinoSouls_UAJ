@@ -1,26 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RandomCameraShake : MonoBehaviour
 {
     [SerializeField]
-    private float shakeTime = 1;
+    private float shakeTime = 0.15f;
 
     [SerializeField]
-    private float minDist = 0.1f;
+    private float minDist = -0.1f;
     [SerializeField]
     private float maxDist = 0.1f;
 
     FollowingCamera followingCamera;
 
-    Vector3 iniPos;
-
     private void OnEnable()
     {
         Invoke("DeactivateScript", shakeTime);
-
-        iniPos = transform.position;
     }
 
     private void Start()
@@ -30,16 +24,17 @@ public class RandomCameraShake : MonoBehaviour
 
     private void Update()
     {
-        if (followingCamera != null) followingCamera.DeactivateMovement(shakeTime);
-
+        //Genera un vector aleatorio en el rango elegido
         float x = Random.Range(minDist, maxDist);
         float y = Random.Range(minDist, maxDist);
 
-        transform.Translate(iniPos + new Vector3(x, y, 0));
+        followingCamera.ChangeDistance(new Vector3(x, y, 0));
     }
 
+    //Se desactiva tras un tiempo y restaura la distancia inicial
     private void DeactivateScript() 
     {
+        followingCamera.RestoreDistance();
         this.enabled = false;
     }
 }

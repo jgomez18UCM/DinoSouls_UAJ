@@ -30,7 +30,7 @@ public class EnemyDamage : MonoBehaviour
         //Si lo que colisiona es el jugador llama al método Respawn
         if (attack.gameObject.GetComponent<PlayerController>() != null)
         {
-            gm.TakeDamage(damage);
+            gm.TakeDamage(damage, false);
         }
 
     }

@@ -18,7 +18,7 @@ public class EnemyAttackDMG : MonoBehaviour
     {
         if (collision.gameObject.layer==LayerMask.NameToLayer("Player"))
         {
-            gm.TakeDamage(damage);
+            gm.TakeDamage(damage, false);
         }
     }
 }

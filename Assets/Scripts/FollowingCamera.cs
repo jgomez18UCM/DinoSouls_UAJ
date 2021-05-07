@@ -16,9 +16,9 @@ public class FollowingCamera : MonoBehaviour
     {
         // Distancia que hay entre la cámara y el jugador
         distance = (transform.position - tJug.position);
+        iniDistance = distance;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         // Cambia la posición de la cámara a la posición del jugador más la distancia
@@ -28,17 +28,22 @@ public class FollowingCamera : MonoBehaviour
     //Aumenta la distancia entre la cámara y el jugador un tiempo
     public void ExtendDistance(Vector3 addDistance, float time) 
     {
-        iniDistance = distance;
-
         distance += addDistance;
 
         Invoke("RestoreDistance", time);
     }
 
-    private void RestoreDistance() 
+    //Restaura la distancia inicial
+    public void RestoreDistance() 
     {
         distance = iniDistance;
         CancelInvoke();
+    }
+
+    //Cambia la distancia permanentemente
+    public void ChangeDistance(Vector3 addDistance) 
+    {
+        distance += addDistance;
     }
 
     //Desactiva el movimiento de la cámara un tiempo dado

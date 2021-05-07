@@ -23,6 +23,7 @@ public class Dash : MonoBehaviour
 
     //Script del movimiento de la cámara
     private CameraShake cameraShake;
+    private RandomCameraShake randomShake;
     private Camera cam;
 
     //Tiempo del dash y contador
@@ -48,6 +49,7 @@ public class Dash : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cameraShake = cam.GetComponent<CameraShake>();
         playerController = GetComponent<PlayerController>();
+        randomShake = cam.GetComponent<RandomCameraShake>();
 
         gameManager = GameManager.GetInstance();
 

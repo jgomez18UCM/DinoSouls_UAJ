@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     Vector2 respawnPointTemp;
 
+    private RandomCameraShake randomShake;
+
     private bool haveLanza = true;
 
     void Awake()
@@ -66,6 +68,11 @@ public class GameManager : MonoBehaviour
         life = MAXLIFE;
     }
 
+    private void Start()
+    {
+        randomShake = Camera.main.GetComponent<RandomCameraShake>();
+    }
+
     public static GameManager GetInstance()
     {
         return instance;
@@ -78,8 +85,9 @@ public class GameManager : MonoBehaviour
         theUIManager.UpdateHerbs(herbs);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool cliff)
     {
+        if (!cliff) randomShake.enabled = true;
 
         if (!invencible)
         {
@@ -164,7 +172,7 @@ public class GameManager : MonoBehaviour
     {
         if (!invencible) 
         {
-            TakeDamage(fallDamage);
+            TakeDamage(fallDamage, true);
             player.gameObject.SetActive(false);
 
             GameObject instance = Instantiate(playerFallingPrefab, player.transform.position, player.transform.rotation);
@@ -197,7 +205,7 @@ public class GameManager : MonoBehaviour
     {
         if (poisonTick < contpoisonMax)
         {           
-            TakeDamage(poisonDamage);
+            TakeDamage(poisonDamage, false);
             Invoke(nameof(PoisonDamage), 1);
             poisonTick++;
         }
