@@ -10850,7 +10850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7397cc3726012c048ae81fcf57820e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -11644,6 +11643,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dashSpeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363223225887373947, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363223225887373947, guid: 8100351e5d5a6654d829a98491f14374,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1497524645
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371156, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
