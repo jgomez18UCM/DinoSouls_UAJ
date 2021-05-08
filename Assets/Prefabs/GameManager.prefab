@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587d72393fad0f341a0da0664df8a035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 20
+  contpoisonMax: 4
+  poisonDamage: 1
   fallDamage: 4
   herbs: 0
   haveTrex: 1
@@ -53,4 +54,6 @@ MonoBehaviour:
   player: {fileID: 0}
   respawnTime: 2
   playerFallingPrefab: {fileID: 5115942847500863808, guid: 9e952aebbb26e024eb8c98eabd225c8c,
+    type: 3}
+  deadPlayerPrefab: {fileID: 2138089813738812622, guid: 2b272768f6dd99145ae658935b5f53be,
     type: 3}

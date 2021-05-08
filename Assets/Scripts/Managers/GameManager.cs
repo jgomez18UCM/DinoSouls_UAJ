@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject playerFallingPrefab;
+    [SerializeField]
+    private GameObject deadPlayerPrefab;
 
     Vector2 respawnPointTemp;
 
@@ -100,6 +102,16 @@ public class GameManager : MonoBehaviour
 
             //Respawnea al jugador
             Respawn(respawn.position, respawnTime);
+
+            if (!cliff)
+            { 
+                player.gameObject.SetActive(false);
+
+                GameObject instance = Instantiate(deadPlayerPrefab, player.transform.position, player.transform.rotation);
+
+                Destroy(instance, respawnTime);
+            }
+
         }
         theUIManager.UpdateHearts(life);
     }
