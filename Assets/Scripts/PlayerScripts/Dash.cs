@@ -92,4 +92,10 @@ public class Dash : MonoBehaviour
         //Reproducción del sfx
         dashSound.Play();
     }
+    public void Upgrade()
+    { 
+        dashDistance = dashDistance * 2;
+        dashSpeed = dashSpeed * 2;
+    
+    }
 }
