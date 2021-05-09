@@ -46,6 +46,7 @@ public class FollowingCamera : MonoBehaviour
         distance += addDistance;
     }
 
+    /*
     //Desactiva el movimiento de la cámara un tiempo dado
     public void DeactivateMovement(float activationTime) 
     {
@@ -59,4 +60,5 @@ public class FollowingCamera : MonoBehaviour
         active = true;
         CancelInvoke();
     }
+    */
 }

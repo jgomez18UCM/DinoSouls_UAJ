@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PteranodonAttack : MonoBehaviour
 {
+    [SerializeField]
+    private float stunTime = 1;
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        Stun stun = other.GetComponent<Stun>();
+        PlayerController playerController = other.GetComponent<PlayerController>();
 
         print("el trigger va");
-        if (stun != null)
+        if (playerController != null)
         {
-            stun.enabled = true;
+            playerController.ActivaStunt(stunTime);
         }
     }
 }
