@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     private int activeAttack = 0;
 
     [SerializeField]
-    private bool haveTrex = true, haveAnkylo = true, haveTrice=true;
+    private bool haveTrex = true, haveAnkylo = false, haveTrice = false;
 
     //punto de respawn del jugador
     [SerializeField]
@@ -242,5 +242,17 @@ public class GameManager : MonoBehaviour
         haveLanza = !haveLanza;
 
         theUIManager.UpdateSpear(haveLanza);
+    }
+
+    public void ActivateAnkylo()
+    {
+        haveAnkylo = true;
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
+    }
+
+    public void ActivateTrice()
+    {
+        haveTrice = true;
+        theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
     }
 }

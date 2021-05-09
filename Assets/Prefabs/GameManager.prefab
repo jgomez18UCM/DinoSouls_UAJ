@@ -46,10 +46,10 @@ MonoBehaviour:
   contpoisonMax: 4
   poisonDamage: 1
   fallDamage: 4
-  herbs: 0
+  herbs: 1
   haveTrex: 1
-  haveAnkylo: 1
-  haveTrice: 1
+  haveAnkylo: 0
+  haveTrice: 0
   respawn: {fileID: 0}
   player: {fileID: 0}
   respawnTime: 2

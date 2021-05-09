@@ -51,7 +51,13 @@ public class PlayerController : MonoBehaviour
 
     bool stunned = false;
 
-    private bool canChange = true;
+    private bool canChange = false;
+
+    //Variable que indica si el alma de ankylo esta desbloqueado.
+    bool haveAnkylo = false;
+
+    //Variable que indica si el escudo del triceratops está desbloqueado.
+    bool haveTrice = false;
 
     void Start()
     {
@@ -113,15 +119,15 @@ public class PlayerController : MonoBehaviour
             attack.DoAttack();
         }
 
-        else if (Input.GetButtonDown("EscudoTriceratops") && !stunned) 
+        else if (haveTrice && Input.GetButtonDown("EscudoTriceratops") && !stunned) 
         {
             Attack attackTriceratops = (Attack) attackRootTriceratops;
 
             attackTriceratops.DoAttack();
         }
 
-        if (canChange &&  Input.GetAxis("ChangeAttackF") > 0.1) ChangeAttack(1);
-        else if (!canChange && Input.GetAxis("ChangeAttackF") < 0.1) canChange = true;
+        if (haveAnkylo && canChange &&  Input.GetAxis("ChangeAttackF") > 0.1) ChangeAttack(1);
+        else if (haveAnkylo && !canChange && Input.GetAxis("ChangeAttackF") < 0.1) canChange = true;
         //MOVIMIENTO
 
         //izquierda
@@ -267,5 +273,17 @@ public class PlayerController : MonoBehaviour
     public void ActivateFallingAnimation() 
     {
         Instantiate(fallingPlayer, transform.position, transform.rotation);
+    }
+
+    public void ActivateAnkylo()
+    {
+        haveAnkylo = true;
+        gm.ActivateAnkylo();
+    }
+
+    public void ActivateTrice()
+    {
+        haveTrice = true;
+        gm.ActivateTrice();
     }
 }
