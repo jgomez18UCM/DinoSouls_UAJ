@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool tengolanza = true;
 
+    [SerializeField]
+    private GameObject stunAnimation;
+
 
     [SerializeField]
     [Tooltip("AttackRoot, hijos del jugador, a meter")]
@@ -45,7 +48,8 @@ public class PlayerController : MonoBehaviour
     private int prevAttack;
 
     private GameManager gm;
-    private Stun stun;
+
+    bool stunned = false;
 
     private bool canChange = true;
 
@@ -58,22 +62,24 @@ public class PlayerController : MonoBehaviour
         dashScript = GetComponent<Dash>();
 
         gm = GameManager.GetInstance();
-        stun = GetComponent<Stun>();
     }
 
 
     void Update()
     {
         //Movimiento
-        
-        float movX = 0, movY = 0;
-        
-        if (Input.GetAxis("Horizontal") >= 0.2) movX = 1;
-        else if(Input.GetAxis("Horizontal") <= -0.2)  movX = -1;
-        if (Input.GetAxis("Vertical") >= 0.2) movY = 1;
-        else if (Input.GetAxis("Vertical") <= -0.2) movY = -1;
-      
-        movement = new Vector2(movX, movY);
+
+        if (!stunned)
+        {
+            float movX = 0, movY = 0;
+
+            if (Input.GetAxis("Horizontal") >= 0.2) movX = 1;
+            else if (Input.GetAxis("Horizontal") <= -0.2) movX = -1;
+            if (Input.GetAxis("Vertical") >= 0.2) movY = 1;
+            else if (Input.GetAxis("Vertical") <= -0.2) movY = -1;
+
+            movement = new Vector2(movX, movY);
+        }
 
         //Lanza
         if (Input.GetButtonDown("Fire2") && tengolanza)
@@ -91,7 +97,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dash
-        else if (Input.GetButtonDown("Jump") && dashCooldown <= 0)
+        else if (Input.GetButtonDown("Jump") && dashCooldown <= 0 && !stunned)
         {
             dashScript.ExecuteDash(ref dashCooldown);
         }
@@ -100,14 +106,14 @@ public class PlayerController : MonoBehaviour
 
         //Ataque
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !stunned)
         {
             Attack attack = (Attack) attackRoot[activeAttack];
 
             attack.DoAttack();
         }
 
-        else if (Input.GetButtonDown("EscudoTriceratops")) 
+        else if (Input.GetButtonDown("EscudoTriceratops") && !stunned) 
         {
             Attack attackTriceratops = (Attack) attackRootTriceratops;
 
@@ -183,7 +189,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //parado
-        else if (movement.x == 0 && movement.y == 0)
+        else if ((movement.x == 0 && movement.y == 0))
         {
             playerAnimator.Play("PlayerStopped");
 
@@ -192,6 +198,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if(!stunned)
         rb.velocity = movement * speed;
     }
 
@@ -212,9 +219,30 @@ public class PlayerController : MonoBehaviour
 
         gm.ChangeAttackUI(activeAttack);
     }
-    public void ActivaStunt()//publico porque lo llama el pteranodon
+
+    //Activa el stun con animación
+    public void ActivaStunt(float time)//publico porque lo llama el pteranodon
     {
-        stun.enabled=true;
+        Stun(time);
+        movement = Vector2.zero;
+        stunAnimation.SetActive(true);
+    }
+
+    //Stun sin animación
+    public void Stun(float time) 
+    {
+        stunned = true;
+        rb.velocity = Vector2.zero;
+
+        Invoke("DeactivateStun", time);
+    }
+
+    private void DeactivateStun() 
+    {
+        stunned = false;
+
+        //si hay animación activa la desactiva
+        if(stunAnimation.activeSelf) stunAnimation.SetActive(false);
     }
 
     public void ActivateFallingAnimation() 

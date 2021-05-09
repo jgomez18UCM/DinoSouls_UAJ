@@ -20,23 +20,4 @@ public class CameraShake : MonoBehaviour
         //Si hay followingCamera extiende la distancia lo indicado
         if (followingCamera != null) followingCamera.ExtendDistance(dir, time);
     }
-
-    public void DoubleShake(Vector3 dir, float distance, float time) 
-    {
-        dir.Normalize();
-        dir *= distance;
-
-        //Si hay followingCamera extiende la distancia lo indicado
-        if (followingCamera != null)
-        {
-            followingCamera.ExtendDistance(dir, time);
-            
-
-        }
-    }
-
-    private void SecondShake(Vector3 dir, float distance, float time) 
-    {
-        if (followingCamera != null) followingCamera.ExtendDistance(dir, time);
-    }
 }
