@@ -121,6 +121,8 @@ MonoBehaviour:
   enemyLives: 2
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
+  knockbackTime: 0.5
+  knockbackForce: 5
 --- !u!1 &3356166617580097129
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +273,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1779921819
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2810960275487289657, guid: f25a33e2422b02a4cb739020ef7608fd,
     type: 3}

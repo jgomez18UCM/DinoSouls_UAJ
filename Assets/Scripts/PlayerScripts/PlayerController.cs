@@ -195,6 +195,9 @@ public class PlayerController : MonoBehaviour
 
             //direction.transform.up = Vector2.down;
         }
+
+        if (rb.velocity != Vector2.zero)
+        print(rb.velocity);
     }
     void FixedUpdate()
     {
@@ -243,6 +246,25 @@ public class PlayerController : MonoBehaviour
 
         //si hay animación activa la desactiva
         if(stunAnimation.activeSelf) stunAnimation.SetActive(false);
+    }
+
+    //Knockback para el jugador en dirección contraria a su dir, para colisiones con enemigos
+    public void KnockbackNoDir(float knockbackForce, float knockbackTime) 
+    {
+        Stun(knockbackTime);
+
+        Vector2 dir = -direction.transform.up;
+        dir.Normalize();
+        dir *= knockbackForce;
+
+        rb.velocity = dir;
+    }
+    //Para colisiones con ataques
+    public void Knockback(Vector2 dir, float knockbackTime) 
+    {
+        Stun(knockbackTime);
+
+        rb.velocity = dir;
     }
 
     public void ActivateFallingAnimation() 

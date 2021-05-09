@@ -53,7 +53,7 @@ public class LancerMeleeAttack : MonoBehaviour
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
+        //Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -61,7 +61,7 @@ public class LancerMeleeAttack : MonoBehaviour
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
+        //Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     public void DoAttack()

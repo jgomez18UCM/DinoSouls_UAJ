@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1779921819
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8492826060330808907, guid: f2acbb42eab141848aab6836f4d920f9,
     type: 3}
@@ -268,6 +268,8 @@ MonoBehaviour:
   enemyLives: 20
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
+  knockbackTime: 0.25
+  knockbackForce: 3
 --- !u!1 &5154095140410068611
 GameObject:
   m_ObjectHideFlags: 0

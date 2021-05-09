@@ -19,7 +19,13 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private GameObject fallingEnemy;
 
+    [SerializeField]
+    private float knockbackTime = 0.5f;
+    [SerializeField]
+    private float knockbackForce = 3;
+
     private GameManager gm;
+    private PlayerController playerController;
 
     private void Start()
     {
@@ -27,12 +33,19 @@ public class EnemyDamage : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D attack)
     {
+        playerController = attack.gameObject.GetComponent<PlayerController>();
+
         //Si lo que colisiona es el jugador llama al método Respawn
-        if (attack.gameObject.GetComponent<PlayerController>() != null)
+        if (playerController != null)
         {
             gm.TakeDamage(damage, false);
-        }
 
+            Vector2 dir = attack.transform.position - transform.position;
+            dir.Normalize();
+            dir *= knockbackForce;
+
+            playerController.Knockback(dir, knockbackTime);
+        }
     }
 
     private void Update()

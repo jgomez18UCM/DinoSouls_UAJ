@@ -26,8 +26,7 @@ public class Dash : MonoBehaviour
     private RandomCameraShake randomShake;
     private Camera cam;
 
-    //Tiempo del dash y contador
-    private float timer;
+    //Tiempo del dash
     private float dashTime;
 
     private Vector3 direction;
@@ -57,31 +56,16 @@ public class Dash : MonoBehaviour
         dashTime = dashDistance / dashSpeed;
     }
 
-    void Update()
-    {
-        //Tiempo de dash
-        if (timer <= 0)
-        {
-            rb.velocity = Vector2.zero;
-
-            playerController.enabled = true;
-        }
-
-        else timer -= Time.deltaTime;
-    }
-
     //Función pública que realiza el dash
     public void ExecuteDash(ref float cooldown) 
     {
-        playerController.enabled = false;
+        playerController.Stun(dashTime);
 
         direction = dashDirection.transform.up;
 
         rb.velocity = direction * dashSpeed;
 
         cooldown = uptime;
-
-        timer = dashTime;
 
         //Se vuelve invencible al jugador mientras dure el dash
         gameManager.CancelDamage(dashTime);
