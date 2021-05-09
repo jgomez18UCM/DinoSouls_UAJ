@@ -63,9 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f147f5b08e6b09b47ba9c9a4faa371f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 24
+  damage: 8
   colliderAnk: {fileID: 621354737368357543}
-  knockBackForce: 5
+  knockbackForce: 7
+  knockbackTime: 0.5
   attackAngle: 90
 --- !u!212 &8160883183601813954
 SpriteRenderer:

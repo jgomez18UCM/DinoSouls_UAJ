@@ -17,6 +17,11 @@ public class EnemyFollow : MonoBehaviour
     Rigidbody2D rbEnemigo;
     private Vector2 distancia;
 
+    bool stunned = false;
+    bool knockback = false;
+    //Tiempo que se queda el enemigo stuneado tras un knockback
+    float knockbackRecoverTime = 0.5f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,8 +51,37 @@ public class EnemyFollow : MonoBehaviour
 
     private void Mueve()
     {
-        rbEnemigo.velocity = distancia.normalized * (velocity);
-        direction.transform.up = distancia;
-        direction.transform.up.Normalize();
+        if (!stunned)
+        {
+            rbEnemigo.velocity = distancia.normalized * (velocity);
+            direction.transform.up = distancia;
+            direction.transform.up.Normalize();
+        }
+    }
+
+    public void Stun(float time)
+    {
+        stunned = true;
+        rbEnemigo.velocity = Vector2.zero;
+
+        if (time >= 0) //Los valores negativos actúan como comodín para un stun infinito
+        Invoke("DeactivateStun", time);
+    }
+
+    public void DeactivateStun()
+    {
+        stunned = false;
+        if (knockback) 
+        {
+            Stun(knockbackRecoverTime);
+            knockback = false;
+        }
+    }
+
+    public void Knockback(Vector2 dir, float time) 
+    {
+        knockback = true;
+        Stun(time);
+        rbEnemigo.velocity = dir;
     }
 }

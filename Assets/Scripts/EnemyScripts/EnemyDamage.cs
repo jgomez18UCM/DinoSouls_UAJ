@@ -26,10 +26,12 @@ public class EnemyDamage : MonoBehaviour
 
     private GameManager gm;
     private PlayerController playerController;
+    private EnemyFollow enemyFollow;
 
     private void Start()
     {
         gm = GameManager.GetInstance();
+        enemyFollow = GetComponent<EnemyFollow>();
     }
     private void OnCollisionEnter2D(Collision2D attack)
     {
@@ -75,6 +77,14 @@ public class EnemyDamage : MonoBehaviour
         Destroy(this.gameObject);
 
         Destroy(instance, 2);
+    }
+
+    public void Knockback(Vector2 dir, float knockbackTime) 
+    {
+        if (enemyFollow != null) 
+        {
+            enemyFollow.Knockback(dir, knockbackTime);
+        }
     }
 }
 

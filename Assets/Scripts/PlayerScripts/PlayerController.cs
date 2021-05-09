@@ -195,9 +195,6 @@ public class PlayerController : MonoBehaviour
 
             //direction.transform.up = Vector2.down;
         }
-
-        if (rb.velocity != Vector2.zero)
-        print(rb.velocity);
     }
     void FixedUpdate()
     {

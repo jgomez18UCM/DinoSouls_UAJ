@@ -37,8 +37,8 @@ public class Perception : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-     seeing = false;
-      See();
+        seeing = false;
+        See();
    
     }
 
@@ -58,11 +58,8 @@ public class Perception : MonoBehaviour
                 s.enabled = false;
                 s.CancelInvoke();
             }
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
         }
-        
-            
-        
     }
 
     public bool GetSee()

@@ -11,7 +11,9 @@ public class AnkyloAttackDMG : MonoBehaviour
     private Collider2D colliderAnk;
 
     [SerializeField]
-    private float knockBackForce;
+    private float knockbackForce = 10;
+    [SerializeField]
+    private float knockbackTime = 0.5f;
 
     [SerializeField]
     [Tooltip("Ángulo del área de ataque")]
@@ -28,14 +30,16 @@ public class AnkyloAttackDMG : MonoBehaviour
             //Vector de la dirección hacia el enemigo
             Vector2 dir = collision.transform.position - transform.position;
 
-            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-
-            if (rb != null) rb.AddForce(dir.normalized * knockBackForce, ForceMode2D.Impulse);
-
             //Si el ángulo está dentro del área del ataque hace daño
             if (Vector2.Angle(transform.up, dir) <= attackAngle/2 && enemyDamage != null) 
             {
                 enemyDamage.TakeDamage(damage);
+
+                //Knockback
+                Vector2 dirKnockback = dir.normalized * knockbackForce;
+                print(dirKnockback);
+
+                enemyDamage.Knockback(dirKnockback, knockbackTime);
             }
         }
     }

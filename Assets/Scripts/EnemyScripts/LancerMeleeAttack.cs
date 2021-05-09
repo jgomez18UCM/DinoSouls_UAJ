@@ -35,16 +35,14 @@ public class LancerMeleeAttack : MonoBehaviour
     [SerializeField]
     private Collider2D perColl;
 
-    private Patrol p;
-    private EnemyFollow f;
-    private Rigidbody2D rb;
+    private Patrol enemyPatrol;
+    private EnemyFollow enemyFollow;
     
 
     void Start()
     {
-        p = father.GetComponent<Patrol>();
-        f = father.GetComponent<EnemyFollow>();
-        rb = father.GetComponent<Rigidbody2D>();
+        enemyPatrol = father.GetComponent<Patrol>();
+        enemyFollow = father.GetComponent<EnemyFollow>();
         attack = true;
     }
 
@@ -68,15 +66,16 @@ public class LancerMeleeAttack : MonoBehaviour
     {
         if (attack)
         {
+            /*
             if (per) per.enabled = false;
             if (perColl) perColl.enabled = false;         
-            if (p) p.enabled = false;
-            if (f)
+            if (enemyPatrol) enemyPatrol.enabled = false;
+            if (enemyFollow)
             {
-                f.CancelInvoke();
-                f.enabled = false;
-            }  
-            rb.velocity = new Vector2(0,0);
+                enemyFollow.CancelInvoke();
+                enemyFollow.enabled = false;
+            */
+            enemyFollow.Stun(-1); //Le pasamos el valor -1 para tener un stun con tiempo indeterminado
             attackInstance = Instantiate(attackPrefab, attackRoot);
             attack = false;
             Invoke(nameof(ResetCooldown), attackCooldown);
@@ -91,8 +90,12 @@ public class LancerMeleeAttack : MonoBehaviour
     }
     private void MoveAgain()
     {
+        /*
         perColl.enabled = true;
         if(per) per.enabled = true;  
+        */
+
+        enemyFollow.DeactivateStun();
     }
 
 }
