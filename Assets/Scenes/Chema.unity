@@ -4003,7 +4003,7 @@ GameObject:
   - component: {fileID: 788459024}
   - component: {fileID: 788459023}
   - component: {fileID: 788459022}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AnkyloTotem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,8 +4072,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1497524645
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5886488776149985069, guid: 9f216a764db9d094491990f8f4214949,
     type: 3}
@@ -4940,7 +4940,7 @@ PrefabInstance:
     - target: {fileID: 769592614244995743, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269679639178914346, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -5363,6 +5363,16 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 1668025949}
+    - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
+        type: 3}
+      propertyPath: haveTrice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
+        type: 3}
+      propertyPath: haveAnkylo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1100563519715175941, guid: b88cfd18440a94441bcb23d92ba03e37,
         type: 3}
       propertyPath: playerFallingPrefab
