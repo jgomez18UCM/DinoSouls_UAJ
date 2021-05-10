@@ -25,10 +25,12 @@ public class AnkyloAttackDMG : MonoBehaviour
     {
         enemyDamage = collision.GetComponent<EnemyDamage>();
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (enemyDamage != null)
         {
+            //Transform del padre que indica la dirección del ataque
+            Transform directionTransform = transform.parent.parent;
             //Vector de la dirección hacia el enemigo
-            Vector2 dir = collision.transform.position - transform.position;
+            Vector2 dir = collision.transform.position - directionTransform.position;
 
             //Si el ángulo está dentro del área del ataque hace daño
             if (Vector2.Angle(transform.up, dir) <= attackAngle/2 && enemyDamage != null) 

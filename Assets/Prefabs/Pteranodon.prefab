@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3360563305782115747}
   - component: {fileID: 5177913416192926817}
   - component: {fileID: 4572616063224783475}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: AnimationDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 660332807591907871}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5154095139341103771}
   - component: {fileID: 5154095139341103773}
   - component: {fileID: 8288092532840874592}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Pteranodon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5154095140410068613}
   - component: {fileID: 5154095140410068610}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: perc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 5806637958407947741}
   - component: {fileID: 1826671300796198736}
   - component: {fileID: 9075141133727258540}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -27,11 +27,13 @@ public class EnemyDamage : MonoBehaviour
     private GameManager gm;
     private PlayerController playerController;
     private EnemyFollow enemyFollow;
+    private Pteranodon pteranodon;
 
     private void Start()
     {
         gm = GameManager.GetInstance();
         enemyFollow = GetComponent<EnemyFollow>();
+        pteranodon = GetComponent<Pteranodon>();
     }
     private void OnCollisionEnter2D(Collision2D attack)
     {
@@ -81,10 +83,12 @@ public class EnemyDamage : MonoBehaviour
 
     public void Knockback(Vector2 dir, float knockbackTime) 
     {
-        if (enemyFollow != null) 
+        if (enemyFollow != null)
         {
             enemyFollow.Knockback(dir, knockbackTime);
         }
+
+        else if (pteranodon != null) pteranodon.Knockback(dir, knockbackTime);
     }
 }
 

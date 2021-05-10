@@ -13,8 +13,12 @@ public class Pteranodon : MonoBehaviour
     Vector2 mov = new Vector2(0, 0);
     PlayerController playercont;
     float mod;
-    Rigidbody2D rg;
+    Rigidbody2D rb;
     Transform posjug;
+
+    bool stunned = false;
+    bool knockback = false;
+    float knockbackRecoverTime = 0.5f;
 
     [SerializeField]
     private GameObject direction;
@@ -28,15 +32,12 @@ public class Pteranodon : MonoBehaviour
         percepcion = GetComponent<Perception>();
         posjug = jugador.GetComponent<Transform>();
         //playercont = jugador.GetComponent<PlayerController>();
-        rg = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         speedAuxiliar = pteranodonSpeed;
-        
-
     }
 
     void Update()
     {
-        
         if (percepcion.GetSee())//cuando lo vea lo seguira hasta la distancia de  ataque
         {
             mov = posjug.transform.position - transform.position;
@@ -50,24 +51,16 @@ public class Pteranodon : MonoBehaviour
                 mov = -mov;
                 pteranodonSpeed = speedAuxiliar;
 
-
                 //si está muy cerca que salga en direccion contraria y ataca
-
-
             }
             else if ((mod<attackDistance)&&mod>= attackDistance - 2)
             {
-                mov = mov;
                 pteranodonSpeed = 0;
                 //mov = mov * 0; mov me cambia la direccion tbm solo tengo que tocar la velocidad
-
             }
             else if (mod > attackDistance + 2)//si esta en un rango de distancia con respecto del jugador ,ataca
             {
-
-                mov = mov;
                 pteranodonSpeed = speedAuxiliar;
-
             }
 
             direction.transform.up = mov;
@@ -85,10 +78,7 @@ public class Pteranodon : MonoBehaviour
         {
             CancelInvoke();
             pteranodonSpeed = 0;
-
-            //mov = mov * 0;
         }
-      
     }
 
     public void Attack(float attackTime) 
@@ -100,11 +90,38 @@ public class Pteranodon : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!percepcion.GetSee())
-            rg.velocity = mov * 0;
-        else
-        rg.velocity = mov * pteranodonSpeed;
+        if (!stunned)
+        {
+            if (!percepcion.GetSee())
+                rb.velocity = mov * 0;
+            else
+                rb.velocity = mov * pteranodonSpeed;
+        }
     }
 
-    
+    public void Stun(float time)
+    {
+        stunned = true;
+        rb.velocity = Vector2.zero;
+
+        if (time >= 0) //Los valores negativos actúan como comodín para un stun infinito
+            Invoke("DeactivateStun", time);
+    }
+
+    public void DeactivateStun()
+    {
+        stunned = false;
+        if (knockback)
+        {
+            Stun(knockbackRecoverTime);
+            knockback = false;
+        }
+    }
+
+    public void Knockback(Vector2 dir, float time)
+    {
+        knockback = true;
+        Stun(time);
+        rb.velocity = dir;
+    }
 }

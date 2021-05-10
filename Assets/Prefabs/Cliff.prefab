@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 4435277554556216016}
   - component: {fileID: 4435277554556216021}
   - component: {fileID: 4435277554556216017}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Cliff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
