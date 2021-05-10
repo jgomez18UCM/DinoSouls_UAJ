@@ -53,7 +53,6 @@ public class CarnotaurusBite : MonoBehaviour
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        //Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -61,22 +60,12 @@ public class CarnotaurusBite : MonoBehaviour
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-        //Debug.Log("ángulo: " + Vector2.Angle(directionGO.transform.up, dir));
     }
 
     public void DoAttack()
     {
         if (attack)
-        {
-            /*
-            if (per) per.enabled = false;
-            if (perColl) perColl.enabled = false;         
-            if (enemyPatrol) enemyPatrol.enabled = false;
-            if (enemyFollow)
-            {
-                enemyFollow.CancelInvoke();
-                enemyFollow.enabled = false;
-            */
+        {          
             enemyFollow.Stun(-1); //Le pasamos el valor -1 para tener un stun con tiempo indeterminado
             attackInstance = Instantiate(attackPrefab, attackRoot);
             attack = false;
@@ -91,12 +80,7 @@ public class CarnotaurusBite : MonoBehaviour
         attack = true;
     }
     private void MoveAgain()
-    {
-        /*
-        perColl.enabled = true;
-        if(per) per.enabled = true;  
-        */
-
+    {      
         enemyFollow.DeactivateStun();
     }
 
