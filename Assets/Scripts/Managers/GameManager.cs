@@ -56,6 +56,9 @@ public class GameManager : MonoBehaviour
 
     private bool haveLanza = true;
 
+    //variable que indica si se le puede envenenar al jugador por parte del escudo(es decir,si no lo tiene)
+    private bool canPoison = true;
+
     void Awake()
     {
         if (instance == null)
@@ -120,6 +123,7 @@ public class GameManager : MonoBehaviour
     public void CancelDamage(float time) 
     {
         invencible = true;
+        canPoison = false;
 
         //Solo llama la función de desactivar si el tiempo es >= 0
         if (time >= 0) 
@@ -134,6 +138,7 @@ public class GameManager : MonoBehaviour
     public void DeactivateInvencibility() 
     {
         invencible = false;
+        canPoison = true;
     }
 
     public void Heal()
@@ -230,7 +235,7 @@ public class GameManager : MonoBehaviour
      
     public void ActivatePoison()
     {
-        if (!poisoned)
+        if (!poisoned && canPoison)
         {
             PoisonDamage();
             poisoned = true;
