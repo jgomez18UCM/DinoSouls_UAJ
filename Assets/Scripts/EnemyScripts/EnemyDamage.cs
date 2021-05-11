@@ -28,6 +28,8 @@ public class EnemyDamage : MonoBehaviour
     private PlayerController playerController;
     private EnemyFollow enemyFollow;
     private Pteranodon pteranodon;
+    private int poisonTicks = -1;
+    private int poisonedDmgPerTick;
 
     private void Start()
     {
@@ -89,6 +91,24 @@ public class EnemyDamage : MonoBehaviour
         }
 
         else if (pteranodon != null) pteranodon.Knockback(dir, knockbackTime);
+    }
+
+    public void Poisoned(int time,int dmgPerTick)
+    {
+        if (poisonTicks < 0)
+        {
+            poisonTicks = time;
+            poisonedDmgPerTick = dmgPerTick;
+        }
+        Debug.Log("Daño por veneno");
+        TakeDamage(dmgPerTick);
+        poisonTicks--;
+        if (poisonTicks > 0) Invoke("RepeatDamage",1);
+    }
+
+    private void RepeatDamage()
+    {
+        Poisoned(poisonTicks, poisonedDmgPerTick);
     }
 }
 

@@ -53,9 +53,14 @@ public class PlayerController : MonoBehaviour
 
     private bool canChange = false;
 
+    [SerializeField]
+    bool venenoLanza;
+
+    [SerializeField]
     //Variable que indica si el alma de ankylo esta desbloqueado.
     bool haveAnkylo = false;
 
+    [SerializeField]
     //Variable que indica si el escudo del triceratops está desbloqueado.
     bool haveTrice = false;
 
@@ -68,6 +73,8 @@ public class PlayerController : MonoBehaviour
         dashScript = GetComponent<Dash>();
 
         gm = GameManager.GetInstance();
+
+        if (venenoLanza) ActivarVenenoLanza();
     }
 
 
@@ -94,7 +101,12 @@ public class PlayerController : MonoBehaviour
 
             gm.changeSpearStateUI();
 
-            Instantiate(lanza, direction.transform.position, direction.transform.rotation);
+            GameObject projectile = Instantiate(lanza, direction.transform.position, direction.transform.rotation);
+            if(venenoLanza)
+            {
+                PlayerAttackDMG dañoProy = projectile.GetComponent<PlayerAttackDMG>();
+                if (dañoProy) dañoProy.ActivatePoison();
+            }
 
         }
         else if (Input.GetButtonDown("Fire3"))
@@ -285,5 +297,11 @@ public class PlayerController : MonoBehaviour
     {
         haveTrice = true;
         gm.ActivateTrice();
+    }
+
+    public void ActivarVenenoLanza()
+    {
+        venenoLanza = true;
+        Debug.Log("Activado veneno de la lanza");
     }
 }
