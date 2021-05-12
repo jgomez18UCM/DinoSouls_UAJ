@@ -95,7 +95,7 @@ public class EnemyDamage : MonoBehaviour
 
     public void Poisoned(int time,int dmgPerTick)
     {
-        if (poisonTicks < 0)
+        if (poisonTicks <= 0)
         {
             poisonTicks = time;
             poisonedDmgPerTick = dmgPerTick;
