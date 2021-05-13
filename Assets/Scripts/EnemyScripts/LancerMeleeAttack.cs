@@ -6,10 +6,8 @@ public class LancerMeleeAttack : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private GameObject attackPrefab;
-
-    [SerializeField]
     private Transform attackRoot;
+    [SerializeField]
     private GameObject attackInstance;
 
     [SerializeField]
@@ -28,12 +26,6 @@ public class LancerMeleeAttack : MonoBehaviour
 
     [SerializeField]
     private GameObject father = null;
-
-    [SerializeField]
-    private Perception per;
-
-    [SerializeField]
-    private Collider2D perColl;
 
     private Patrol enemyPatrol;
     private EnemyFollow enemyFollow;
@@ -66,20 +58,12 @@ public class LancerMeleeAttack : MonoBehaviour
     {
         if (attack)
         {
-            /*
-            if (per) per.enabled = false;
-            if (perColl) perColl.enabled = false;         
-            if (enemyPatrol) enemyPatrol.enabled = false;
-            if (enemyFollow)
-            {
-                enemyFollow.CancelInvoke();
-                enemyFollow.enabled = false;
-            */
             enemyFollow.Stun(-1); //Le pasamos el valor -1 para tener un stun con tiempo indeterminado
-            attackInstance = Instantiate(attackPrefab, attackRoot);
+            attackInstance.SetActive(true);
             attack = false;
             Invoke(nameof(ResetCooldown), attackCooldown);
-            Destroy(attackInstance, attackDuration);
+
+            //Desactiva el ataque y retoma el movimiento cuando acaba la duración del ataque
             Invoke(nameof(MoveAgain), attackDuration);
         }        
     }
@@ -90,12 +74,8 @@ public class LancerMeleeAttack : MonoBehaviour
     }
     private void MoveAgain()
     {
-        /*
-        perColl.enabled = true;
-        if(per) per.enabled = true;  
-        */
-
         enemyFollow.DeactivateStun();
+        attackInstance.SetActive(false);
     }
 
 }

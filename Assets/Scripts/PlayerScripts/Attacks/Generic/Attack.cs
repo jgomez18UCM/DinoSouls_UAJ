@@ -3,9 +3,6 @@
 public class Attack : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Prefab del ataque")]
-    private GameObject attackPrefab = null;  
-    [SerializeField]
     [Tooltip("Tiempo de lanzamiento del ataque")]
     private float attackCastTime = 0;
     [SerializeField]
@@ -14,6 +11,10 @@ public class Attack : MonoBehaviour
     [SerializeField]
     [Tooltip("Cooldown del ataque")]
     private float cooldown = 0;
+
+    [SerializeField]
+    [Tooltip("Prefab del ataque, hijo del root desactivado")]
+    GameObject attackInstance;
 
     private float timer = 0;
 
@@ -44,7 +45,7 @@ public class Attack : MonoBehaviour
 
     private void CastAttack()
     {
-        GameObject attackInstance = Instantiate(attackPrefab, transform);
+        attackInstance.SetActive(true);
 
         //si se ha invocado el escudo
         if (attackInstance.GetComponent<TriceratopsAttackEffect>() != null)
@@ -55,16 +56,14 @@ public class Attack : MonoBehaviour
             Invoke(nameof(changeShielStateUI), cooldown + attackDuration);
         }
 
-        //Lo destruye una vez acabada la duración
-        Destroy(attackInstance, attackDuration);
-
-        //Pone attacking a false una vez acabe el ataque
+        //Pone attacking a false una vez acabe el ataque y desactiva el ataque
         Invoke(nameof(CancelAttacking), attackDuration);
     }
 
     private void CancelAttacking() 
     {
         attacking = false;
+        attackInstance.SetActive(false);
     }
 
     //invoca al gm para cambiar el estado de la ui sobre el escudo
