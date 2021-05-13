@@ -57,7 +57,7 @@ public class CarnotaurusCarga : MonoBehaviour
     }
     void Placaje()
     {
-        animator.Play("SpinoPrepareRoll");
+        animator.Play("CarnotaurusPreparing");
         attacking = true;
         dir = jugador.position - transform.position;
         dir.Normalize();
@@ -78,6 +78,7 @@ public class CarnotaurusCarga : MonoBehaviour
         {
             patrol.enabled = false;
             patrol.CancelInvoke();
+            
         }
 
         mov = dir * velocidadPlacaje;
@@ -101,7 +102,7 @@ public class CarnotaurusCarga : MonoBehaviour
         attacking = false;
         stun = true;
         rg.velocity = Vector2.zero;
-        animator.Play("SpinoStopped");
+        animator.Play("CarnotaurusStop");
         Invoke(nameof(QuitaStun), tiempoStun);
     }
 
@@ -118,7 +119,7 @@ public class CarnotaurusCarga : MonoBehaviour
 
     public void PlayRollingAnimation()
     {
-        animator.Play("SpinoRoll");
+        animator.Play("CarnotaurusRoll");
     }
 
 }
