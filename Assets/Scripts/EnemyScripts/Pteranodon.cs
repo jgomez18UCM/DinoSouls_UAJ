@@ -11,7 +11,7 @@ public class Pteranodon : MonoBehaviour
     int speedAuxiliar;
     Perception percepcion;
     Vector2 mov = new Vector2(0, 0);
-    PlayerController playercont;
+
     float mod;
     Rigidbody2D rb;
     Transform posjug;
@@ -23,15 +23,12 @@ public class Pteranodon : MonoBehaviour
     [SerializeField]
     private GameObject direction;
     [SerializeField]
-    private GameObject attackPrefab;
-    [SerializeField]
     private GameObject animationDir;
     
     void Start()
     {
         percepcion = GetComponent<Perception>();
         posjug = jugador.GetComponent<Transform>();
-        //playercont = jugador.GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         speedAuxiliar = pteranodonSpeed;
     }
@@ -63,7 +60,7 @@ public class Pteranodon : MonoBehaviour
                 pteranodonSpeed = speedAuxiliar;
             }
 
-            direction.transform.up = mov;
+            direction.transform.up = jugador.transform.position - transform.position;
 
             //Dirección de la animación
             float angle = Vector2.SignedAngle(direction.transform.up, Vector2.up);
@@ -79,13 +76,6 @@ public class Pteranodon : MonoBehaviour
             CancelInvoke();
             pteranodonSpeed = 0;
         }
-    }
-
-    public void Attack(float attackTime) 
-    {
-        GameObject instance = Instantiate(attackPrefab, direction.transform);
-
-        Destroy(instance, attackTime);
     }
 
     void FixedUpdate()

@@ -1519,6 +1519,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 9075141133727258540, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: attackCooldown
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5154095139341103770, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
