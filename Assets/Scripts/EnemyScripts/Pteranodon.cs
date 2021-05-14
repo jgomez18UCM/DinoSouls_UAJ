@@ -27,7 +27,7 @@ public class Pteranodon : MonoBehaviour
     
     void Start()
     {
-        percepcion = GetComponent<Perception>();
+        percepcion = GetComponentInChildren<Perception>();
         posjug = jugador.GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         speedAuxiliar = pteranodonSpeed;
@@ -39,10 +39,11 @@ public class Pteranodon : MonoBehaviour
         {
             mov = posjug.transform.position - transform.position;
             //no encontre niguna instruccion para calcular modulkos pero si alguien la conoce nos ahorramos esto XD
-            mod = Mathf.Sqrt(mov.x * mov.x + mov.y * mov.y);
+            //mod = Mathf.Sqrt(mov.x * mov.x + mov.y * mov.y);
+            mod = mov.magnitude;
             mov.Normalize();
 
-            if (mod < attackDistance - 2)
+            if (mod < attackDistance - 1.5f)
             {
                 //Invoke("Attack", 0);
                 mov = -mov;
@@ -50,12 +51,12 @@ public class Pteranodon : MonoBehaviour
 
                 //si está muy cerca que salga en direccion contraria y ataca
             }
-            else if ((mod<attackDistance)&&mod>= attackDistance - 2)
+            else if ((mod<attackDistance) &&mod>= attackDistance - 1)
             {
                 pteranodonSpeed = 0;
                 //mov = mov * 0; mov me cambia la direccion tbm solo tengo que tocar la velocidad
             }
-            else if (mod > attackDistance + 2)//si esta en un rango de distancia con respecto del jugador ,ataca
+            else if (mod > attackDistance)//si esta en un rango de distancia con respecto del jugador ,ataca
             {
                 pteranodonSpeed = speedAuxiliar;
             }
@@ -71,7 +72,7 @@ public class Pteranodon : MonoBehaviour
             else if (angle < 0) animationDir.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         }
-        else if (!percepcion.GetSee())
+        else if(!percepcion.GetSee())
         {
             CancelInvoke();
             pteranodonSpeed = 0;

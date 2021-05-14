@@ -284,6 +284,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 136332594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &178745318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5154095140410068611, guid: 6cb358f11e93db041a05684589e8209d,
+    type: 3}
+  m_PrefabInstance: {fileID: 774878498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &178745321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178745318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d9eeb2f59c5fd4b8397798af2bf2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  father: {fileID: 1815977894}
 --- !u!1 &191276488
 GameObject:
   m_ObjectHideFlags: 0
@@ -11009,6 +11028,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pteranodon
       objectReference: {fileID: 0}
+    - target: {fileID: 5154095139341103846, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5154095139341103847, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: jugador
@@ -11019,12 +11043,23 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5154095140410068611, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837822234798660189, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8288092532840874592, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: enemyLives
       value: 16
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5154095139341103846, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cb358f11e93db041a05684589e8209d, type: 3}
 --- !u!1001 &786049113
 PrefabInstance:
@@ -11990,6 +12025,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1815977894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5154095139341103844, guid: 6cb358f11e93db041a05684589e8209d,
+    type: 3}
+  m_PrefabInstance: {fileID: 774878498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1843912908
 PrefabInstance:
   m_ObjectHideFlags: 0
