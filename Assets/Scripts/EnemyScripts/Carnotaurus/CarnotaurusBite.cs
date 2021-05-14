@@ -8,10 +8,6 @@ public class CarnotaurusBite : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private GameObject attackPrefab;
-
-    [SerializeField]
-    private Transform attackRoot;
     private GameObject attackInstance;
 
     [SerializeField]
@@ -30,12 +26,6 @@ public class CarnotaurusBite : MonoBehaviour
 
     [SerializeField]
     private GameObject father = null;
-
-    [SerializeField]
-    private Perception per;
-
-    [SerializeField]
-    private Collider2D perColl;
 
     private Patrol enemyPatrol;
     private EnemyFollow enemyFollow;
@@ -67,10 +57,10 @@ public class CarnotaurusBite : MonoBehaviour
         if (attack)
         {          
             enemyFollow.Stun(-1); //Le pasamos el valor -1 para tener un stun con tiempo indeterminado
-            attackInstance = Instantiate(attackPrefab, attackRoot);
+            attackInstance.SetActive(true);
+
             attack = false;
             Invoke(nameof(ResetCooldown), attackCooldown);
-            Destroy(attackInstance, attackDuration);
             Invoke(nameof(MoveAgain), attackDuration);
         }
     }
@@ -82,6 +72,7 @@ public class CarnotaurusBite : MonoBehaviour
     private void MoveAgain()
     {      
         enemyFollow.DeactivateStun();
+        attackInstance.SetActive(false);
     }
 
 }
