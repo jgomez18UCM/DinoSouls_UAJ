@@ -870,6 +870,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1124633161}
+    - target: {fileID: 4158612654520825764, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 1124633161}
     - target: {fileID: 4296462331607731122, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: m_Name
