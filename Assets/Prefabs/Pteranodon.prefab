@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDuration: 1
-  attackCooldown: 1
+  attackCooldown: 3
   pteranodonScript: {fileID: 5154095139341103847}
   attackInstance: {fileID: 1126670819582295058}
 --- !u!1001 &2579003464788926394
@@ -451,6 +451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518934287831250676, guid: 9cb5ecaf0201d8940bb5eebbf291bc5e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.36862746
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb5ecaf0201d8940bb5eebbf291bc5e, type: 3}
