@@ -52,7 +52,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   tiempoPlacaje: 1
   tiempoStun: 1
-  velocidadPlacaje: 5
+  velocidadPlacaje: 3
   direction: {fileID: 8251996504558929773}
   animator: {fileID: 2367297632858801939}
   perceptionCollider: {fileID: 6475937760117584525}
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 4
   direction: {fileID: 8251996504558929773}
   animationDir: {fileID: 3439197645548001761}
-  enemyLives: 2
+  enemyLives: 36
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
   knockbackTime: 0.5

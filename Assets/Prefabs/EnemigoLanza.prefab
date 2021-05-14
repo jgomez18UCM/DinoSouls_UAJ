@@ -67,8 +67,6 @@ MonoBehaviour:
   attackDuration: 1
   directionGO: {fileID: 1582852997847853723}
   father: {fileID: 5140677700851771437}
-  per: {fileID: 8699244166007326680}
-  perColl: {fileID: 7352244099731642941}
 --- !u!1 &1003415794982502098
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,12 +284,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolPositions:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   direction: {fileID: 1582852997847853723}
-  randomNext: 1
+  randomNext: 0
   standBy: 0.5
-  speed: 3
+  speed: 1
 --- !u!61 &7523791590216944125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -352,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
-  velocity: 3
+  velocity: 1
   standByTime: 0
   perception: {fileID: 8699244166007326680}
   direction: {fileID: 1582852997847853723}
@@ -368,10 +364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   direction: {fileID: 1582852997847853723}
   animationDir: {fileID: 4983499137836078075}
-  enemyLives: 1
+  enemyLives: 28
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
   knockbackTime: 0.5

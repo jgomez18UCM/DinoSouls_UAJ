@@ -338,13 +338,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4431609366368579837}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49b2dd6b5a4bcf640962d719466dec8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
-  velocity: 3
+  velocity: 1
   standByTime: 1
   perception: {fileID: 4431609365623471888}
   direction: {fileID: 7824026981062780916}
@@ -360,10 +360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   direction: {fileID: 7824026981062780916}
   animationDir: {fileID: 3919964209631516180}
-  enemyLives: 2
+  enemyLives: 20
   fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
     type: 3}
   knockbackTime: 0.25

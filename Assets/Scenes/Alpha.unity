@@ -10900,11 +10900,6 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
-    - target: {fileID: 5154095139341103847, guid: 6cb358f11e93db041a05684589e8209d,
-        type: 3}
-      propertyPath: pteranodonSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5154095140410068610, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: m_Radius
@@ -10924,16 +10919,6 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1260411344}
-    - target: {fileID: 472468902621568428, guid: 18fea75875f52694cbce41d7d332b988,
-        type: 3}
-      propertyPath: velocidadPlacaje
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 472468902621568428, guid: 18fea75875f52694cbce41d7d332b988,
-        type: 3}
-      propertyPath: perceptionCollider
-      value: 
-      objectReference: {fileID: 1649360318}
     - target: {fileID: 472468902621568429, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
       propertyPath: m_Constraints
@@ -11008,16 +10993,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5256855281466047545, guid: 18fea75875f52694cbce41d7d332b988,
-        type: 3}
-      propertyPath: damage
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5256855281466047545, guid: 18fea75875f52694cbce41d7d332b988,
-        type: 3}
-      propertyPath: enemyLives
-      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18fea75875f52694cbce41d7d332b988, type: 3}
@@ -11286,30 +11261,10 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
-    - target: {fileID: 4431609366368579830, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
-      propertyPath: velocity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431609366368579830, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4431609366368579837, guid: fc5f0f01e22220849bd870ea66638346,
         type: 3}
       propertyPath: m_Name
       value: Dilophosaurus
-      objectReference: {fileID: 0}
-    - target: {fileID: 5462136925055861681, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5462136925055861681, guid: fc5f0f01e22220849bd870ea66638346,
-        type: 3}
-      propertyPath: enemyLives
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5f0f01e22220849bd870ea66638346, type: 3}
@@ -11338,32 +11293,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -836077665587962538, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: enemyLives
-      value: 28
-      objectReference: {fileID: 0}
     - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
-    - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
-      propertyPath: velocity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
-      propertyPath: perception
-      value: 
-      objectReference: {fileID: 566031015}
     - target: {fileID: 80445782462319214, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
@@ -11462,26 +11395,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: randomNext
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
-      propertyPath: patrolPositions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
-        type: 3}
       propertyPath: patrolPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1048538476}
@@ -11529,11 +11442,6 @@ PrefabInstance:
       propertyPath: dashSound
       value: 
       objectReference: {fileID: 125712575}
-    - target: {fileID: 2269679639178914346, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 2363223225887373947, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_SortingLayer
@@ -11548,11 +11456,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jugador
-      objectReference: {fileID: 0}
-    - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3925003021163371157, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -11618,26 +11521,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.61658955
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.83669543
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.00000011920929
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560644827131077968, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08165228
       objectReference: {fileID: 0}
     - target: {fileID: 6828485488825656181, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
@@ -11809,12 +11692,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88cfd18440a94441bcb23d92ba03e37, type: 3}
---- !u!58 &1649360318 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6475937760117584525, guid: 18fea75875f52694cbce41d7d332b988,
-    type: 3}
-  m_PrefabInstance: {fileID: 786049113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1668025948
 GameObject:
   m_ObjectHideFlags: 0
@@ -24900,6 +24777,31 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5948865788139110931, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918032864604002964, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918032864604002964, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918032864604002964, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918032864604002964, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918032864604002964, guid: 07f2982f2cd4fb34c983eee5b4d9f0ed,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0

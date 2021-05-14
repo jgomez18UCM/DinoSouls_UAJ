@@ -303,8 +303,7 @@ MonoBehaviour:
   dashSpeed: 25
   dashDistance: 3
   uptime: 0.75
-  dashSound: {fileID: 2258792942272096821, guid: b7cbbfe52c0a1ae458854355f8d126fd,
-    type: 3}
+  dashSound: {fileID: 0}
   dashDirection: {fileID: 7606772320658485771}
 --- !u!61 &4560644827131077968
 BoxCollider2D:
@@ -319,7 +318,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0017217398, y: -0.040310085}
+  m_Offset: {x: -0.00000011920929, y: -0.08165228}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -330,7 +329,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40661776, y: 0.7433623}
+  m_Size: {x: 0.61658955, y: 0.83669543}
   m_EdgeRadius: 0
 --- !u!95 &3146997570167325586
 Animator:
@@ -410,7 +409,7 @@ GameObject:
   - component: {fileID: 2474148440509883681}
   - component: {fileID: 1159055322037544487}
   m_Layer: 8
-  m_Name: AttackRoot1
+  m_Name: TrexAttackRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
