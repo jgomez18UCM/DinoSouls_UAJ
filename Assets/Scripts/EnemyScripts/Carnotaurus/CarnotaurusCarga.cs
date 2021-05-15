@@ -33,7 +33,6 @@ public class CarnotaurusCarga : MonoBehaviour
     [SerializeField]
     Collider2D perceptionCollider;
 
-    // Start is called before the first frame update
     void Start()
     {
         rg = GetComponent<Rigidbody2D>();
@@ -43,7 +42,6 @@ public class CarnotaurusCarga : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!stun)
@@ -119,7 +117,7 @@ public class CarnotaurusCarga : MonoBehaviour
 
     public void PlayRollingAnimation()
     {
-        animator.Play("CarnotaurusRoll");
+        animator.Play("CarnotaurusRolling");
     }
 
 }
