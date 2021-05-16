@@ -885,6 +885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carnotaurus
       objectReference: {fileID: 0}
+    - target: {fileID: 4296462331607731122, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4296462331607731132, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: m_RootOrder
@@ -1518,6 +1523,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371167610198113881, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 490067082009222774, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: m_Layer
@@ -1527,6 +1537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815176044072006323, guid: 6cb358f11e93db041a05684589e8209d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5154095139341103768, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
@@ -1596,7 +1611,7 @@ PrefabInstance:
     - target: {fileID: 5154095139341103844, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5154095139341103847, guid: 6cb358f11e93db041a05684589e8209d,
         type: 3}
