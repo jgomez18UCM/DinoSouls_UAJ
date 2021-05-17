@@ -19,14 +19,33 @@ public class AnkyloAttackDMG : MonoBehaviour
     [Tooltip("Ángulo del área de ataque")]
     private float attackAngle = 90;
 
+    //Array de enemigos golpeados
+    private GameObject[] enemies;
+    int contEnem;
+
     private EnemyDamage enemyDamage;
+
+    private void OnEnable()
+    {
+        //Resetea el array
+        enemies = new GameObject[5];
+        contEnem = 0;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         enemyDamage = collision.GetComponent<EnemyDamage>();
 
-        if (enemyDamage != null)
+        //Comprueba que el enemigo no está en el array de los que ya han sido atacados
+        int i = 0;
+        while (i < contEnem && collision.gameObject != enemies[i]) i++;
+
+        if (enemyDamage != null && i == contEnem)
         {
+            //Añade el enemigo al array de enemigos golpeados
+            enemies[contEnem] = collision.gameObject;
+            contEnem++;
+
             //Transform del padre que indica la dirección del ataque
             Transform directionTransform = transform.parent.parent;
             //Vector de la dirección hacia el enemigo
