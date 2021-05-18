@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform respawn;
 
+    private Vector2 respawnVector;
+
     [SerializeField]
     private GameObject player;
 
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         randomShake = Camera.main.GetComponent<RandomCameraShake>();
+        respawnVector = new Vector2(respawn.position.x, respawn.position.y);
     }
 
     public static GameManager GetInstance()
@@ -104,7 +107,7 @@ public class GameManager : MonoBehaviour
             life = MAXLIFE;
 
             //Respawnea al jugador
-            Respawn(respawn.position, respawnTime);
+            Respawn(respawnVector, respawnTime);
 
             if (!cliff)
             { 
@@ -259,5 +262,10 @@ public class GameManager : MonoBehaviour
     {
         haveTrice = true;
         theUIManager.UpdateSouls(haveTrex, haveAnkylo, activeAttack, haveTrice);
+    }
+
+    public void changeRespawnPoint(Vector2 respawnPosition)
+    {
+        respawnVector = respawnPosition;
     }
 }
