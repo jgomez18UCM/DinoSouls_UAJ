@@ -7,21 +7,22 @@ public class Piedras : MonoBehaviour
 {
     [SerializeField]
     Image piedra=null;
+
+    [SerializeField]
+    float time = 3;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerController>() != null)
+        PlayerController player = other.GetComponent<PlayerController>();
+
+        if (player != null)
         {
             piedra.enabled = true;
-            Invoke("PasaPiedra", 3);
-           
-        
+            Invoke("PasaPiedra", time);
+            player.ActivaStunt(time);
         }
-    
     }
     void PasaPiedra()
     {
         piedra.enabled = false;
-        Destroy(this.gameObject);
-
     }
 }
