@@ -4664,7 +4664,7 @@ PrefabInstance:
       objectReference: {fileID: 1124633161}
     - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1939805503, guid: 934f14adef772634a9c720afc70120db, type: 3}
       propertyPath: perception
@@ -4774,7 +4774,7 @@ PrefabInstance:
     - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332870999039681298, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
@@ -4796,6 +4796,11 @@ PrefabInstance:
       propertyPath: patrolPositions.Array.data[2]
       value: 
       objectReference: {fileID: 1566032481}
+    - target: {fileID: 7607735152305098460, guid: 934f14adef772634a9c720afc70120db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8435546319548986852, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: per
