@@ -7,32 +7,32 @@ public class Piedras : MonoBehaviour
 {
     [SerializeField]
     Image piedra=null;
-    PlayerController player;
 
+    PlayerController player;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-       player = other.GetComponent<PlayerController>();
+        player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
             piedra.enabled = true;
-            player.enabled = false;
+            
             Time.timeScale = 0;
            
            
-            //player.ActivaStunt(time);
+            player.ActivaStunt(-1);
         }
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Jump"))
             Invoke("PasaPiedra", 0);
     }
     void PasaPiedra()
     {
         Time.timeScale = 1;
-        player.enabled = true;
+        player.DeactivateStun();
         piedra.enabled = false;
     }
 }

@@ -259,11 +259,11 @@ public class PlayerController : MonoBehaviour
     {
         stunned = true;
         rb.velocity = Vector2.zero;
-
+        if (time >= 0) 
         Invoke("DeactivateStun", time);
     }
 
-    private void DeactivateStun() 
+    public void DeactivateStun() 
     {
         stunned = false;
 
