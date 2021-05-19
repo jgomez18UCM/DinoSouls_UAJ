@@ -28,6 +28,7 @@ public class EnemyDamage : MonoBehaviour
     private PlayerController playerController;
     private EnemyFollow enemyFollow;
     private Pteranodon pteranodon;
+    private SpinoEnemy spino;
     private int poisonTicks = -1;
     private int poisonedDmgPerTick;
 
@@ -36,6 +37,7 @@ public class EnemyDamage : MonoBehaviour
         gm = GameManager.GetInstance();
         enemyFollow = GetComponent<EnemyFollow>();
         pteranodon = GetComponent<Pteranodon>();
+        spino = GetComponent<SpinoEnemy>();
     }
     private void OnCollisionEnter2D(Collision2D attack)
     {
@@ -91,6 +93,8 @@ public class EnemyDamage : MonoBehaviour
         }
 
         else if (pteranodon != null) pteranodon.Knockback(dir, knockbackTime);
+
+        else if (spino != null) spino.Knockback(dir, knockbackTime);
     }
 
     public void Poisoned(int time,int dmgPerTick)
