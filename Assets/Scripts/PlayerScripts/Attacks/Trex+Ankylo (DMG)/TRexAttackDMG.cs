@@ -19,10 +19,11 @@ public class TRexAttackDMG : MonoBehaviour
     private void OnEnable()
     {
         //Resetea el array
-        enemies = new GameObject[5];
+        enemies = new GameObject[10];
         contEnem = 0;
+        
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         enemyDamage = collision.GetComponent<EnemyDamage>();
