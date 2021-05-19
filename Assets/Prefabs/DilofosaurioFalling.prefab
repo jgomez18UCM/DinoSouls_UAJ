@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5115942847500863811}
   - component: {fileID: 4719879243262408992}
   m_Layer: 0
-  m_Name: PlayerFalling
+  m_Name: DilofosaurioFalling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,10 +118,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1497524645
-  m_SortingLayer: 4
+  m_SortingLayerID: -1779921819
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4833438273499498420, guid: 782d1abd6da72d9448f5a94dbaaa25d8,
+  m_Sprite: {fileID: -7630136345494140757, guid: fa7d4ab3ce0f5394e988ddce97c75840,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

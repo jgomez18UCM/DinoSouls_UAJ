@@ -368,7 +368,7 @@ MonoBehaviour:
   direction: {fileID: 1582852997847853723}
   animationDir: {fileID: 4983499137836078075}
   enemyLives: 28
-  fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
+  fallingEnemy: {fileID: 5115942847500863808, guid: ab73feb39c8209b4aa911d2204d54338,
     type: 3}
   knockbackTime: 0.5
   knockbackForce: 3
