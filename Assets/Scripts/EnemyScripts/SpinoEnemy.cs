@@ -33,7 +33,10 @@ public class SpinoEnemy : MonoBehaviour
     [SerializeField]
     Collider2D perceptionCollider;
 
-    // Start is called before the first frame update
+    bool knockback = false;
+    //Tiempo que se queda el enemigo stuneado tras un knockback
+    float knockbackRecoverTime = 0.5f;
+
     void Start()
     {
         rg= GetComponent<Rigidbody2D>();
@@ -43,7 +46,6 @@ public class SpinoEnemy : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!stun)
@@ -63,16 +65,6 @@ public class SpinoEnemy : MonoBehaviour
         dir.Normalize();
         direction.transform.up = dir;
 
-        if (patrol)
-        {
-            patrol.enabled = false;
-            patrol.CancelInvoke();
-        }
-        if (enemyFollow)
-        {
-            enemyFollow.enabled = false;
-            enemyFollow.CancelInvoke();
-        }
         if (perceptionCollider) perceptionCollider.enabled = false;
         if (patrol)
         {
@@ -96,24 +88,38 @@ public class SpinoEnemy : MonoBehaviour
         }
     }
 
-    private void GetStunned()
-    { 
-        attacking = false;
-        stun = true; 
-        rg.velocity = Vector2.zero;
+    void GetStunned() 
+    {
+        Stun(tiempoStun);
         animator.Play("SpinoStopped");
-        Invoke(nameof(QuitaStun), tiempoStun);
+        attacking = false;
     }
 
-    private void QuitaStun()
+    public void Stun(float time)
+    {
+        stun = true;
+        rg.velocity = Vector2.zero;
+
+        if (time >= 0) //Los valores negativos actúan como comodín para un stun infinito
+            Invoke("DeactivateStun", time);
+    }
+
+    public void DeactivateStun()
     {
         stun = false;
         if (perceptionCollider) perceptionCollider.enabled = true;
-        if (patrol)
+        if (knockback)
         {
-            patrol.enabled = true;
-            patrol.CancelInvoke();
+            Stun(knockbackRecoverTime);
+            knockback = false;
         }
+    }
+
+    public void Knockback(Vector2 dir, float time)
+    {
+        knockback = true;
+        Stun(time);
+        rg.velocity = dir;
     }
 
     public void PlayRollingAnimation() 
