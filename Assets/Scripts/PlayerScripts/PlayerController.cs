@@ -64,6 +64,9 @@ public class PlayerController : MonoBehaviour
     //Variable que indica si el escudo del triceratops está desbloqueado.
     bool haveTrice = false;
 
+    [SerializeField]
+    private menuManager menuMg;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -212,6 +215,11 @@ public class PlayerController : MonoBehaviour
             playerAnimator.Play("PlayerStopped");
 
             //direction.transform.up = Vector2.down;
+        }
+
+        if (Input.GetButtonDown("MenuPausa"))
+        {
+            menuMg.MenuPausa();
         }
     }
     void FixedUpdate()

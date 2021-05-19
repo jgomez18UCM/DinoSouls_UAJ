@@ -7,6 +7,9 @@ public class menuManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject controls;
+
+    [SerializeField]
+    private GameObject pausa;
     public void QuitApplication()
     {
         Application.Quit();
@@ -21,5 +24,19 @@ public class menuManager : MonoBehaviour
     {
         if (controls.activeInHierarchy == true) controls.SetActive(false);
         else controls.SetActive(true);
+    }
+
+    public void MenuPausa()
+    {
+        if (pausa.activeInHierarchy == true)
+        {
+            pausa.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            pausa.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }
