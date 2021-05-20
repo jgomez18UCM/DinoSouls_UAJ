@@ -2185,11 +2185,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3333334
       objectReference: {fileID: 0}
-    - target: {fileID: 4571007200855714387, guid: 8100351e5d5a6654d829a98491f14374,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 6628404065096896068, guid: 8100351e5d5a6654d829a98491f14374,
         type: 3}
       propertyPath: m_IsActive
