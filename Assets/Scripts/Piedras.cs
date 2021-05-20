@@ -20,19 +20,18 @@ public class Piedras : MonoBehaviour
             
             Time.timeScale = 0;
            
-           
             player.ActivaStunt(-1);
         }
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (piedra.enabled && Input.GetButtonDown("Jump"))
             Invoke("PasaPiedra", 0);
     }
     void PasaPiedra()
     {
         Time.timeScale = 1;
-       jug.GetComponent<PlayerController>().DeactivateStun();
+        jug.GetComponent<PlayerController>().DeactivateStun();
         piedra.enabled = false;
     }
 }
