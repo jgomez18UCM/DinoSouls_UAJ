@@ -36,11 +36,10 @@ public class MoveSpear : MonoBehaviour
 
 
         }
-
     }
+
     void OnDestroy()
     {
         Instantiate(drop, this.transform.position, this.transform.rotation);
-
     }
 }
