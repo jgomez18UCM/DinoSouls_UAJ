@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7887822220201429602}
   - component: {fileID: 7887822220201429603}
   - component: {fileID: 7887822220201429607}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CapaPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1497524645
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2510476293373519475, guid: 8cd20a295bf4f814f88c6b78721b14a9,
     type: 3}
