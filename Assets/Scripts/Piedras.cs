@@ -7,12 +7,12 @@ public class Piedras : MonoBehaviour
 {
     [SerializeField]
     Image piedra=null;
-
-    PlayerController player;
+    [SerializeField]
+    GameObject jug;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        player = other.GetComponent<PlayerController>();
+        PlayerController player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
@@ -32,7 +32,7 @@ public class Piedras : MonoBehaviour
     void PasaPiedra()
     {
         Time.timeScale = 1;
-        player.DeactivateStun();
+       jug.GetComponent<PlayerController>().DeactivateStun();
         piedra.enabled = false;
     }
 }

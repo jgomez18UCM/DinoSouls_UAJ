@@ -16983,6 +16983,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
         type: 3}
+      propertyPath: jug
+      value: 
+      objectReference: {fileID: 1474658808}
+    - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
+        type: 3}
       propertyPath: piedra
       value: 
       objectReference: {fileID: 1916329917}
@@ -17315,6 +17320,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
+        type: 3}
+      propertyPath: jug
+      value: 
+      objectReference: {fileID: 1474658808}
     - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
         type: 3}
       propertyPath: piedra
@@ -18067,6 +18077,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
+        type: 3}
+      propertyPath: jug
+      value: 
+      objectReference: {fileID: 1474658808}
     - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
         type: 3}
       propertyPath: piedra
@@ -19211,6 +19226,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
+        type: 3}
+      propertyPath: jug
+      value: 
+      objectReference: {fileID: 1474658808}
     - target: {fileID: 2042838593942784874, guid: a35f6804c9bc7c541b9d683417f4dd47,
         type: 3}
       propertyPath: piedra
