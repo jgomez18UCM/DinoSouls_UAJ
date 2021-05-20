@@ -47,11 +47,11 @@ TagManager:
   - name: Enemies
     uniqueID: 2515045477
     locked: 0
-  - name: ankylo
-    uniqueID: 1944609751
-    locked: 0
   - name: Trail
     uniqueID: 1520938679
+    locked: 0
+  - name: ankylo
+    uniqueID: 1944609751
     locked: 0
   - name: Player
     uniqueID: 1497524645
