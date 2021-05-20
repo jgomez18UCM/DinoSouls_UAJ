@@ -11,6 +11,5 @@ public class PickUp : MonoBehaviour
             other.GetComponent<PlayerController>().DarLanza();
             Destroy(this.gameObject);
         }
-
     }
 }
