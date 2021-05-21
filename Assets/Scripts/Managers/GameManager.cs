@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
     //variable que indica si se le puede envenenar al jugador por parte del escudo(es decir,si no lo tiene)
     private bool canPoison = true;
 
+    [SerializeField]
+    private GameObject poisonEffect;
+
     void Awake()
     {
         if (instance == null)
@@ -233,6 +236,7 @@ public class GameManager : MonoBehaviour
         {
             poisonTick = 0;
             poisoned = false;
+            poisonEffect.SetActive(false);
         }
     }
      
@@ -242,6 +246,7 @@ public class GameManager : MonoBehaviour
         {
             PoisonDamage();
             poisoned = true;
+            poisonEffect.SetActive(true);
         }
     }
     //cambia el estado de la lanza en la interfaz
