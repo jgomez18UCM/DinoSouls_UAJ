@@ -6,17 +6,18 @@ using UnityEngine.UI;
 public class Piedras : MonoBehaviour
 {
     [SerializeField]
-    Image piedra=null;
-    [SerializeField]
-    GameObject jug;
+    GameObject piedra;
+
+    private PlayerController player;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerController player = other.GetComponent<PlayerController>();
+        player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
-            piedra.enabled = true;
+            piedra.SetActive(true);
             
             Time.timeScale = 0;
            
@@ -25,13 +26,13 @@ public class Piedras : MonoBehaviour
     }
     private void Update()
     {
-        if (piedra.enabled && Input.GetButtonDown("Jump"))
+        if (piedra.activeInHierarchy && Input.GetButtonDown("Jump"))
             Invoke("PasaPiedra", 0);
     }
     void PasaPiedra()
     {
         Time.timeScale = 1;
-        jug.GetComponent<PlayerController>().DeactivateStun();
-        piedra.enabled = false;
+        player.GetComponent<PlayerController>().DeactivateStun();
+        piedra.SetActive(false);
     }
 }
