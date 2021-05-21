@@ -34,7 +34,6 @@ public class EnemyFollow : MonoBehaviour
         {
             distancia = jugador.transform.position - transform.position;
         }
-        Mueve();
     }
 
     void Update()
