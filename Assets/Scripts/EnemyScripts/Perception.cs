@@ -58,7 +58,7 @@ public class Perception : MonoBehaviour
                 s.enabled = false;
                 s.CancelInvoke();
             }
-            //rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
         }
     }
 

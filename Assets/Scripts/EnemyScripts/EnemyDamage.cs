@@ -32,6 +32,9 @@ public class EnemyDamage : MonoBehaviour
     private int poisonTicks = -1;
     private int poisonedDmgPerTick;
 
+    [SerializeField]
+    private GameObject poisonEffect;
+
     private void Start()
     {
         gm = GameManager.GetInstance();
@@ -103,11 +106,16 @@ public class EnemyDamage : MonoBehaviour
         {
             poisonTicks = time;
             poisonedDmgPerTick = dmgPerTick;
+            poisonEffect.SetActive(true);
         }
         Debug.Log("Daño por veneno");
         TakeDamage(dmgPerTick);
         poisonTicks--;
         if (poisonTicks > 0) Invoke("RepeatDamage",1);
+        else
+        {
+            poisonEffect.SetActive(false);
+        }
     }
 
     private void RepeatDamage()
