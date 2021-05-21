@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 6787748458552726861}
   - component: {fileID: 4158612654520825764}
   - component: {fileID: 429298619504545925}
+  - component: {fileID: 8102587287882218041}
   m_Layer: 0
   m_Name: Carnotaurus
   m_TagString: Untagged
@@ -364,6 +365,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bite: {fileID: 3334605905879066599}
+--- !u!114 &8102587287882218041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296462331607731122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  direction: {fileID: 1264061503538343062}
+  animationDir: {fileID: 2815030786765036820}
+  enemyLives: 32
+  fallingEnemy: {fileID: 0}
+  knockbackTime: 0.5
+  knockbackForce: 3
 --- !u!1 &5700788573961327336
 GameObject:
   m_ObjectHideFlags: 0

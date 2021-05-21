@@ -39,5 +39,10 @@ public class CarnotaurusPatrons : MonoBehaviour
         state = States.First;
     }
 
-    
+    private void OnDestroy()
+    {
+        CancelInvoke();
+        GameManager.GetInstance();
+    }
+
 }
