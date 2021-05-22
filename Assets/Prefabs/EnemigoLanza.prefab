@@ -63,7 +63,7 @@ MonoBehaviour:
   player: {fileID: 0}
   attackRoot: {fileID: 6365371258975920758}
   attackInstance: {fileID: 345354684432044777}
-  attackCooldown: 2
+  attackCooldown: 0.5
   attackDuration: 1
   directionGO: {fileID: 1582852997847853723}
   father: {fileID: 5140677700851771437}
@@ -217,7 +217,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1779921819
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -296772893610246311, guid: 6cb69fdbebd2e584e83a11f37a73bd54,
     type: 3}
@@ -528,6 +528,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6365371258975920758}
     m_Modifications:
+    - target: {fileID: 1532028411913466185, guid: d314768341d59e542bc81d40b6bd8d66,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2228007172024889135, guid: d314768341d59e542bc81d40b6bd8d66,
         type: 3}
       propertyPath: m_Name

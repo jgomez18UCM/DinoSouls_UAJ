@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1779921819
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8492826060330808907, guid: f2acbb42eab141848aab6836f4d920f9,
     type: 3}
@@ -139,7 +139,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1103470331
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 4323323326144892259, guid: edec2804157f78242b5c7bebd35f1413,
     type: 3}
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDuration: 1
-  attackCooldown: 3
+  attackCooldown: 2.5
   pteranodonScript: {fileID: 5154095139341103847}
   attackInstance: {fileID: 1126670819582295058}
 --- !u!1001 &2579003464788926394
