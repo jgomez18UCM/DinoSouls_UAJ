@@ -44,8 +44,12 @@ public class DamagePoison : MonoBehaviour
     
     // Llava a ActivatePoison del GM y destruye el veneno
     private void OnCollisionEnter2D(Collision2D collision)
-    {       
-        GameManager.GetInstance().ActivatePoison();
+    {
+        if (collision.gameObject.GetComponent<PlayerController>() != null)
+        {
+            GameManager.GetInstance().ActivatePoison();
+        }
+
         Destroy(this.gameObject);
     }
    

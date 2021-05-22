@@ -24,7 +24,7 @@ TagManager:
   - Cliff
   - BloqueaZona
   - Respawn
-  - 
+  - Tilemaps
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Tilemaps
     uniqueID: 224207157
+    locked: 0
+  - name: Totems
+    uniqueID: 745081553
     locked: 0
   - name: Enemies
     uniqueID: 2515045477
