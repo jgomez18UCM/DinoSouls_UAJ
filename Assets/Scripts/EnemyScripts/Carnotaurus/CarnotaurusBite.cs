@@ -38,7 +38,7 @@ public class CarnotaurusBite : MonoBehaviour
         attack = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
@@ -50,7 +50,7 @@ public class CarnotaurusBite : MonoBehaviour
         Vector2 dir = -transform.position + player.transform.position;
         if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
             DoAttack();
-    }
+    }*/
 
     public void DoAttack()
     {

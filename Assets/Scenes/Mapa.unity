@@ -638,15 +638,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429298619504545925, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1012647431}
+    - target: {fileID: 429298619504545925, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: firstPatronUptime.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429298619504545925, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: firstPatronUptime.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1012647438}
+    - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: velocidadPlacaje
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3334605905879066599, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 1012647431}
+    - target: {fileID: 3334605905879066599, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4158612654520825764, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}

@@ -42,18 +42,7 @@ public class CarnotaurusCarga : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        if (!stun)
-        {
-            if (perceptionComponent) detectado = perceptionComponent.GetSee();
-            if (detectado && !attacking)
-            {
-                Placaje();
-            }
-        }
-    }
-    void Placaje()
+    public void Placaje()
     {
         animator.Play("CarnotaurusPreparing");
         attacking = true;
