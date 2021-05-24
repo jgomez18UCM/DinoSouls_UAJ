@@ -373,6 +373,8 @@ MonoBehaviour:
     type: 3}
   knockbackTime: 0.5
   knockbackForce: 3
+  deathParticles: {fileID: 6065153896366126524, guid: 5ec0607ae8bfac346816344bd5e73493,
+    type: 3}
   poisonEffect: {fileID: 2627603983678249971}
 --- !u!1 &7607735152305098460
 GameObject:

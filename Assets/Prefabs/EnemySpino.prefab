@@ -124,6 +124,8 @@ MonoBehaviour:
     type: 3}
   knockbackTime: 0.5
   knockbackForce: 5
+  deathParticles: {fileID: 6065153896366126524, guid: 5ec0607ae8bfac346816344bd5e73493,
+    type: 3}
   poisonEffect: {fileID: 155391879795333786}
 --- !u!1 &3356166617580097129
 GameObject:
@@ -275,7 +277,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1779921819
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2810960275487289657, guid: f25a33e2422b02a4cb739020ef7608fd,
     type: 3}

@@ -24,6 +24,9 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private float knockbackForce = 3;
 
+    [SerializeField]
+    private GameObject deathParticles;
+
     private GameManager gm;
     private PlayerController playerController;
     private EnemyFollow enemyFollow;
@@ -76,6 +79,9 @@ public class EnemyDamage : MonoBehaviour
         if (enemyLives <= 0)
         {
             Destroy(gameObject);
+
+            GameObject instance = Instantiate(deathParticles, transform.position, transform.rotation);
+            Destroy(instance, 1);
         }
     }
 
