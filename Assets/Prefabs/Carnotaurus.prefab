@@ -4975,7 +4975,6 @@ GameObject:
   - component: {fileID: 1035915976728802975}
   - component: {fileID: 6515097368360593275}
   - component: {fileID: 855121867839646413}
-  - component: {fileID: 6787748458552726861}
   - component: {fileID: 4158612654520825764}
   - component: {fileID: 429298619504545925}
   - component: {fileID: 8102587287882218041}
@@ -5069,29 +5068,8 @@ MonoBehaviour:
   velocidadPlacaje: 5
   direction: {fileID: 1264061503538343062}
   animator: {fileID: 7015389858883928889}
+  particulasCarga: {fileID: 7191353494489130}
   perceptionCollider: {fileID: 2337804472961069828}
---- !u!114 &6787748458552726861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4296462331607731122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  direction: {fileID: 1264061503538343062}
-  animationDir: {fileID: 2815030786765036820}
-  enemyLives: 30
-  fallingEnemy: {fileID: 5115942847500863808, guid: b048282981839e24ab81f9d9c4a9533b,
-    type: 3}
-  knockbackTime: 0.5
-  knockbackForce: 3
-  deathParticles: {fileID: 0}
-  poisonEffect: {fileID: 0}
 --- !u!114 &4158612654520825764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5139,14 +5117,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0ec5bc2fdd09a4098ea09f3939b9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   direction: {fileID: 1264061503538343062}
   animationDir: {fileID: 2815030786765036820}
   enemyLives: 32
-  fallingEnemy: {fileID: 0}
+  fallingEnemy: {fileID: 5115942847500863808, guid: 1850b920f062d344593515217018499b,
+    type: 3}
   knockbackTime: 0.5
   knockbackForce: 3
-  deathParticles: {fileID: 0}
+  deathParticles: {fileID: 6065153896366126524, guid: 5ec0607ae8bfac346816344bd5e73493,
+    type: 3}
   poisonEffect: {fileID: 3103801152169960955, guid: baec354dc38e75e44a5f5749d14d53ad,
     type: 3}
 --- !u!1 &5700788573961327336
@@ -5330,15 +5310,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee57d0cad74dd9419b4e1ca11bc945f, type: 3}
---- !u!4 &1153638279722193157 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4248985503048369557, guid: 6ee57d0cad74dd9419b4e1ca11bc945f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3095633390084936848}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1153638279722193160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4248985503048369560, guid: 6ee57d0cad74dd9419b4e1ca11bc945f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3095633390084936848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1153638279722193157 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4248985503048369557, guid: 6ee57d0cad74dd9419b4e1ca11bc945f,
     type: 3}
   m_PrefabInstance: {fileID: 3095633390084936848}
   m_PrefabAsset: {fileID: 0}

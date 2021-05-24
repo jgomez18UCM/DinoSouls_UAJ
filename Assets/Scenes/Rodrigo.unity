@@ -855,6 +855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191353494489130, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: jugador
@@ -862,13 +866,8 @@ PrefabInstance:
       objectReference: {fileID: 1260411344}
     - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
-      propertyPath: tiempoPlacaje
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
-        type: 3}
-      propertyPath: velocidadPlacaje
-      value: 5
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 890357460564447256, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
@@ -880,16 +879,41 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053672289827498163, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748790516126302680, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873982539599370690, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3334605905879066599, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1124633161}
+    - target: {fileID: 4104482455787170689, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4158612654520825764, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1124633161}
+    - target: {fileID: 4240108172843758373, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4296462331607731122, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: m_Name
@@ -955,16 +979,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4594245744337795336, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275663797640464437, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5324227180635673596, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7015389858883928889, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+    - target: {fileID: 5896345675114889816, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c4a1d55b96ef92a458615e1d97bd2693, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253820946425475432, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9, type: 3}
 --- !u!1 &631568624 stripped
@@ -4054,6 +4128,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8762278635245113428, guid: 9dcffe11af8b61841b4d5a35acc1aae7,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762278635245113428, guid: 9dcffe11af8b61841b4d5a35acc1aae7,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.2923993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762278635245113428, guid: 9dcffe11af8b61841b4d5a35acc1aae7,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.11712353
+      objectReference: {fileID: 0}
     - target: {fileID: 8762278635245113431, guid: 9dcffe11af8b61841b4d5a35acc1aae7,
         type: 3}
       propertyPath: m_Name

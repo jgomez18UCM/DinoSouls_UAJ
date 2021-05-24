@@ -26,6 +26,9 @@ public class CarnotaurusCarga : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private GameObject particulasCarga;
+
 
     Perception perceptionComponent;
     Patrol patrol;
@@ -45,6 +48,7 @@ public class CarnotaurusCarga : MonoBehaviour
     public void Placaje()
     {
         animator.Play("CarnotaurusPreparing");
+        particulasCarga.SetActive(true);
         attacking = true;
         dir = jugador.position - transform.position;
         dir.Normalize();
@@ -65,11 +69,11 @@ public class CarnotaurusCarga : MonoBehaviour
         {
             patrol.enabled = false;
             patrol.CancelInvoke();
-            
         }
 
         mov = dir * velocidadPlacaje;
         rg.AddForce(mov, ForceMode2D.Impulse);
+         
         //Debug.Log("vector de mov (spino): " + mov);
         Invoke(nameof(GetStunned), tiempoPlacaje);
 
@@ -86,6 +90,7 @@ public class CarnotaurusCarga : MonoBehaviour
 
     private void GetStunned()
     {
+        particulasCarga.SetActive(false);
         attacking = false;
         stun = true;
         rg.velocity = Vector2.zero;
