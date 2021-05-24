@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
     //variable que indica si se le puede envenenar al jugador por parte del escudo(es decir,si no lo tiene)
     private bool canPoison = true;
 
+    private bool poisonedSpear = false;
+
     [SerializeField]
     private GameObject poisonEffect;
 
@@ -254,7 +256,7 @@ public class GameManager : MonoBehaviour
     {
         haveLanza = !haveLanza;
 
-        theUIManager.UpdateSpear(haveLanza);
+        theUIManager.UpdateSpear(haveLanza,poisonedSpear);
     }
 
     public void ActivateAnkylo()
@@ -272,5 +274,11 @@ public class GameManager : MonoBehaviour
     public void changeRespawnPoint(Vector2 respawnPosition)
     {
         respawnVector = respawnPosition;
+    }
+
+    public void ActivatePoisonSpear()
+    {
+        poisonedSpear = true;
+        theUIManager.UpdateSpear(haveLanza, poisonedSpear);
     }
 }

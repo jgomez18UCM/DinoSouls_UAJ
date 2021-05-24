@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private Transform rotate;
-    public GameObject lanza;
+    public GameObject [] lanza;
     public float dashCooldown;
     [SerializeField]
     private bool tengolanza = true;
@@ -104,12 +104,15 @@ public class PlayerController : MonoBehaviour
 
             gm.changeSpearStateUI();
 
-            GameObject projectile = Instantiate(lanza, direction.transform.position, direction.transform.rotation);
-            if(venenoLanza)
+            GameObject projectile;
+
+            if (venenoLanza)
             {
+                projectile = Instantiate(lanza[1], direction.transform.position, direction.transform.rotation);
                 PlayerAttackDMG dañoProy = projectile.GetComponent<PlayerAttackDMG>();
                 if (dañoProy) dañoProy.ActivatePoison();
             }
+            else projectile = Instantiate(lanza[0], direction.transform.position, direction.transform.rotation);
 
         }
         else if (Input.GetButtonDown("Fire3"))
@@ -310,6 +313,7 @@ public class PlayerController : MonoBehaviour
     public void ActivarVenenoLanza()
     {
         venenoLanza = true;
+        gm.ActivatePoisonSpear();
         Debug.Log("Activado veneno de la lanza");
     }
 }

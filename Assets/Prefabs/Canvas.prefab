@@ -1179,6 +1179,7 @@ MonoBehaviour:
   spearSprites:
   - {fileID: -7984578779037241709, guid: 06944b333d178ea40ba818611f5fb09a, type: 3}
   - {fileID: 1443705559732973524, guid: 06944b333d178ea40ba818611f5fb09a, type: 3}
+  - {fileID: 21300000, guid: 4202fe7c02e6e6c4199387be42382c2d, type: 3}
   spear: {fileID: 1426236278339249522}
 --- !u!1 &5948865787208934828
 GameObject:

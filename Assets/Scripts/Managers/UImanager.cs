@@ -90,11 +90,13 @@ public class UImanager : MonoBehaviour
 
     }
 
-    public void UpdateSpear(bool haveLanza)
+    public void UpdateSpear(bool haveLanza, bool poisoned)
     {
         if (haveLanza)
         {
-            spear.sprite = spearSprites[1];
+            if (!poisoned) spear.sprite = spearSprites[1];
+            
+            else spear.sprite = spearSprites[2];
         }
         else
         {

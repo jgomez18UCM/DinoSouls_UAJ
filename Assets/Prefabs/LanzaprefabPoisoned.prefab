@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2397185110608537414}
   - component: {fileID: 9026960740800961632}
   m_Layer: 12
-  m_Name: Lanzaprefab
+  m_Name: LanzaprefabPoisoned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1103470331
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f12bbe60f2e285498dec16d92940f7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5fca55631aeda14c867b53918ae73ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
