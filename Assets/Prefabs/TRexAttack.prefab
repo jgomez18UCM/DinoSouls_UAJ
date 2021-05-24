@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4022357815668211409}
   - component: {fileID: 8400156036921015487}
   m_Layer: 12
-  m_Name: Attack
+  m_Name: TRexAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1103470331
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -314656797161914361, guid: 569c0fb0500d8d449a2ce3e2f58c2525,
     type: 3}
@@ -142,6 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4886405bbee396c4188c0cc3609d4d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 6
   knockbackTime: 0.5
   knockbackForce: 3
