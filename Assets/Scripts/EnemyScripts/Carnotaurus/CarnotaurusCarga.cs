@@ -107,6 +107,7 @@ public class CarnotaurusCarga : MonoBehaviour
     private void QuitaStun()
     {
         stun = false;
+        animator.Play("CarnotaurusWalking");
         if (perceptionCollider) perceptionCollider.enabled = true;
         if (patrol)
         {
@@ -115,9 +116,9 @@ public class CarnotaurusCarga : MonoBehaviour
         }
     }
 
-    public void PlayRollingAnimation()
+    public void PlayChargingAnimation()
     {
-        animator.Play("CarnotaurusRolling");
+        animator.Play("CarnotaurusCharging");
     }
 
 }

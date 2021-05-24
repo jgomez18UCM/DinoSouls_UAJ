@@ -7,8 +7,8 @@ public class CarnotauroAnimHelper : MonoBehaviour
     [SerializeField]
     private CarnotaurusCarga carnotaurusCarga;
 
-    public void PlayRollingAnimation()
+    public void PlayChargingAnimation()
     {
-        carnotaurusCarga.PlayRollingAnimation();
+        carnotaurusCarga.PlayChargingAnimation();
     }
 }

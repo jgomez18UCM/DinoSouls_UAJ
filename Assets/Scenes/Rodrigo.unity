@@ -860,6 +860,16 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 1260411344}
+    - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: tiempoPlacaje
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: velocidadPlacaje
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 890357460564447256, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: player
@@ -888,7 +898,7 @@ PrefabInstance:
     - target: {fileID: 4296462331607731122, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4296462331607731132, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
@@ -950,6 +960,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7015389858883928889, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c4a1d55b96ef92a458615e1d97bd2693, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9, type: 3}
 --- !u!1 &631568624 stripped
@@ -1137,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 472468902621568432, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 472468902621568435, guid: 18fea75875f52694cbce41d7d332b988,
         type: 3}
@@ -1879,7 +1894,7 @@ PrefabInstance:
     - target: {fileID: 80445782462319214, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 404994741374714928, guid: 934f14adef772634a9c720afc70120db,
         type: 3}
