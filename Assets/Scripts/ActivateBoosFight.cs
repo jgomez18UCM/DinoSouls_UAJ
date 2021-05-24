@@ -20,5 +20,6 @@ public class ActivateBoosFight : MonoBehaviour
         carnotauro.SetActive(true);
         carnotauro.GetComponent<CarnotaurusPatrons>().WakeUp();
         piedrasEntrada.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

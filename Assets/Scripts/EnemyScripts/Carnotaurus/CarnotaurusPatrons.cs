@@ -17,7 +17,7 @@ public class CarnotaurusPatrons : MonoBehaviour
     float bitePatronDistance;
     CarnotaurusCarga charge;
 
-    private void Start()
+    private void OnEnable()
     {
         state = States.Sleep;
         charge = GetComponent<CarnotaurusCarga>();
@@ -43,11 +43,13 @@ public class CarnotaurusPatrons : MonoBehaviour
     //Este método activa por primera vez al Carnotauro
     public void WakeUp()
     {
+        Debug.Log("Activado");
         state = States.First;
     }
 
     void FirstPatron()
     {
+        Debug.Log(state);
         Charge();
         Invoke(nameof(Mordisco), firstPatronUptime[0]);
         Invoke(nameof(SearchPlayer), firstPatronUptime[0] + firstPatronUptime[1]);
