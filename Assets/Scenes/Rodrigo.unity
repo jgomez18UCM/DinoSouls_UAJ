@@ -857,8 +857,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7191353494489130, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 429298619504545925, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1124633161}
     - target: {fileID: 855121867839646413, guid: 6dcb1fe3d0241aa4db595d0a3c0e7de9,
         type: 3}
       propertyPath: jugador
