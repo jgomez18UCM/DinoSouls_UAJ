@@ -16,6 +16,8 @@ public class CarnotaurusPatrons : MonoBehaviour
     [SerializeField]
     float bitePatronDistance;
     CarnotaurusCarga charge;
+    [SerializeField]
+    private menuManager menuM;
 
     private void OnEnable()
     {
@@ -76,7 +78,7 @@ public class CarnotaurusPatrons : MonoBehaviour
     private void OnDestroy()
     {
         CancelInvoke();
-        GameManager.GetInstance();
+        menuM.EndMenu();
     }
 
 }
