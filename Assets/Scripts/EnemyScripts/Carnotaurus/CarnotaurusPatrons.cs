@@ -12,10 +12,16 @@ public class CarnotaurusPatrons : MonoBehaviour
     [SerializeField]
     CarnotaurusBite bite;
     [SerializeField]
-    float[] firstPatronUptime = new float[2];
+    float[] firstPatronUptime = new float[3];
+    [SerializeField]
+    float[] farPatronUptime = new float[2];
+    [SerializeField]
+    float[] closePatronUptime = new float[2];
     [SerializeField]
     float bitePatronDistance;
     CarnotaurusCarga charge;
+    [SerializeField]
+    private menuManager menuM;
 
     private void OnEnable()
     {
@@ -32,10 +38,12 @@ public class CarnotaurusPatrons : MonoBehaviour
                 FirstPatron();
                 break;
             case States.Far:
+                state = States.Sleep;
+                FarPatron();
                 break;
             case States.Close:
-                break;
-            default:
+                state = States.Sleep;
+                ClosePatron();
                 break;
         }
     }
@@ -49,11 +57,25 @@ public class CarnotaurusPatrons : MonoBehaviour
 
     void FirstPatron()
     {
-        Debug.Log(state);
-        Charge();
-        Invoke(nameof(Mordisco), firstPatronUptime[0]);
-        Invoke(nameof(SearchPlayer), firstPatronUptime[0] + firstPatronUptime[1]);
+
+        Invoke(nameof(Charge),firstPatronUptime[0]);
+        Invoke(nameof(Charge), firstPatronUptime[0] + firstPatronUptime[1]);
+        Invoke(nameof(SearchPlayer), firstPatronUptime[0] + firstPatronUptime[1] + firstPatronUptime[2]);
        
+    }
+
+    void FarPatron()
+    {
+        Charge();
+        Invoke(nameof(Mordisco), farPatronUptime[0]);
+        Invoke(nameof(SearchPlayer), farPatronUptime[0] + farPatronUptime[1]);
+    }
+
+    void ClosePatron()
+    {
+        Mordisco();
+        Invoke(nameof(Mordisco), closePatronUptime[0]);
+        Invoke(nameof(SearchPlayer), farPatronUptime[0] + farPatronUptime[1]);
     }
 
     void Charge()
@@ -70,13 +92,15 @@ public class CarnotaurusPatrons : MonoBehaviour
 
     void SearchPlayer()
     {
+        if (Vector2.Distance(player.transform.position, transform.position) > bitePatronDistance) state = States.Far;
+        else state = States.Close;
         Debug.Log("Buscando");
     }
 
     private void OnDestroy()
     {
         CancelInvoke();
-        GameManager.GetInstance();
+        menuM.EndMenu();
     }
 
 }

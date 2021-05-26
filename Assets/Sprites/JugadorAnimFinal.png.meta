@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 8cd20a295bf4f814f88c6b78721b14a9
+guid: 46e7701b430f6fb4b9ff03c23cb52afa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2510476293373519475
-    second: New Piskel_0
+      213: -4046987358282888036
+    second: JugadorAnimFinal_0
   - first:
-      213: 627625725489826318
-    second: New Piskel_1
+      213: -7898914973393412836
+    second: JugadorAnimFinal_1
   - first:
-      213: 6338068570567419226
-    second: New Piskel_2
+      213: 725823509819071101
+    second: JugadorAnimFinal_2
   - first:
-      213: -4309738878335270719
-    second: New Piskel_3
+      213: -9018967157302055154
+    second: JugadorAnimFinal_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,10 +54,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +112,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel_0
+      name: JugadorAnimFinal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d899e6cbc1ff82dd0800000000000000
-      internalID: -2510476293373519475
+      spriteID: c9c4d03807636d7c0800000000000000
+      internalID: -4046987358282888036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_1
+      name: JugadorAnimFinal_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ac7b3a546c5b800800000000000000
-      internalID: 627625725489826318
+      spriteID: c1d1fd39eaa616290800000000000000
+      internalID: -7898914973393412836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_2
+      name: JugadorAnimFinal_2
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a552dbec8c755f750800000000000000
-      internalID: 6338068570567419226
+      spriteID: d7a9468f2a4a21a00800000000000000
+      internalID: 725823509819071101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_3
+      name: JugadorAnimFinal_3
       rect:
         serializedVersion: 2
         x: 32
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0c22af25bb034c0800000000000000
-      internalID: -4309738878335270719
+      spriteID: e0fa81ca72136d280800000000000000
+      internalID: -9018967157302055154
       vertices: []
       indices: 
       edges: []

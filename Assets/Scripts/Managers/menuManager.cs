@@ -10,6 +10,9 @@ public class menuManager : MonoBehaviour
 
     [SerializeField]
     private GameObject pausa;
+
+    [SerializeField]
+    private string endSceneName = "endScene";
     public void QuitApplication()
     {
         Application.Quit();
@@ -38,5 +41,14 @@ public class menuManager : MonoBehaviour
             pausa.SetActive(true);
             Time.timeScale = 0;
         }
+    }
+    public void EndMenu()
+    {
+        Invoke(nameof(ShowEndMenu),1.5f);
+    }
+
+    private void ShowEndMenu()
+    {
+        SceneManager.LoadScene(endSceneName);
     }
 }
