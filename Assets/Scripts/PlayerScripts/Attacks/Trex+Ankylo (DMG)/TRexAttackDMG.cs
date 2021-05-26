@@ -10,6 +10,9 @@ public class TRexAttackDMG : MonoBehaviour
     [SerializeField]
     private float knockbackForce = 3;
 
+    [SerializeField]
+    private AudioClip sfx;
+
     //Array de enemigos golpeados
     private GameObject[] enemies;
     int contEnem;
@@ -39,6 +42,7 @@ public class TRexAttackDMG : MonoBehaviour
             contEnem++;
 
             enemyDamage.TakeDamage(damage);
+            SoundManager.Instance.Play(sfx);
 
             //Transform del padre que indica la dirección del ataque
             Transform directionTransform = transform.parent.parent;

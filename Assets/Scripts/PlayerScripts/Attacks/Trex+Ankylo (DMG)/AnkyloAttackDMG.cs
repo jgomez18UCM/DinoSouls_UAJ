@@ -19,6 +19,9 @@ public class AnkyloAttackDMG : MonoBehaviour
     [Tooltip("Ángulo del área de ataque")]
     private float attackAngle = 90;
 
+    [SerializeField]
+    private AudioClip sfx;
+
     //Array de enemigos golpeados
     private GameObject[] enemies;
     int contEnem;
@@ -55,6 +58,7 @@ public class AnkyloAttackDMG : MonoBehaviour
             if (Vector2.Angle(transform.up, dir) <= attackAngle/2 && enemyDamage != null) 
             {
                 enemyDamage.TakeDamage(damage);
+                SoundManager.Instance.Play(sfx);
 
                 //Knockback
                 Vector2 dirKnockback = dir.normalized * knockbackForce;

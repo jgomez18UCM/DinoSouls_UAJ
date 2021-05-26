@@ -11,17 +11,20 @@ public class PlayerAttackDMG : MonoBehaviour
     [SerializeField]
     private int poisonDmgPerTick;
 
+    [SerializeField]
+    private AudioClip sfxLanza;
+
     private bool veneno = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        EnemyDamage enemigo = collision.gameObject.GetComponent<EnemyDamage>();
+
+        if (enemigo != null)
         {
-            EnemyDamage enemigo = collision.gameObject.GetComponent<EnemyDamage>();
-           
-            
-                enemigo.TakeDamage(damage);
+            enemigo.TakeDamage(damage);
+
+            SoundManager.Instance.Play(sfxLanza);
             
             if(veneno)
             {

@@ -162,3 +162,4 @@ MonoBehaviour:
   damage: 8
   poisonTicks: 4
   poisonDmgPerTick: 1
+  sfxLanza: {fileID: 8300000, guid: 2b5b9a1731bd7c84d9c65fe0f34c0cf6, type: 3}

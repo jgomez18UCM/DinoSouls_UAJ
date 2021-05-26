@@ -15,7 +15,7 @@ public class Dash : MonoBehaviour
 
     //SFX del dash
     [SerializeField]
-    private AudioSource dashSound;
+    private AudioClip dashSound;
 
     [SerializeField]
     [Tooltip("GO hijo del player que indica la dirección del dash")]
@@ -86,7 +86,7 @@ public class Dash : MonoBehaviour
         Invoke("DeactivateTrail", dashTime + 1);
 
         //Reproducción del sfx
-        dashSound.Play();
+        SoundManager.Instance.Play(dashSound);
     }
 
     public void Upgrade()

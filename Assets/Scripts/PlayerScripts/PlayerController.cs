@@ -65,6 +65,10 @@ public class PlayerController : MonoBehaviour
     bool haveTrice = false;
 
     [SerializeField]
+    //0:TrexAttack, 1:Slap, 2:Golpe, 3:Muerte
+    private AudioClip[] attackEffects;
+
+    [SerializeField]
     private menuManager menuMg;
 
     void Start()

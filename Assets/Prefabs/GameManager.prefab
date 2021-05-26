@@ -57,3 +57,5 @@ MonoBehaviour:
     type: 3}
   deadPlayerPrefab: {fileID: 2138089813738812622, guid: 2b272768f6dd99145ae658935b5f53be,
     type: 3}
+  poisonEffect: {fileID: 3103801152169960955, guid: baec354dc38e75e44a5f5749d14d53ad,
+    type: 3}

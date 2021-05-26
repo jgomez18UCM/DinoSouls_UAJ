@@ -69,6 +69,7 @@ MonoBehaviour:
   knockbackForce: 7
   knockbackTime: 0.5
   attackAngle: 90
+  sfx: {fileID: 8300000, guid: 2b5b9a1731bd7c84d9c65fe0f34c0cf6, type: 3}
 --- !u!212 &8160883183601813954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1944609751
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1823304139077918427, guid: c82eb33139c31f74299db18b85215734,
     type: 3}
