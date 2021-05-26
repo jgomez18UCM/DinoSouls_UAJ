@@ -8,6 +8,12 @@ public class SoundManager : MonoBehaviour
 	public AudioSource EffectsSource;
 	public AudioSource MusicSource;
 
+	[SerializeField]
+	AudioSource Carnotauro;
+
+	[SerializeField]
+	AudioClip musicIni;
+
 	// Random pitch adjustment range.
 	public float LowPitchRange = .95f;
 	public float HighPitchRange = 1.05f;
@@ -33,11 +39,22 @@ public class SoundManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 	}
 
-	// Play a single clip through the sound effects source.
-	public void Play(AudioClip clip)
+    private void Start()
+    {
+		PlayMusic(musicIni);
+    }
+
+    // Play a single clip through the sound effects source.
+    public void Play(AudioClip clip)
 	{
 		EffectsSource.clip = clip;
 		EffectsSource.Play();
+	}
+
+	public void PlayCarnotaur(AudioClip clip)
+	{
+		Carnotauro.clip = clip;
+		Carnotauro.Play();
 	}
 
 	// Play a single clip through the music source.

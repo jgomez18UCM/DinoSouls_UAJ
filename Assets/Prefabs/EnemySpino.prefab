@@ -119,7 +119,7 @@ MonoBehaviour:
   damage: 4
   direction: {fileID: 8251996504558929773}
   animationDir: {fileID: 3439197645548001761}
-  enemyLives: 36
+  enemyLives: 10
   fallingEnemy: {fileID: 5115942847500863808, guid: 1850b920f062d344593515217018499b,
     type: 3}
   knockbackTime: 0.5

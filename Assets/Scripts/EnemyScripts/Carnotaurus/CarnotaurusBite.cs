@@ -18,6 +18,9 @@ public class CarnotaurusBite : MonoBehaviour
     [SerializeField]
     private GameObject directionGO;
 
+    [SerializeField]
+    private AudioClip carnotaurusBiteSFX;
+
     private bool attack;
     private float distance;
     private LayerMask mask;
@@ -38,26 +41,13 @@ public class CarnotaurusBite : MonoBehaviour
         attack = true;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Vector2 dir = -transform.position + player.transform.position;
-        if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
-            DoAttack();
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Vector2 dir = -transform.position + player.transform.position;
-        if (Vector2.Angle(directionGO.transform.up, dir) <= 45)
-            DoAttack();
-    }*/
-
     public void DoAttack()
     {
         if (attack)
         {          
             enemyFollow.Stun(-1); //Le pasamos el valor -1 para tener un stun con tiempo indeterminado
             attackInstance.SetActive(true);
+            SoundManager.Instance.PlayCarnotaur(carnotaurusBiteSFX);
 
             attack = false;
             Invoke(nameof(ResetCooldown), attackCooldown);

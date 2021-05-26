@@ -7,7 +7,9 @@ public class ActivateBoosFight : MonoBehaviour
     [SerializeField]
     private GameObject carnotauro;
     [SerializeField]
-    private AudioSource rugido;
+    private AudioClip rugido;
+    [SerializeField]
+    private AudioClip musicBoss;
 
     [SerializeField]
     private GameObject piedrasEntrada;
@@ -15,11 +17,17 @@ public class ActivateBoosFight : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Rugido
-        //rugido.Play();
+        SoundManager.Instance.Play(rugido);
+        Invoke("ActivateCarnotaur", 1);
 
-        carnotauro.SetActive(true);
-        carnotauro.GetComponent<CarnotaurusPatrons>().WakeUp();
         piedrasEntrada.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    void ActivateCarnotaur() 
+    {
+        carnotauro.SetActive(true);
+        carnotauro.GetComponent<CarnotaurusPatrons>().WakeUp();
+        SoundManager.Instance.PlayMusic(musicBoss);
     }
 }

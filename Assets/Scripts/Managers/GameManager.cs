@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject deadPlayerPrefab;
 
+    [SerializeField]
+    private AudioClip[] audioClips;
+
     Vector2 respawnPointTemp;
 
     private RandomCameraShake randomShake;
@@ -103,6 +106,7 @@ public class GameManager : MonoBehaviour
         if (!invencible)
         {
             life -= damage;
+            SoundManager.Instance.Play(audioClips[1]);
         }
 
         if (life <= 0 && !invencible)
@@ -117,6 +121,7 @@ public class GameManager : MonoBehaviour
                 player.gameObject.SetActive(false);
 
                 GameObject instance = Instantiate(deadPlayerPrefab, player.transform.position, player.transform.rotation);
+                SoundManager.Instance.Play(audioClips[0]);
 
                 Destroy(instance, respawnTime);
             }

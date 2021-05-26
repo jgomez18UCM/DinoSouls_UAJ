@@ -29,6 +29,8 @@ public class CarnotaurusCarga : MonoBehaviour
     [SerializeField]
     private GameObject particulasCarga;
 
+    [SerializeField]
+    private AudioClip sfxCarga;
 
     Perception perceptionComponent;
     Patrol patrol;
@@ -49,6 +51,8 @@ public class CarnotaurusCarga : MonoBehaviour
     {
         animator.Play("CarnotaurusPreparing");
         particulasCarga.SetActive(true);
+        SoundManager.Instance.PlayCarnotaur(sfxCarga);
+
         attacking = true;
         dir = jugador.position - transform.position;
         dir.Normalize();
