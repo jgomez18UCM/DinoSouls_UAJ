@@ -6669,6 +6669,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444fd066f881304dacb2d35adc633d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &428417938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1478447609118314663, guid: 8b8e862b31b2e5d478189b2ee1c628d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 363594694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &428417941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428417938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579b3f2c6ff9214196a2724fb95c9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: b8e55561ff5f85f40baa6faafa3cc982, type: 3}
 --- !u!1 &439552360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6904,7 +6923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carnotauro: {fileID: 288760813}
   rugido: {fileID: 8300000, guid: 88844eb137cf65e4a81ead1c04d46a68, type: 3}
-  musicBoss: {fileID: 0}
+  musicBoss: {fileID: 8300000, guid: 80dd21e512b6f5445a083e92d32e849f, type: 3}
   piedrasEntrada: {fileID: 1841400221}
 --- !u!1 &473370551
 GameObject:
