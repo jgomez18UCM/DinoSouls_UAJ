@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Muro : MonoBehaviour
+public class Wall : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {

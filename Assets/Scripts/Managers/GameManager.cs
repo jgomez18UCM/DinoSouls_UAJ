@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
-    
     const int MAXLIFE = 20;
 
     [SerializeField]

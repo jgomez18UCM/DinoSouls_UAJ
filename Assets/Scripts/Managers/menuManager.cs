@@ -12,6 +12,9 @@ public class menuManager : MonoBehaviour
     private GameObject pausa;
 
     [SerializeField]
+    private GameObject credits;
+
+    [SerializeField]
     private string endSceneName = "endScene";
     public void QuitApplication()
     {
@@ -27,6 +30,12 @@ public class menuManager : MonoBehaviour
     {
         if (controls.activeInHierarchy == true) controls.SetActive(false);
         else controls.SetActive(true);
+    }
+
+    public void ShowHideCredits()
+    {
+        if (credits.activeInHierarchy == true) credits.SetActive(false);
+        else credits.SetActive(true);
     }
 
     public void MenuPausa()

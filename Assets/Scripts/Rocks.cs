@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Piedras : MonoBehaviour
+public class Rocks : MonoBehaviour
 {
     [SerializeField]
     GameObject piedra;
