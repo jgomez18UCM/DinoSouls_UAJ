@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Lanza
-        if (Input.GetButtonDown("Fire2") && tengolanza)
+        if (Input.GetButtonDown("Fire2") && tengolanza&&!stunned)
         {
             tengolanza = false;
 
