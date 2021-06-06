@@ -27,4 +27,12 @@ public class Cliff : MonoBehaviour
             if (enemyDamage != null) enemyDamage.CliffFall();
         }
     }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.GetComponent<PlayerController>() != null)
+        {
+            GameManager.GetInstance().CliffFall(cliffRespawnPoint.position, cliffRespawnTime);
+        }
+    }
 }
