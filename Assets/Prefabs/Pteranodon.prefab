@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 5154095140410068613}
   - component: {fileID: 5154095140410068610}
   - component: {fileID: 3725954910409421955}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: perc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 5806637958407947741}
   - component: {fileID: 1826671300796198736}
   - component: {fileID: 9075141133727258540}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
