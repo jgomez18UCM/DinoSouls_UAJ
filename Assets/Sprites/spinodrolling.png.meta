@@ -57,7 +57,7 @@ TextureImporter:
       213: 1908874888165888824
     second: spinodrolling_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,6 +77,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -86,8 +88,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -108,10 +110,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -127,6 +133,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -528,6 +546,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      spinodrolling_0: 8413986468788905196
+      spinodrolling_1: 6472603177346192569
+      spinodrolling_10: 3552060811868451714
+      spinodrolling_11: 2093259008948594117
+      spinodrolling_12: 5084444613754983877
+      spinodrolling_13: -8624568819171657156
+      spinodrolling_14: 3206121660839135586
+      spinodrolling_15: 7297676630825697449
+      spinodrolling_16: 1980834975960746312
+      spinodrolling_17: 1908874888165888824
+      spinodrolling_2: -4597727951905714564
+      spinodrolling_3: -1303790459613606805
+      spinodrolling_4: 7686258295731420495
+      spinodrolling_5: -338296813178879216
+      spinodrolling_6: -4002304200696067147
+      spinodrolling_7: -4622571427612806161
+      spinodrolling_8: -1091357015821500373
+      spinodrolling_9: -2981051143532506980
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

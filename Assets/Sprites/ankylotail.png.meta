@@ -57,7 +57,7 @@ TextureImporter:
       213: -692151458009608368
     second: ankylotail_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,6 +77,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -86,8 +88,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -108,10 +110,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -127,6 +133,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -528,6 +546,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ankylotail_0: -1776466872750151250
+      ankylotail_1: -2160219516438077608
+      ankylotail_10: 8030128060705197518
+      ankylotail_11: 7919503342328785868
+      ankylotail_12: -2196465725017974791
+      ankylotail_13: 3104314420713343521
+      ankylotail_14: -4956090951806964146
+      ankylotail_15: -5878415511881615788
+      ankylotail_16: 351924084690538147
+      ankylotail_17: -692151458009608368
+      ankylotail_2: -3764159828922614133
+      ankylotail_3: -5587237305637557796
+      ankylotail_4: -8478640025253741855
+      ankylotail_5: -8045410881040207133
+      ankylotail_6: -6260493172686783510
+      ankylotail_7: -6598615013307136561
+      ankylotail_8: 1778183326031854475
+      ankylotail_9: -1823304139077918427
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

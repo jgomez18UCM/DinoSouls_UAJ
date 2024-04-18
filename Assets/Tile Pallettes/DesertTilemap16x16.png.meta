@@ -633,7 +633,7 @@ TextureImporter:
       213: -4946624847306551717
     second: DesertTilemap16x16_209
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -653,6 +653,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -662,8 +664,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -684,10 +686,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -703,6 +709,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -5136,6 +5154,217 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DesertTilemap16x16_0: -8861254367512345782
+      DesertTilemap16x16_1: 6325353561597204944
+      DesertTilemap16x16_10: -1210801793842406704
+      DesertTilemap16x16_100: 321156690116177172
+      DesertTilemap16x16_101: -7691487195485703183
+      DesertTilemap16x16_102: 301751816291464884
+      DesertTilemap16x16_103: 3706558707647536500
+      DesertTilemap16x16_104: 9037651118515263648
+      DesertTilemap16x16_105: -8624266105032632692
+      DesertTilemap16x16_106: 4253913173000790161
+      DesertTilemap16x16_107: 3770568714111523448
+      DesertTilemap16x16_108: 687291308571340321
+      DesertTilemap16x16_109: 4641248355863881789
+      DesertTilemap16x16_11: -12909443750894891
+      DesertTilemap16x16_110: -808188574703312649
+      DesertTilemap16x16_111: 5813636203893095619
+      DesertTilemap16x16_112: 4506201973380451381
+      DesertTilemap16x16_113: 3454091083401454838
+      DesertTilemap16x16_114: -2493101370927253781
+      DesertTilemap16x16_115: -1475139627087485653
+      DesertTilemap16x16_116: 3867976795475116584
+      DesertTilemap16x16_117: 5284817544614306855
+      DesertTilemap16x16_118: -2834933408813586887
+      DesertTilemap16x16_119: 993150399263871839
+      DesertTilemap16x16_12: -182647546827805357
+      DesertTilemap16x16_120: -9204345229941310105
+      DesertTilemap16x16_121: 7442018471770202336
+      DesertTilemap16x16_122: 1780192020040592209
+      DesertTilemap16x16_123: 3518215363507825359
+      DesertTilemap16x16_124: -4539125790671245814
+      DesertTilemap16x16_125: 6954730290249115634
+      DesertTilemap16x16_126: 463621009741873729
+      DesertTilemap16x16_127: 7722601249354804035
+      DesertTilemap16x16_128: 6681983996465599799
+      DesertTilemap16x16_129: -3325967574973389315
+      DesertTilemap16x16_13: -5535529768664907732
+      DesertTilemap16x16_130: 9135379612899610424
+      DesertTilemap16x16_131: 186515814250332391
+      DesertTilemap16x16_132: -7072561995451938952
+      DesertTilemap16x16_133: 5492153094304025378
+      DesertTilemap16x16_134: 8497127908576102513
+      DesertTilemap16x16_135: 9034276631263554727
+      DesertTilemap16x16_136: 1311198601078451658
+      DesertTilemap16x16_137: -15273904752344925
+      DesertTilemap16x16_138: -8296894590535200645
+      DesertTilemap16x16_139: -6818014404380944781
+      DesertTilemap16x16_14: -9067084020533834961
+      DesertTilemap16x16_140: -5021324300246323731
+      DesertTilemap16x16_141: 623530038665370767
+      DesertTilemap16x16_142: -2501475483876230489
+      DesertTilemap16x16_143: 368775691294814516
+      DesertTilemap16x16_144: 8138205396646723414
+      DesertTilemap16x16_145: 2710019529660799780
+      DesertTilemap16x16_146: -7741806474288710327
+      DesertTilemap16x16_147: -7224267665023171615
+      DesertTilemap16x16_148: -500960875857469264
+      DesertTilemap16x16_149: 8879683379131711036
+      DesertTilemap16x16_15: -4853874587216582367
+      DesertTilemap16x16_150: -176945433863520155
+      DesertTilemap16x16_151: 5865186062946148800
+      DesertTilemap16x16_152: 2517369676306753322
+      DesertTilemap16x16_153: 4863557514328092309
+      DesertTilemap16x16_154: 6605884245638603276
+      DesertTilemap16x16_155: -3105892866311249183
+      DesertTilemap16x16_156: 2656923156376487368
+      DesertTilemap16x16_157: 5204647622382054176
+      DesertTilemap16x16_158: 3888409032110859104
+      DesertTilemap16x16_159: -8332016335606843474
+      DesertTilemap16x16_16: 7597579884810714060
+      DesertTilemap16x16_160: -335207788465178820
+      DesertTilemap16x16_161: -5253677357758305812
+      DesertTilemap16x16_162: -2490991100070231656
+      DesertTilemap16x16_163: -773370886666156883
+      DesertTilemap16x16_164: -7477482578673624783
+      DesertTilemap16x16_165: 2004565226602320941
+      DesertTilemap16x16_166: -2758232675199841966
+      DesertTilemap16x16_167: -4452313354590821960
+      DesertTilemap16x16_168: 1850238842565094313
+      DesertTilemap16x16_169: -9080693427728490943
+      DesertTilemap16x16_17: -7685251509288612862
+      DesertTilemap16x16_170: -5936587217783015811
+      DesertTilemap16x16_171: 7202014347632647583
+      DesertTilemap16x16_172: 4846426421948959694
+      DesertTilemap16x16_173: -3773781293298439103
+      DesertTilemap16x16_174: -6689502649374415428
+      DesertTilemap16x16_175: -386771298949441607
+      DesertTilemap16x16_176: 1764224330027706001
+      DesertTilemap16x16_177: -5278573595161295006
+      DesertTilemap16x16_178: -4046675013207230696
+      DesertTilemap16x16_179: -8449462919581432275
+      DesertTilemap16x16_18: -5484675433873615044
+      DesertTilemap16x16_180: 4423773676391804971
+      DesertTilemap16x16_181: -7922038790747731119
+      DesertTilemap16x16_182: 2804806657897000385
+      DesertTilemap16x16_183: -804435354395265642
+      DesertTilemap16x16_184: -1018809077945891209
+      DesertTilemap16x16_185: 5196717342120097590
+      DesertTilemap16x16_186: 5186991920163704657
+      DesertTilemap16x16_187: 1934734669080242860
+      DesertTilemap16x16_188: 186524281010366094
+      DesertTilemap16x16_189: -5627031281520425436
+      DesertTilemap16x16_19: -4696890894672491613
+      DesertTilemap16x16_190: 601403479562524834
+      DesertTilemap16x16_191: 5395776839055719477
+      DesertTilemap16x16_192: 1718191703375299644
+      DesertTilemap16x16_193: -1144170929248057227
+      DesertTilemap16x16_194: 5027231862730172247
+      DesertTilemap16x16_195: -4747549496375051087
+      DesertTilemap16x16_196: -5629313964101123267
+      DesertTilemap16x16_197: -692060304772130677
+      DesertTilemap16x16_198: 4163821506944123051
+      DesertTilemap16x16_199: 454761024960627990
+      DesertTilemap16x16_2: -4748466029294423387
+      DesertTilemap16x16_20: -270357283796801371
+      DesertTilemap16x16_200: -2645905966215874441
+      DesertTilemap16x16_201: -8696229467689784223
+      DesertTilemap16x16_202: 4746370589943292933
+      DesertTilemap16x16_203: 2252027967988156880
+      DesertTilemap16x16_204: -4034122394027085603
+      DesertTilemap16x16_205: -1740783425018901412
+      DesertTilemap16x16_206: -5249498576411551885
+      DesertTilemap16x16_207: 4852215025349819311
+      DesertTilemap16x16_208: 8226414110108204877
+      DesertTilemap16x16_209: -4946624847306551717
+      DesertTilemap16x16_21: -999750913372742004
+      DesertTilemap16x16_22: 6843167426245345543
+      DesertTilemap16x16_23: 143146710853532950
+      DesertTilemap16x16_24: 5810965359863034333
+      DesertTilemap16x16_25: 832565310954078961
+      DesertTilemap16x16_26: 5164678078384348669
+      DesertTilemap16x16_27: -5055574644744065200
+      DesertTilemap16x16_28: -6626300155251545406
+      DesertTilemap16x16_29: 7869703385417488880
+      DesertTilemap16x16_3: -435533510206805229
+      DesertTilemap16x16_30: 5389031377309122368
+      DesertTilemap16x16_31: 5996934417878453518
+      DesertTilemap16x16_32: -5583942196824987880
+      DesertTilemap16x16_33: -1575871354403004421
+      DesertTilemap16x16_34: 1397777141998139332
+      DesertTilemap16x16_35: 4393386514198912076
+      DesertTilemap16x16_36: -4575997081420014658
+      DesertTilemap16x16_37: 103785438183100543
+      DesertTilemap16x16_38: 3984635304319970005
+      DesertTilemap16x16_39: -2669681239812251493
+      DesertTilemap16x16_4: 300756949470946654
+      DesertTilemap16x16_40: -9125915067569742762
+      DesertTilemap16x16_41: 2336757493173418932
+      DesertTilemap16x16_42: 8808219929936475557
+      DesertTilemap16x16_43: 3238162252223274293
+      DesertTilemap16x16_44: -1449031561941008183
+      DesertTilemap16x16_45: -3023070520429448313
+      DesertTilemap16x16_46: 6295105963818498216
+      DesertTilemap16x16_47: -4593287630172784863
+      DesertTilemap16x16_48: 4468076726975800993
+      DesertTilemap16x16_49: 3351286377841821576
+      DesertTilemap16x16_5: 591277424839394420
+      DesertTilemap16x16_50: -2159402926445986366
+      DesertTilemap16x16_51: -1824582193649567964
+      DesertTilemap16x16_52: 3902910989490071313
+      DesertTilemap16x16_53: -1695359899793554106
+      DesertTilemap16x16_54: 5920848585397881676
+      DesertTilemap16x16_55: 936197035263719885
+      DesertTilemap16x16_56: 3629154355015314374
+      DesertTilemap16x16_57: 4752818853360277842
+      DesertTilemap16x16_58: -3896351852377234502
+      DesertTilemap16x16_59: -5297690260901381965
+      DesertTilemap16x16_6: -7690945542599610222
+      DesertTilemap16x16_60: -7473579253044823870
+      DesertTilemap16x16_61: -5635624496868399018
+      DesertTilemap16x16_62: 2840224836822714061
+      DesertTilemap16x16_63: -1772061152563394840
+      DesertTilemap16x16_64: 4653104188315618787
+      DesertTilemap16x16_65: -7070757732758872455
+      DesertTilemap16x16_66: 4762207909907247630
+      DesertTilemap16x16_67: 6277830073502764295
+      DesertTilemap16x16_68: 462345861372049894
+      DesertTilemap16x16_69: 7606813901628035783
+      DesertTilemap16x16_7: 8858284439130014100
+      DesertTilemap16x16_70: 1514232362466014021
+      DesertTilemap16x16_71: 4540965832403463905
+      DesertTilemap16x16_72: 8892235570775062419
+      DesertTilemap16x16_73: 6353107927559257175
+      DesertTilemap16x16_74: 6958712906486154485
+      DesertTilemap16x16_75: -1463051090293125685
+      DesertTilemap16x16_76: -3777668337223519961
+      DesertTilemap16x16_77: -8918890507438549019
+      DesertTilemap16x16_78: 2811769807431992478
+      DesertTilemap16x16_79: 4450995273269840849
+      DesertTilemap16x16_8: -7722311087496687721
+      DesertTilemap16x16_80: 1149616954499097232
+      DesertTilemap16x16_81: 7395229212904695648
+      DesertTilemap16x16_82: 7563665147263742115
+      DesertTilemap16x16_83: 5185130437168779176
+      DesertTilemap16x16_84: 6541381569515637588
+      DesertTilemap16x16_85: -6750699231515392993
+      DesertTilemap16x16_86: 1645742258013327239
+      DesertTilemap16x16_87: 6528980295537479924
+      DesertTilemap16x16_88: -859923427912908792
+      DesertTilemap16x16_89: -5760882727341792153
+      DesertTilemap16x16_9: -3366047408973596908
+      DesertTilemap16x16_90: -6809553762220645118
+      DesertTilemap16x16_91: -6532073188712288730
+      DesertTilemap16x16_92: -7013219168235614428
+      DesertTilemap16x16_93: -6132004278662641546
+      DesertTilemap16x16_94: 5834896467955155732
+      DesertTilemap16x16_95: -3219827612039528683
+      DesertTilemap16x16_96: 112042299804707367
+      DesertTilemap16x16_97: -9075098890942303924
+      DesertTilemap16x16_98: 3383748431571055642
+      DesertTilemap16x16_99: -980515883970020592
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

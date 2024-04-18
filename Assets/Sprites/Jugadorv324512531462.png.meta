@@ -111,7 +111,7 @@ TextureImporter:
       213: -8740012721061707511
     second: Jugadorv324512531462_35
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -131,6 +131,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -140,8 +142,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -162,10 +164,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -181,6 +187,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -960,6 +978,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Jugadorv324512531462_0: -4833438273499498420
+      Jugadorv324512531462_1: -2846252649140242606
+      Jugadorv324512531462_10: 5095114821264704431
+      Jugadorv324512531462_11: -5846425521926297276
+      Jugadorv324512531462_12: -2210856496728507434
+      Jugadorv324512531462_13: -7843727293037966705
+      Jugadorv324512531462_14: -1075158774560848305
+      Jugadorv324512531462_15: 8601050026932959364
+      Jugadorv324512531462_16: -1198539556140113632
+      Jugadorv324512531462_17: -5420933004270818716
+      Jugadorv324512531462_18: 5281754097207262205
+      Jugadorv324512531462_19: -4628557900801886017
+      Jugadorv324512531462_2: 2451254638295116794
+      Jugadorv324512531462_20: 8531422205735924738
+      Jugadorv324512531462_21: 2077663497133583164
+      Jugadorv324512531462_22: 9168219667711684810
+      Jugadorv324512531462_23: 4265850067415673095
+      Jugadorv324512531462_24: 1474076064801226827
+      Jugadorv324512531462_25: 3252731239406049390
+      Jugadorv324512531462_26: 1378345756270358553
+      Jugadorv324512531462_27: -3808238671375243379
+      Jugadorv324512531462_28: 1715729532303769410
+      Jugadorv324512531462_29: 5465174550058986559
+      Jugadorv324512531462_3: -8892141564651517861
+      Jugadorv324512531462_30: -6240177450852134206
+      Jugadorv324512531462_31: 3051627141624189604
+      Jugadorv324512531462_32: -87218608186733902
+      Jugadorv324512531462_33: 1537053593524018778
+      Jugadorv324512531462_34: 7364833896033030123
+      Jugadorv324512531462_35: -8740012721061707511
+      Jugadorv324512531462_4: 8881980797172476748
+      Jugadorv324512531462_5: -3054434405392688124
+      Jugadorv324512531462_6: -912677447081271235
+      Jugadorv324512531462_7: 3041909620769719192
+      Jugadorv324512531462_8: 4504000562614398663
+      Jugadorv324512531462_9: -9038244287788521835
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

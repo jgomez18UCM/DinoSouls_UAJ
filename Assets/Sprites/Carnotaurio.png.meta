@@ -57,7 +57,7 @@ TextureImporter:
       213: 7833673448082494071
     second: Carnotaurio_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,6 +77,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -86,8 +88,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -108,10 +110,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -127,6 +133,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -528,6 +546,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Carnotaurio_0: 9196379938892962303
+      Carnotaurio_1: 2425243865008408816
+      Carnotaurio_10: 173749637602725141
+      Carnotaurio_11: 7098250295049803635
+      Carnotaurio_12: -3516318399950595715
+      Carnotaurio_13: 4896215435909600825
+      Carnotaurio_14: -7580446526118145094
+      Carnotaurio_15: -7377092652435130701
+      Carnotaurio_16: -5970453823530543907
+      Carnotaurio_17: 7833673448082494071
+      Carnotaurio_2: -332579961526399477
+      Carnotaurio_3: 6078190058355867191
+      Carnotaurio_4: 5170715286975071885
+      Carnotaurio_5: -1097804853203243700
+      Carnotaurio_6: 8602108921617095065
+      Carnotaurio_7: 6720755383941450891
+      Carnotaurio_8: -4250439091775207139
+      Carnotaurio_9: 5571510359388287239
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

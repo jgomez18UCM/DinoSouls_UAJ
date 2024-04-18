@@ -696,7 +696,7 @@ TextureImporter:
       213: 7601131406036380597
     second: forest-palette02-day_230
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -716,6 +716,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -725,8 +727,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -747,10 +749,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -766,6 +772,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -5640,6 +5658,238 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      forest-palette02-day_0: -3172350458958883657
+      forest-palette02-day_1: 1678260356508700499
+      forest-palette02-day_10: -4456998070332370258
+      forest-palette02-day_100: 916445444717108596
+      forest-palette02-day_101: 6352108078639304369
+      forest-palette02-day_102: -4557229687695282278
+      forest-palette02-day_103: 432542231111351307
+      forest-palette02-day_104: -5808987157900704712
+      forest-palette02-day_105: 3143823148261612401
+      forest-palette02-day_106: 2538354495845650316
+      forest-palette02-day_107: -8689179250628367970
+      forest-palette02-day_108: 8560281335432465452
+      forest-palette02-day_109: -561595471422890145
+      forest-palette02-day_11: 374931444050521387
+      forest-palette02-day_110: 6392254931916885516
+      forest-palette02-day_111: 8889100821636856497
+      forest-palette02-day_112: -1230274853220429939
+      forest-palette02-day_113: 175790656437360899
+      forest-palette02-day_114: 9073489588483241192
+      forest-palette02-day_115: 919627229448012808
+      forest-palette02-day_116: -5954499185904033854
+      forest-palette02-day_117: 5536167507097802587
+      forest-palette02-day_118: -3393487201783441566
+      forest-palette02-day_119: 5152633674589274563
+      forest-palette02-day_12: -6633616735875819327
+      forest-palette02-day_120: -7382621364127411666
+      forest-palette02-day_121: 5276341907402292657
+      forest-palette02-day_122: -3163652438030989389
+      forest-palette02-day_123: 6816082050578906759
+      forest-palette02-day_124: -3914309519513704479
+      forest-palette02-day_125: 1145652207863419666
+      forest-palette02-day_126: 179685542537329351
+      forest-palette02-day_127: 1025677885494819080
+      forest-palette02-day_128: -2049883698922480644
+      forest-palette02-day_129: 5716621096163042620
+      forest-palette02-day_13: 4871258874589995
+      forest-palette02-day_130: -7114115404460038726
+      forest-palette02-day_131: 8924104720644363013
+      forest-palette02-day_132: -5158911485877905511
+      forest-palette02-day_133: -5280137635418682538
+      forest-palette02-day_134: 8130505206498403435
+      forest-palette02-day_135: -2314326168484837936
+      forest-palette02-day_136: -6025444590465976998
+      forest-palette02-day_137: -6437771102850006059
+      forest-palette02-day_138: -4977566842121891883
+      forest-palette02-day_139: -8086254251690679306
+      forest-palette02-day_14: -2255823432674822928
+      forest-palette02-day_140: -5504283710568325516
+      forest-palette02-day_141: 6343008264061151365
+      forest-palette02-day_142: -5621215855114731649
+      forest-palette02-day_143: -4759156413358982596
+      forest-palette02-day_144: -858243211169588651
+      forest-palette02-day_145: -3720380007259675388
+      forest-palette02-day_146: -7271362118706637039
+      forest-palette02-day_147: 2212987945597380500
+      forest-palette02-day_148: -4035973583465799780
+      forest-palette02-day_149: -6045512366590321601
+      forest-palette02-day_15: 8200276668537382813
+      forest-palette02-day_150: -5046658111040710812
+      forest-palette02-day_151: -5543952155400011878
+      forest-palette02-day_152: 596743979117389401
+      forest-palette02-day_153: -7039751102758351990
+      forest-palette02-day_154: -3547339984942216290
+      forest-palette02-day_155: 1731026475042047496
+      forest-palette02-day_156: -4325667033611714284
+      forest-palette02-day_157: -2674205108911304342
+      forest-palette02-day_158: -5036285642794814271
+      forest-palette02-day_159: -3208232095777835908
+      forest-palette02-day_16: -6099540667514072800
+      forest-palette02-day_160: -1532660389576455805
+      forest-palette02-day_161: -834319907345948911
+      forest-palette02-day_162: 3960770315346681558
+      forest-palette02-day_163: -2529610552519380457
+      forest-palette02-day_164: 1128331458746259884
+      forest-palette02-day_165: 3720502267489749715
+      forest-palette02-day_166: 3650685785937199035
+      forest-palette02-day_167: 5315351106934303273
+      forest-palette02-day_168: -3192092552052915471
+      forest-palette02-day_169: -106890296117410806
+      forest-palette02-day_17: -3312497662064017805
+      forest-palette02-day_170: 893965363814121112
+      forest-palette02-day_171: -8688561754181873242
+      forest-palette02-day_172: -8924337164804653164
+      forest-palette02-day_173: 7596678604517843949
+      forest-palette02-day_174: 5749711770996031785
+      forest-palette02-day_175: -4395900274404543288
+      forest-palette02-day_176: -298366376541056481
+      forest-palette02-day_177: -5786229274218578994
+      forest-palette02-day_178: 8276454447735845382
+      forest-palette02-day_179: -510797169936067750
+      forest-palette02-day_18: 1864875143533555091
+      forest-palette02-day_180: 7481643296611607421
+      forest-palette02-day_181: 3529795869135014177
+      forest-palette02-day_182: 6059791451720107745
+      forest-palette02-day_183: -7110088697647343347
+      forest-palette02-day_184: 2075008383711499733
+      forest-palette02-day_185: 7287538288086290745
+      forest-palette02-day_186: 5409060355216728875
+      forest-palette02-day_187: 916707671307793104
+      forest-palette02-day_188: -9143881169855929936
+      forest-palette02-day_189: 8330661385341182122
+      forest-palette02-day_19: -2909789467523718300
+      forest-palette02-day_190: -719409954776343739
+      forest-palette02-day_191: -4988906799865666881
+      forest-palette02-day_192: -6105611507561784957
+      forest-palette02-day_193: -2260835669304918623
+      forest-palette02-day_194: 3292487010995581216
+      forest-palette02-day_195: -161370152540738612
+      forest-palette02-day_196: -5189029727567004203
+      forest-palette02-day_197: -3096638043073778729
+      forest-palette02-day_198: 6651536259923843715
+      forest-palette02-day_199: -8161941274391295382
+      forest-palette02-day_2: -8327822638457027972
+      forest-palette02-day_20: -7383995341832298521
+      forest-palette02-day_200: 4425372618327752866
+      forest-palette02-day_201: 8807198844080082988
+      forest-palette02-day_202: -1992883315262074027
+      forest-palette02-day_203: 1331268161791700012
+      forest-palette02-day_204: 5819733991827179987
+      forest-palette02-day_205: -4432271559667340062
+      forest-palette02-day_206: -8226338893903885096
+      forest-palette02-day_207: -531064487749695400
+      forest-palette02-day_208: 1045323963488521193
+      forest-palette02-day_209: -8614357009109202895
+      forest-palette02-day_21: -6766354833809222812
+      forest-palette02-day_210: -8251413929259002534
+      forest-palette02-day_211: 6663929702078856199
+      forest-palette02-day_212: 1538990997755139875
+      forest-palette02-day_213: -7028720671325630203
+      forest-palette02-day_214: -8907284679378816905
+      forest-palette02-day_215: -3176429032983189106
+      forest-palette02-day_216: 3029452059559507567
+      forest-palette02-day_217: 1453105388275611597
+      forest-palette02-day_218: -3231360633475906515
+      forest-palette02-day_219: -4048092003816790163
+      forest-palette02-day_22: 2308862135386251
+      forest-palette02-day_220: 1055575204710060665
+      forest-palette02-day_221: 7140902683889500169
+      forest-palette02-day_222: -4428138611824280804
+      forest-palette02-day_223: -6902987081240905808
+      forest-palette02-day_224: 8144633182349717467
+      forest-palette02-day_225: 3551200361607035335
+      forest-palette02-day_226: 4818782417747277616
+      forest-palette02-day_227: -7542894586973956757
+      forest-palette02-day_228: 7911697907120831051
+      forest-palette02-day_229: 8842447407020685476
+      forest-palette02-day_23: -2806007274133227086
+      forest-palette02-day_230: 7601131406036380597
+      forest-palette02-day_24: -1000609468938623297
+      forest-palette02-day_25: 5931982679258365409
+      forest-palette02-day_26: -2043711212517961528
+      forest-palette02-day_27: -408214146257460288
+      forest-palette02-day_28: 7965896086592224076
+      forest-palette02-day_29: 8886637065350782493
+      forest-palette02-day_3: 6676428690027870382
+      forest-palette02-day_30: 3183634188823431256
+      forest-palette02-day_31: 9134935771663981846
+      forest-palette02-day_32: -1456457799013462227
+      forest-palette02-day_33: -1492278593493053150
+      forest-palette02-day_34: -7025206554887036555
+      forest-palette02-day_35: 7308993605443944739
+      forest-palette02-day_36: -6934259170912556766
+      forest-palette02-day_37: 1712929616713564821
+      forest-palette02-day_38: 5155986478691697691
+      forest-palette02-day_39: -8145787221124625772
+      forest-palette02-day_4: -7783051430183110520
+      forest-palette02-day_40: -8626642382686411114
+      forest-palette02-day_41: 6533239564929466324
+      forest-palette02-day_42: 6353140073184827765
+      forest-palette02-day_43: -3234064223468633768
+      forest-palette02-day_44: -8634100169853637659
+      forest-palette02-day_45: 3707831726271264582
+      forest-palette02-day_46: -6015384078291115056
+      forest-palette02-day_47: -4935078147589089456
+      forest-palette02-day_48: 1019625445924166897
+      forest-palette02-day_49: 6972288438262171604
+      forest-palette02-day_5: 2384771030396006635
+      forest-palette02-day_50: 6507956369274390520
+      forest-palette02-day_51: 1043129028508222446
+      forest-palette02-day_52: -1640104152063530329
+      forest-palette02-day_53: 7269358651036400377
+      forest-palette02-day_54: -5064638901343367058
+      forest-palette02-day_55: -587063655479521879
+      forest-palette02-day_56: -4166999573780459837
+      forest-palette02-day_57: -1315657402004728518
+      forest-palette02-day_58: 9060601659194065698
+      forest-palette02-day_59: 5332009494146090822
+      forest-palette02-day_6: 6323806945329370
+      forest-palette02-day_60: 5768390995796861808
+      forest-palette02-day_61: -6186876338069266625
+      forest-palette02-day_62: 5607616839408794554
+      forest-palette02-day_63: -2897891273942679493
+      forest-palette02-day_64: 2953156246087811081
+      forest-palette02-day_65: -8864263857642652113
+      forest-palette02-day_66: 1340181952583004229
+      forest-palette02-day_67: 3569669886454619694
+      forest-palette02-day_68: -562313090649941244
+      forest-palette02-day_69: 4779960737307897264
+      forest-palette02-day_7: 6690197708886634119
+      forest-palette02-day_70: -4795582382063305207
+      forest-palette02-day_71: -7290955692585200942
+      forest-palette02-day_72: 2989304029552701963
+      forest-palette02-day_73: 1830824679206755224
+      forest-palette02-day_74: -8089302704602521991
+      forest-palette02-day_75: 1251000983183277376
+      forest-palette02-day_76: -3102007044397597606
+      forest-palette02-day_77: -7166680387551397597
+      forest-palette02-day_78: -2361842127841824825
+      forest-palette02-day_79: -3231210805628546629
+      forest-palette02-day_8: -6800014890665920363
+      forest-palette02-day_80: 2552673511723148873
+      forest-palette02-day_81: 8862442648045727848
+      forest-palette02-day_82: -3439704029465186516
+      forest-palette02-day_83: -6942469324669068493
+      forest-palette02-day_84: 3827182028808834764
+      forest-palette02-day_85: 7516952438907284724
+      forest-palette02-day_86: 9177414242479873724
+      forest-palette02-day_87: 2886347418658339215
+      forest-palette02-day_88: 8845518048871244547
+      forest-palette02-day_89: 4322390032119020736
+      forest-palette02-day_9: 6412367143724673689
+      forest-palette02-day_90: 1194867109266539550
+      forest-palette02-day_91: -2621027240661011162
+      forest-palette02-day_92: 1836444091512591773
+      forest-palette02-day_93: -8013692946753432209
+      forest-palette02-day_94: -2924384297817573432
+      forest-palette02-day_95: 5561072072813908634
+      forest-palette02-day_96: 6609364294708752041
+      forest-palette02-day_97: 8733146075828277277
+      forest-palette02-day_98: 5614221128272591719
+      forest-palette02-day_99: 1994935047057914887
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
