@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Telemetria;
+using UnityEngine.Analytics;
+using System;
 public class menuManager : MonoBehaviour
 {
     [SerializeField]
@@ -16,6 +18,17 @@ public class menuManager : MonoBehaviour
 
     [SerializeField]
     private string endSceneName = "endScene";
+
+    private void Awake()
+    {
+        //Guid.NewGuid().ToString();
+    }
+    private void Start()
+    {
+        Tracker.Init(AnalyticsSessionInfo.userId, Application.persistentDataPath);
+        Debug.Log(AnalyticsSessionInfo.userId);
+        
+    }
     public void QuitApplication()
     {
         Application.Quit();
