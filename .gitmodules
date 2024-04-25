@@ -1,0 +1,4 @@
+[submodule "Assets/plugins/Telemetria~"]
+	path = Assets/plugins/Telemetria~
+	url = https://github.com/jgomez18UCM/Telemetria
+	branch = main
