@@ -42,6 +42,9 @@ public class menuManager : MonoBehaviour
         Tracker.Close();
         Debug.Log("Sesion cerrada");
         Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     public void changeScene(string nextScene)
