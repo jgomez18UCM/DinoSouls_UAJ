@@ -1,0 +1,5 @@
+{"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"e0e11a81-f8e1-4402-ab12-84e7813c1496","event_type":"StartSession","id_game":"2048307170","send_time":1714064948}
+{"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"e0e11a81-f8e1-4402-ab12-84e7813c1496","event_type":"StartGame","id_game":"2048307170","send_time":1714064970}
+{"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"e0e11a81-f8e1-4402-ab12-84e7813c1496","event_type":"EndSession","id_game":"2048307170","send_time":1714064977}
+{"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"9a0f53e7-3833-4e65-b8f4-3f4f43a20f59","event_type":"StartSession","id_game":"-251589572","send_time":1714065159}
+{"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"9a0f53e7-3833-4e65-b8f4-3f4f43a20f59","event_type":"EndSession","id_game":"-251589572","send_time":1714065162}

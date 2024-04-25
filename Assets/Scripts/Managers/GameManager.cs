@@ -71,8 +71,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Tracker.Instance.TrackEvent(new Telemetria.StartGame());
-        Debug.Log("Start Game");
 
         if (instance == null)
         {

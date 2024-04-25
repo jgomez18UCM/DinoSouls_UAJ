@@ -39,12 +39,29 @@ public class menuManager : MonoBehaviour
 
     public void QuitApplication()
     {
+        Tracker.Close();
+        Debug.Log("Sesion cerrada");
         Application.Quit();
     }
 
     public void changeScene(string nextScene)
     {
         SceneManager.LoadScene(nextScene);
+    }
+
+    public void GameEvent(string eventID)
+    {
+        switch(eventID)
+        {
+            case "Start":
+                Tracker.Instance.TrackEvent(new Telemetria.StartGame());
+                Debug.Log("Partida Empezada");
+                break;
+            case "End":
+                Tracker.Instance.TrackEvent(new Telemetria.EndGame());
+                Debug.Log("Partida Terminada");
+                break;
+        }
     }
 
     public void ShowHideControls()
@@ -80,6 +97,9 @@ public class menuManager : MonoBehaviour
     private void ShowEndMenu()
     {
         SceneManager.LoadScene(endSceneName);
+        Tracker.Instance.TrackEvent(new Telemetria.EndGame());
+        Debug.Log("Partida Terminada :D");
+
     }
 
 }
