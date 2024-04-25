@@ -3,9 +3,9 @@ using Telemetria;
 
 public class GetItemEvent : Telemetria.Event
 {
-    string item_name { get; set; }
-    float position_x { get; set; }
-    float position_y { get; set; }
+    public string item_name { get; set; }
+    public float position_x { get; set; }
+    public float position_y { get; set; }
     public GetItemEvent(string itemN, float x, float y) : base()
     {
         event_type = "GetItem";
@@ -23,7 +23,7 @@ public class GetItemEvent : Telemetria.Event
 
 public class UseItemEvent : Telemetria.Event
 {
-    string item_name { get; set; }
+    public string item_name { get; set; }
     public UseItemEvent(string itemN, float x, float y) : base()
     {
         event_type = "UseItem";
