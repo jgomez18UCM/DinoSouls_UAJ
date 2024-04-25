@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Telemetria;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -70,6 +71,9 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Tracker.Instance.TrackEvent(new Telemetria.StartGame());
+        Debug.Log("Start Game");
+
         if (instance == null)
         {
             instance = this;

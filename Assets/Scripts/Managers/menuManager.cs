@@ -19,16 +19,24 @@ public class menuManager : MonoBehaviour
     [SerializeField]
     private string endSceneName = "endScene";
 
+
+    static bool isGameStarted = false;
+
     private void Awake()
     {
-        //Guid.NewGuid().ToString();
+
+        if (!isGameStarted)
+        {
+            isGameStarted = true;
+
+            Debug.Log("Iniciado tracker");
+            Debug.Log(AnalyticsSessionInfo.userId);
+            Tracker.Init(AnalyticsSessionInfo.userId, Application.persistentDataPath);
+            // do stuff
+        }
     }
-    private void Start()
-    {
-        Tracker.Init(AnalyticsSessionInfo.userId, Application.persistentDataPath);
-        Debug.Log(AnalyticsSessionInfo.userId);
-        
-    }
+    private void Start() { }
+
     public void QuitApplication()
     {
         Application.Quit();
@@ -66,11 +74,12 @@ public class menuManager : MonoBehaviour
     }
     public void EndMenu()
     {
-        Invoke(nameof(ShowEndMenu),1.5f);
+        Invoke(nameof(ShowEndMenu), 1.5f);
     }
 
     private void ShowEndMenu()
     {
         SceneManager.LoadScene(endSceneName);
     }
+
 }
