@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Telemetria;
 using UnityEngine;
 
 public class AnkyloAttackDMG : MonoBehaviour
@@ -71,6 +72,8 @@ public class AnkyloAttackDMG : MonoBehaviour
 
     public void ActivateAttack() 
     {
+        Debug.Log("Totem Ankylo usado");
+        Tracker.Instance.TrackEvent(new UseItemEvent("TotemAnkylo", transform.position.x, transform.position.y));
         colliderAnk.enabled = true;
     }
 }

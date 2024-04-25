@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Telemetria;
 
 public class AnkyloTotem : MonoBehaviour
 {
@@ -6,7 +7,9 @@ public class AnkyloTotem : MonoBehaviour
     {
         PlayerController player = collision.gameObject.GetComponent<PlayerController>();
         if (player != null)
-        { 
+        {
+            Debug.Log("Ankylo Totem cogido");
+            Tracker.Instance.TrackEvent(new GetItemEvent("TotemAnkylo", player.transform.position.x, player.transform.position.y));
             player.ActivateAnkylo();
             Destroy(gameObject);
         }

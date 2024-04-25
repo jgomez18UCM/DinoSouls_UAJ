@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Telemetria;
 using UnityEngine;
 
 public class MoveSpear : MonoBehaviour
@@ -41,6 +42,7 @@ public class MoveSpear : MonoBehaviour
     void OnDestroy()
     {
         Debug.Log("Lanza usada");
+        Tracker.Instance.TrackEvent(new UseItemEvent("Lanza", rg.position.x, rg.position.y));
         Instantiate(drop, this.transform.position, this.transform.rotation);
     }
 }

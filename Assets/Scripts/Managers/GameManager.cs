@@ -165,6 +165,9 @@ public class GameManager : MonoBehaviour
 
             theUIManager.UpdateHerbs(herbs);
 
+            Debug.Log("Planta verde usada");
+            Tracker.Instance.TrackEvent(new UseItemEvent("PlantaVerde", player.transform.position.x, player.transform.position.y));
+
         }
     }
 

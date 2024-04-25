@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Telemetria;
 using UnityEngine;
 
 public class TriceTotem : MonoBehaviour
@@ -9,6 +10,8 @@ public class TriceTotem : MonoBehaviour
         PlayerController player = collision.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
+            Debug.Log("Trice Totem cogido");
+            Tracker.Instance.TrackEvent(new GetItemEvent("TotemTrice", player.transform.position.x, player.transform.position.y));
             player.ActivateTrice();
             Destroy(gameObject);
         }

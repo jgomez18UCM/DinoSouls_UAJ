@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Telemetria;
 
 public class PlayerController : MonoBehaviour
 {
@@ -144,7 +145,8 @@ public class PlayerController : MonoBehaviour
         else if (haveTrice && Input.GetButtonDown("EscudoTriceratops") && !stunned) 
         {
             Attack attackTriceratops = (Attack) attackRootTriceratops;
-
+            Debug.Log("Totem Trice usado");
+            Tracker.Instance.TrackEvent(new UseItemEvent("TotemTrice", rb.position.x, rb.position.y));
             attackTriceratops.DoAttack();
         }
 
