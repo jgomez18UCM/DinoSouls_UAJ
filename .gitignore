@@ -35,6 +35,8 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+!Assets/plugins/Telemetria~/Telemetria.sln
+!Assets/plugins/Telemetria~/Telemetria.csproj
 *.suo
 *.tmp
 *.user
