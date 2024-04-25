@@ -3,3 +3,14 @@
 {"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"e0e11a81-f8e1-4402-ab12-84e7813c1496","event_type":"EndSession","id_game":"2048307170","send_time":1714064977}
 {"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"9a0f53e7-3833-4e65-b8f4-3f4f43a20f59","event_type":"StartSession","id_game":"-251589572","send_time":1714065159}
 {"id_user":"3913eb18bb9a64a4a813aeb23228257e","id_session":"9a0f53e7-3833-4e65-b8f4-3f4f43a20f59","event_type":"EndSession","id_game":"-251589572","send_time":1714065162}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"8eee16b2-9f6a-4f7c-9a66-f630d71a1eb6","event_type":"StartSession","id_game":"-1138640720","send_time":1714065444}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"8eee16b2-9f6a-4f7c-9a66-f630d71a1eb6","event_type":"StartGame","id_game":"-1138640720","send_time":1714065453}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"8eee16b2-9f6a-4f7c-9a66-f630d71a1eb6","event_type":"EndSession","id_game":"-1138640720","send_time":1714065462}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"a39a2db8-4e74-468b-8a54-58cc6c7424e0","event_type":"StartSession","id_game":"295125744","send_time":1714065474}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"a39a2db8-4e74-468b-8a54-58cc6c7424e0","event_type":"EndSession","id_game":"295125744","send_time":1714065477}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"76ce6802-78ff-4e93-bd4d-f321690d50e0","event_type":"StartSession","id_game":"-1346877269","send_time":1714065659}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"76ce6802-78ff-4e93-bd4d-f321690d50e0","event_type":"EndSession","id_game":"-1346877269","send_time":1714065666}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"e095adf6-61b9-495e-9e96-cdc478bab1f6","event_type":"StartSession","id_game":"42884331","send_time":1714066007}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"e095adf6-61b9-495e-9e96-cdc478bab1f6","event_type":"StartGame","id_game":"42884331","send_time":1714066009}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"e095adf6-61b9-495e-9e96-cdc478bab1f6","event_type":"EndGame","id_game":"42884331","send_time":1714066072}
+{"id_user":"d04f8af789f75e542a8956f5ffa36039","id_session":"e095adf6-61b9-495e-9e96-cdc478bab1f6","event_type":"EndSession","id_game":"42884331","send_time":1714066075}

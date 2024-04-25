@@ -40,6 +40,7 @@ public class MoveSpear : MonoBehaviour
 
     void OnDestroy()
     {
+        Debug.Log("Lanza usada");
         Instantiate(drop, this.transform.position, this.transform.rotation);
     }
 }

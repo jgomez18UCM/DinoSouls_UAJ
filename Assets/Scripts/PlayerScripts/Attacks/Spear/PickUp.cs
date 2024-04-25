@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.GetComponent<PlayerController>() != null)
         {
+            Debug.Log("Lanza cogida");
             other.GetComponent<PlayerController>().DarLanza();
             Destroy(this.gameObject);
         }
