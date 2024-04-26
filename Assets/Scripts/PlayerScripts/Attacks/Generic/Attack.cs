@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Telemetria;
+using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class Attack : MonoBehaviour
         if (attackInstance.GetComponent<TriceratopsAttackEffect>() != null)
         {
             changeShielStateUI();
+
+            Debug.Log("Totem Trice usado");
+            Tracker.Instance.TrackEvent(new UseItemEvent("TotemTrice", transform.position.x, transform.position.y));
 
             //cooldown + duracion del ataque porque en este punto va a iniciar el ataque
             Invoke(nameof(changeShielStateUI), cooldown + attackDuration);
