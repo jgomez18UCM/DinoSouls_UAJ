@@ -32,6 +32,7 @@ public class menuManager : MonoBehaviour
             Debug.Log("Iniciado tracker");
             Debug.Log(AnalyticsSessionInfo.userId);
             Tracker.Init(AnalyticsSessionInfo.userId, Application.persistentDataPath);
+            Tracker.Instance.addFilePersister(new SerializerCSV(), "events.csv");
             // do stuff
         }
     }
