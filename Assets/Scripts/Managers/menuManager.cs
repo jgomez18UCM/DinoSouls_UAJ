@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Telemetria;
 using UnityEngine.Analytics;
+using System.Reflection;
 using System;
 public class menuManager : MonoBehaviour
 {
@@ -32,7 +33,8 @@ public class menuManager : MonoBehaviour
             Debug.Log("Iniciado tracker");
             Debug.Log(AnalyticsSessionInfo.userId);
             Tracker.Init(AnalyticsSessionInfo.userId, Application.persistentDataPath);
-            Tracker.Instance.addFilePersister(new SerializerCSV(), "events.csv");
+            Tracker.Instance.addFilePersister(new SerializerCSV(Assembly.GetAssembly(typeof(menuManager))), "events.csv");
+
             // do stuff
         }
     }
